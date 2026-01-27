@@ -1,0 +1,17 @@
+{
+  "company": "1031 Exchange Dallas",
+  "phone": "214-225-6826",
+  "phoneDigits": "2142256826",
+  "email": "info@1031exchangedallas.com",
+  "mainCity": "Dallas",
+  "state": "TX",
+  "services": [],
+  "servicesNav": [],
+  "locationsNav": [],
+  "extraLinks": [
+    {
+      "label": "Contact",
+      "href": "/contact"
+    }
+  ]
+}
