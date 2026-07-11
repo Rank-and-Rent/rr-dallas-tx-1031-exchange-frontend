@@ -1,0 +1,58 @@
+{
+ "slug": "45-day-identification-strategy",
+ "taxonomy": "services",
+ "title": "45-Day Identification Strategy",
+ "name": "45-Day Identification Strategy",
+ "metaTitle": "45-Day Identification Strategy in Dallas, TX",
+ "metaDescription": "Building a defensible 45-day identification list for Dallas 1031 exchanges, from first-draft candidates to the final written notice a QI can rely on.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Forty-five days sounds like enough time until the relinquished property actually closes and the search for a Dallas replacement starts in earnest. Identification strategy is the work of turning a rough list of candidates into a written, unambiguous notice the qualified intermediary can act on before the deadline, without wasting days circling back for missing details. A good strategy treats the first week differently from the last week, front-loading the decisions that shape everything after them.</p>"
+  },
+  {
+   "heading": "The Clock Starts Before Most Investors Are Ready",
+   "html": "<p>The 45-day window begins on the relinquished property's closing date, not on whichever day the investor starts touring replacements. Given how quickly Dallas closings can move once a contract goes firm, it is common for the identification clock to start running while the investor is still narrowing between an industrial building near I-20 and a suburban NNN retail parcel. The strategy work that matters most in week one is not touring properties, it is confirming which asset classes and submarkets are even in scope, so the remaining 40-some days go toward due diligence rather than basic sorting. That early sorting also determines whether the search stays within the three-property rule or needs to expand into the 200 percent rule, a decision that gets harder to reverse the closer the list gets to day 45.</p>"
+  },
+  {
+   "heading": "Drafting a List That Survives Scrutiny",
+   "html": "<p>A written identification has to describe each property unambiguously, typically a full legal description or a street address specific enough that there is no question which parcel is meant. Vague descriptions, incomplete addresses, or references to a property by nickname rather than address are the kind of avoidable errors that can jeopardize an otherwise sound exchange. The draft list gets revised as due diligence narrows the field, but the version that goes to the qualified intermediary before day 45 has to be final and precise, since revisions after the deadline are tightly restricted. A last-minute typo in an address or an incomplete legal description is not the kind of mistake worth risking on a document this consequential, which is why a second set of eyes reviewing the final draft against the actual title records is worth the extra day it takes.</p>"
+  },
+  {
+   "heading": "Choosing Which Identification Rule to Use",
+   "html": "<p>Most Dallas exchangers default to naming up to three properties under the three-property rule, which imposes no value limit but caps the count. Investors chasing a broader set of options, several suburban NNN parcels or a mix of office and industrial candidates, often need the 200 percent rule instead, which drops the count limit in exchange for a cap on combined value. Picking the right rule early avoids a scramble in the final days if a fourth property suddenly becomes the front-runner, since switching rules on day 43 leaves almost no room to redo the value calculations a different rule might require.</p>"
+  },
+  {
+   "heading": "What the Final Notice Has to Include",
+   "html": "<p>The written identification delivered to the qualified intermediary before the deadline needs:</p><ul><li>Unambiguous legal description or street address for each property</li><li>Signature and date confirming delivery before day 45</li><li>Confirmation of which identification rule applies to the list</li><li>Combined fair market value calculation, if more than three properties are named</li><li>Delivery method and confirmation that the QI actually received it in writing</li></ul>"
+  },
+  {
+   "heading": "Backup Candidates and What Happens When One Falls Through",
+   "html": "<p>Due diligence on a Dallas replacement property can surface problems late, an environmental issue on an industrial site, a tenant estoppel that does not match the rent roll, a survey that reveals an encroachment. Once the 45-day window closes, the list is generally locked, which is why the strategy work upfront usually includes at least one backup candidate that has already cleared a basic feasibility check rather than a property that only looked good on paper during the first week of the search. That discipline is what keeps a single failed deal from turning into a scramble with no time left to find a substitute before the deadline passes.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I add a property to my identification list after day 45?",
+   "a": "Generally no. Once the 45-day window closes, the identified list is locked with only narrow exceptions, so any property an investor wants held in reserve needs to be named in writing before the deadline, not added afterward."
+  },
+  {
+   "q": "Does the property have to be located in Texas to qualify?",
+   "a": "No. Like-kind real property held for investment or business use anywhere in the United States can qualify as a replacement, regardless of where the relinquished property was located."
+  },
+  {
+   "q": "What counts as a valid delivery of the identification notice?",
+   "a": "Delivery in writing to the qualified intermediary, the seller of the replacement property, or certain other qualifying parties, received before midnight on day 45. Verbal identification or an informal conversation does not satisfy the requirement."
+  },
+  {
+   "q": "Can I identify a property I am not certain I will actually buy?",
+   "a": "Yes. Identification does not obligate the exchanger to close on every property named, which is exactly why many investors list more than one candidate as insurance against a deal falling through in due diligence."
+  },
+  {
+   "q": "How many properties should I realistically identify?",
+   "a": "That depends on how settled the search is by day 45. An investor with a strong front-runner often lists two or three as backups under the three-property rule, while someone still comparing asset classes across Dallas submarkets may need the 200 percent rule to keep more options open."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 859
+}

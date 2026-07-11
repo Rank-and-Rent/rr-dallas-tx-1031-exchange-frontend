@@ -1,0 +1,54 @@
+{
+ "slug": "market-comparable-analysis",
+ "taxonomy": "services",
+ "title": "Market Comparable Analysis",
+ "name": "Market Comparable Analysis",
+ "metaTitle": "Market Comparable Analysis in Dallas, TX",
+ "metaDescription": "Pulling recent sale comparables across Dallas submarkets to support pricing decisions on 1031 replacement candidates before the 45-day deadline closes.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Naming a specific replacement property on a 45-day identification list is a real, binding commitment, and pricing it correctly before that deadline matters far more than it would in an ordinary purchase negotiation, since there is limited time available to walk away from a bad number once it is discovered. A price that looks reasonable on the surface can fall apart entirely under a closer look at what genuinely comparable Dallas properties have actually traded for in recent months of activity. Comparable analysis is what turns a listing price into a defensible figure for the value cap calculations the identification rules depend on, one that can be explained and supported if the exchange is ever questioned later rather than defended with nothing more than a broker's asking-price flyer.</p>"
+  },
+  {
+   "heading": "Why the Value Placed on Any Identified Property Actually Matters",
+   "html": "<p>Under the 200 percent rule, the combined fair market value of everything on the identification list cannot exceed twice the relinquished sale price, and under the 95 percent rule, an investor has to close on 95 percent of identified value to keep the exchange intact. Both calculations depend on getting the fair market value of each candidate right at the time of identification instead of simply accepting a listing price at face value, since Dallas commercial listings, like anywhere, do not always reflect what a property will actually sell for. Overstating a candidate's value on the identification notice creates a paper problem later if the actual closing price comes in meaningfully lower than what was represented against the cap.</p>"
+  },
+  {
+   "heading": "Comparables Vary Sharply Across Submarkets",
+   "html": "<p>A per-square-foot figure that makes sense for a suburban NNN retail pad tells an investor almost nothing about pricing an industrial building near I-20, and an Uptown or Preston Center office comparable set is its own separate universe entirely. Pulling comps means staying within the right asset class and submarket, adjusting for building age, lease structure, and tenant quality rather than applying a single blended number across very different property types under consideration on the same identification list. Treating every candidate with the same generic per-square-foot assumption is one of the faster ways to misjudge value across a mixed asset-class search.</p>"
+  },
+  {
+   "heading": "Cap Rate Context Matters as Much as Price Per Square Foot",
+   "html": "<p>For income-producing replacement candidates, recent sale comparables get evaluated on cap rate as much as on price per square foot, since two buildings priced similarly per square foot can carry very different in-place income and very different resulting valuations. A single-tenant NNN asset with a long remaining lease term typically trades at a different cap rate than a multi-tenant office building with near-term rollover, and treating them as comparable on price alone would misstate the value used in the identification calculation. Pulling both sets of comparables, price per square foot and cap rate, side by side is what catches this kind of mismatch before it becomes a problem on the written identification.</p>"
+  },
+  {
+   "heading": "What a Comparable Set Includes for Each Candidate",
+   "html": "<p>A working comp package for a replacement candidate generally covers:</p><ul><li>Recent closed sales of similar asset type and size within the same or a directly comparable submarket</li><li>Price per square foot and cap rate range, adjusted for lease term and tenant credit</li><li>Building age, condition, and any deferred maintenance affecting value</li><li>Time-on-market and any price reductions on the comparable sales pulled</li><li>Adjustment notes explaining why any comp was weighted more or less heavily</li></ul>"
+  },
+  {
+   "heading": "Where This Analysis Feeds Back Into the Identification Decision",
+   "html": "<p>Once a genuinely defensible value is attached to each candidate, that figure goes directly into whichever identification rule applies to the exchange, keeping a 200 percent rule list under its cap or confirming a 95 percent rule list's closing threshold is realistic. Getting this analysis done before the 45-day deadline, rather than relying on asking prices, is what keeps the identification notice standing on real numbers instead of guesses that could unravel the exchange if a property's actual value turns out to be materially different from what was assumed going in.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is the listing price the same as fair market value for identification purposes?",
+   "a": "Not necessarily. A listing price reflects what a seller is asking, while fair market value for identification purposes should reflect what comparable sales actually support, which can be higher or lower depending on current market conditions."
+  },
+  {
+   "q": "How recent do comparable sales need to be to be useful?",
+   "a": "Generally the more recent the better, since market conditions shift. Comps older than a year or so carry less weight unless adjusted carefully for changes in interest rates, demand, or submarket-specific activity since the sale closed."
+  },
+  {
+   "q": "Do comparables need to be within the same submarket?",
+   "a": "Ideally yes, since pricing for industrial, office, and retail assets can vary meaningfully even within the greater Dallas market depending on the specific corridor or district. A comp from a genuinely different submarket needs clear, documented adjustment rather than being treated as a direct comparison without qualification."
+  },
+  {
+   "q": "Why does cap rate matter more than price per square foot for some properties?",
+   "a": "Because cap rate reflects the relationship between price and income, which matters most for leased, income-producing assets. Two buildings priced similarly per square foot can have very different in-place income, making cap rate the more reliable metric for comparing their actual investment value side by side, especially when one candidate carries a long-term corporate guarantee and the other does not."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

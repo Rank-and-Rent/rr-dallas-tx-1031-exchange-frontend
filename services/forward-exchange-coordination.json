@@ -1,0 +1,54 @@
+{
+ "slug": "forward-exchange-coordination",
+ "taxonomy": "services",
+ "title": "Forward Exchange Coordination",
+ "name": "Forward Exchange Coordination",
+ "metaTitle": "Forward Exchange Coordination in Dallas, TX",
+ "metaDescription": "Coordinating a standard delayed 1031 exchange for Dallas investors, from relinquished-property closing through identification into a funded replacement.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Most 1031 exchanges completed by Dallas investors are forward exchanges: sell the relinquished property first, then identify and close a replacement property within the following 180 days from that sale. It is the standard structure for a reason, it is the simplest to execute, but simple does not mean automatic, and treating it as a set-and-forget transaction is where most avoidable mistakes creep in. Every step depends on the one before it happening on time and on paper, and a Dallas market moving quickly enough to close a relinquished sale in a few weeks does not leave much room to catch a missed step after the fact.</p>"
+  },
+  {
+   "heading": "The Sequence That Has to Happen in the Right Order",
+   "html": "<p>A forward exchange only works if every piece lines up before the relinquished property actually closes: the qualified intermediary is engaged, the exchange agreement is signed, and the sale contract is assigned to the QI. Once that closing happens, the sale proceeds go directly to the intermediary rather than to the investor, which is the mechanism that keeps the exchanger from taking receipt of the funds. Skipping or reversing any of these steps, even by a day, can undo the tax deferral that the whole transaction depends on, which is why the sequencing gets confirmed before a closing date is ever put on the calendar rather than assumed to work itself out.</p>"
+  },
+  {
+   "heading": "What Actually Happens Between the Two Closings",
+   "html": "<p>Once the relinquished Dallas property closes, whether that is an Uptown-area office or a suburban retail asset, the clock starts on both the 45-day identification window and the overall 180-day exchange period. Coordination in this stretch means running due diligence on replacement candidates, a South Dallas industrial building near I-20, a suburban NNN parcel, in parallel with drafting the written identification notice, since both need to be settled before day 45 even though the replacement closing itself can happen later. Treating the identification deadline and the closing deadline as two separate milestones, rather than one combined task, keeps the due diligence work from getting rushed just because a final closing date is still weeks out.</p>"
+  },
+  {
+   "heading": "Financing the Replacement Without Losing the Timeline",
+   "html": "<p>A forward exchange's replacement purchase often needs financing, and lender timelines rarely bend for a tax deadline. Getting a lender engaged and pre-underwriting started before the identification deadline, rather than after, keeps the replacement closing from becoming the bottleneck against day 180. This matters more in a market like Dallas where competitive properties can move fast, and a lender's appraisal or environmental turnaround time can eat weeks an exchanger may not have left. A lender who understands the exchange deadline upfront is far more likely to prioritize the file appropriately than one who only learns about the 180-day constraint after underwriting is already underway.</p>"
+  },
+  {
+   "heading": "What Coordination Tracks From Start to Finish",
+   "html": "<p>A forward exchange file being actively coordinated typically covers:</p><ul><li>Exchange agreement execution ahead of the relinquished closing</li><li>Assignment of both the relinquished sale and replacement purchase contracts</li><li>Written identification of replacement candidates before day 45</li><li>Lender engagement and underwriting timeline for the replacement purchase</li><li>Replacement closing scheduled with buffer ahead of day 180</li></ul>"
+  },
+  {
+   "heading": "Where Forward Exchanges Diverge From Reverse or Improvement Structures",
+   "html": "<p>Forward exchanges assume the relinquished sale closes first and the replacement follows, which is the most common order but not the only option. Investors who find a replacement before they are ready to sell, or who need construction work done on a replacement before it qualifies as equal value, use reverse exchange or improvement exchange structures instead. Recognizing early which structure actually fits the transaction avoids committing to a forward exchange timeline that simply does not match how the deal is actually unfolding on the ground. Making this call by the time the relinquished property goes under contract, rather than midway through the identification window, is what keeps the right structure from being chosen too late to actually use. A forward exchange assumed by default, without checking whether the actual sequence of events still matches, is one of the quieter ways an exchange plan goes off track.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I start looking at replacement properties before my relinquished sale closes?",
+   "a": "Yes, and it is generally a good idea. Nothing prevents due diligence or informal searching before closing, as long as the formal written identification happens after closing, within the 45-day window that starts on that date."
+  },
+  {
+   "q": "What if I already have a buyer lined up but no replacement property in mind?",
+   "a": "That is the standard forward exchange situation. The relinquished sale can proceed on its own timeline as long as the exchange agreement and assignment are in place before closing; the replacement search then runs on the 45-day and 180-day clocks that start at that closing."
+  },
+  {
+   "q": "Does a forward exchange require using the same qualified intermediary throughout?",
+   "a": "Yes, in practice. The same QI holds the proceeds from the relinquished sale until they are used for the replacement purchase, so switching intermediaries mid-exchange is not standard practice and could complicate the fund custody the exchange depends on."
+  },
+  {
+   "q": "How is a forward exchange different from a simultaneous exchange?",
+   "a": "A simultaneous exchange closes both properties on the same day with no intervening period, which is rare in practice. A forward, or delayed, exchange is what almost every 1031 transaction actually is, with the relinquished sale closing first and the replacement following within 180 days."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 851
+}

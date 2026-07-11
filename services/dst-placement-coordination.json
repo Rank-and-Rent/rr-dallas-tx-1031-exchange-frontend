@@ -1,0 +1,54 @@
+{
+ "slug": "dst-placement-coordination",
+ "taxonomy": "services",
+ "title": "DST Placement Coordination",
+ "name": "DST Placement Coordination",
+ "metaTitle": "DST Placement Coordination in Dallas, TX",
+ "metaDescription": "Coordinating Delaware Statutory Trust placements as a 1031 replacement option for Dallas investors who want passive real estate exposure or a deadline backstop.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Not every Dallas exchanger wants to keep managing property after a sale, and not every identification list survives due diligence intact all the way to closing. A Delaware Statutory Trust placement addresses both problems: it qualifies as like-kind replacement property under a 1031 exchange while removing the management burden, and it can also serve as a fallback when the 45-day deadline is closing in and a direct-ownership deal has not firmed up. Both uses come up regularly enough in Dallas exchanges to be worth understanding before the identification deadline arrives, not after a primary deal has already fallen apart.</p>"
+  },
+  {
+   "heading": "What a DST Actually Is in This Context",
+   "html": "<p>A Delaware Statutory Trust holds title to real property on behalf of multiple investors, each of whom owns a beneficial interest rather than a direct deed. Under IRS guidance, a qualifying DST interest counts as like-kind real property for 1031 purposes, which means proceeds from a Dallas relinquished sale can move into a DST interest the same way they would move into a directly owned building. The tradeoff is control: DST investors do not manage the asset, set leasing terms, or make refinancing decisions, since those functions sit with the trust sponsor. In exchange for giving up that control, the investor is relieved of the day-to-day responsibilities that come with directly owning a Dallas commercial property, from fielding tenant calls to overseeing capital repairs.</p>"
+  },
+  {
+   "heading": "Why This Comes Up Most Often as a Deadline Backstop",
+   "html": "<p>The clearest use case in a Dallas exchange is timing risk. An investor identifying a suburban NNN parcel or a small industrial property near I-20 can lose that deal late in the process, financing falls through, an inspection turns up a problem, a seller gets a better offer. A DST interest identified as a backup on the same list gives the exchanger a path to close before day 180 even if the primary deal collapses, since DST placements typically close faster than a negotiated direct purchase. That speed comes from the DST offering already being packaged and ready to accept capital, rather than requiring the individual negotiation, financing, and title work a direct purchase involves.</p>"
+  },
+  {
+   "heading": "The Other Reason Investors Choose This Route",
+   "html": "<p>Beyond simple deadline coverage, some Dallas exchangers move into a DST deliberately and with a clear plan for why, often after years of directly managing a property, tenant turnover, capital repairs, refinancing risk, and simply want the tax deferral without the ongoing operating responsibility. This is common among investors exiting a heavily managed asset in favor of a more passive structure while keeping the exchange intact, particularly investors who have owned and managed the same Dallas property for a long stretch and are ready for a different relationship with real estate ownership. It works as a legitimate long-term strategy on its own terms, not only as a fallback, and the right fit depends on the investor's appetite for control versus passivity, along with how much weight they put on avoiding another round of tenant turnover, capital repairs, and refinancing decisions down the road.</p>"
+  },
+  {
+   "heading": "What Coordination Actually Involves",
+   "html": "<p>Placing a Dallas exchanger's proceeds into a DST interest requires:</p><ul><li>Confirming the specific DST offering qualifies as like-kind real property under current guidance</li><li>Matching the DST interest's value against remaining exchange proceeds, including any debt replacement need</li><li>Verifying the DST is properly identified in writing before the 45-day deadline if used as a backup</li><li>Coordinating closing timing with the qualified intermediary and the DST sponsor</li><li>Reviewing minimum investment thresholds against the exchanger's remaining exchange budget</li></ul>"
+  },
+  {
+   "heading": "What This Role Does Not Cover",
+   "html": "<p>Coordination here means logistics: identification paperwork, timing, and matching proceeds to an offering, not investment advice about which specific DST sponsor or offering is the right fit for a given investor's goals. DST interests carry their own risk profile, illiquidity, sponsor-dependent management, and fee structures that vary by offering, and evaluating those is a conversation for a securities-licensed advisor, since DST interests are typically offered as securities alongside their real estate character. Confirming who holds the appropriate license to advise on that side of the transaction should happen before any funds move, not after.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I use a DST for only part of my exchange proceeds?",
+   "a": "Yes. Many Dallas investors split proceeds between a directly owned replacement property and a DST interest, using the DST portion to absorb any remaining boot or to diversify beyond a single asset."
+  },
+  {
+   "q": "Is a DST interest the same as owning real estate directly?",
+   "a": "For 1031 purposes, a qualifying DST interest is treated as like-kind real property, but legally the investor holds a beneficial interest in a trust rather than a deed. Management, leasing, and refinancing decisions sit with the sponsor, not the individual investor."
+  },
+  {
+   "q": "Why would I identify a DST alongside a directly owned property I actually want?",
+   "a": "As a deadline backstop. If the directly owned deal falls through late in the process, having a DST already identified in writing under the 45-day rule gives the exchanger a closable option before day 180 rather than scrambling for a new property with little time left."
+  },
+  {
+   "q": "Are DST interests available in every price range?",
+   "a": "DST offerings generally have minimum investment thresholds set by the sponsor, and availability changes as offerings sell out. Confirming current minimums and available offerings is part of the coordination process rather than something fixed in advance."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

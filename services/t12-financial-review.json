@@ -1,0 +1,58 @@
+{
+ "slug": "t12-financial-review",
+ "taxonomy": "services",
+ "title": "T12 Financial Review",
+ "name": "T12 Financial Review",
+ "metaTitle": "T12 Financial Review for Dallas 1031 Replacement Property",
+ "metaDescription": "Trailing twelve-month financial review for Dallas exchange candidates: expense recasting, tax reassessment, and NOI verification before you buy.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The trailing twelve-month operating statement is where a Dallas seller's story about a property either holds up or falls apart. A rent roll tells you what tenants owe, but the T12 tells you what the building actually cost to run, and the two documents need to agree with each other before a property clears underwriting on an exchange timeline.</p><p>We treat the T12 as a working document to be interrogated, not a summary to be accepted at face value, especially given how much a purchase price decision depends on getting the going-forward expense picture right the first time, before the identification letter locks in a candidate.</p>"
+  },
+  {
+   "heading": "Recasting Seller Expenses to Owner Reality",
+   "html": "<p>Sellers frequently present a T12 with expenses that reflect their own situation rather than what a new owner will actually pay. Property tax is the biggest recast item in Dallas, since a sale at a materially higher price than the current assessed value almost always triggers reassessment, and that new tax line has to replace the seller's historical number before net operating income means anything.</p>"
+  },
+  {
+   "heading": "Insurance and Utility Line Items That Move After Closing",
+   "html": "<p>Insurance premiums tied to a seller's long-held policy or a multi-property blanket policy rarely transfer at the same rate to a new, single-asset owner, and utility costs billed under a seller's commercial account sometimes shift once accounts are re-titled. We rebuild these lines using current market quotes rather than accepting the seller's historical figures at face value.</p><p>A seller who has owned a Dallas property for a decade or more may be paying an insurance rate locked in years ago under very different market conditions, and getting a fresh quote before the identification letter is finalized avoids an unpleasant surprise in the first year of ownership.</p>"
+  },
+  {
+   "heading": "Capital Expenditure vs Operating Expense Classification",
+   "html": "<p>Some sellers push roof replacements, parking lot resurfacing, or major HVAC work below the line as capital rather than through the operating statement, which inflates the T12's apparent net operating income. We separate true one-time capital items from recurring operating costs so the going-forward NOI reflects what the property genuinely needs each year rather than only what happened to be capitalized during the seller's hold.</p><p>An aging roof nearing the end of its useful life gets flagged as a near-term capital need for the buyer even if the seller never had to spend on it during their own ownership period, since that expense doesn't disappear just because it hasn't come due yet.</p>"
+  },
+  {
+   "heading": "What Every T12 Gets Checked Against",
+   "html": "<p>Before a T12 supports a purchase decision on a Dallas candidate, we confirm:</p><ul><li>Property tax recast to reflect likely reassessment at the sale price</li><li>Insurance and utility lines rebuilt against current market quotes, not seller history</li><li>Capital items separated from recurring operating expenses</li><li>Management fee reflected at market rate rather than a seller's below-market self-managed number</li></ul>"
+  },
+  {
+   "heading": "Making the Numbers Hold Up Under a Tight Timeline",
+   "html": "<p>Because a T12 review can surface issues that change a purchase price or kill a deal outright, we run it as early as possible against every candidate on a client's list, ideally before the identification letter is finalized. Finding a tax reassessment problem after day 45 leaves far fewer options than finding it in week two, especially with the 180-day exchange period already counting down.</p><p>When a T12 does raise a serious concern, we bring it to the client with a clear recommendation rather than a vague warning, since a fast decision to keep pursuing the deal, renegotiate the price, or move to a backup candidate is worth more than a lengthy explanation once the clock is running.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Why does property tax matter so much in a Dallas T12 review?",
+   "a": "A sale at a meaningfully higher price than the current assessed value typically triggers reassessment, which raises the property tax expense going forward. That new number has to replace the seller's historical figure before net operating income is realistic, since this is often the single largest expense line on the statement."
+  },
+  {
+   "q": "Can a seller legitimately show lower expenses than a new owner will actually pay?",
+   "a": "Yes, often without any intent to mislead. Insurance under a blanket policy, a below-market self-managed fee, or utility accounts billed differently can all understate what a new, single-asset owner will actually pay, which is why we rebuild each line item rather than accept the seller's numbers at face value."
+  },
+  {
+   "q": "What's the difference between capital expenditures and operating expenses on a T12?",
+   "a": "Operating expenses recur every year, like utilities and routine repairs, while capital expenditures are one-time investments like a roof replacement. Some sellers move recurring costs into capital treatment to make the operating statement look stronger than it is, and we separate the two before trusting the net operating income figure."
+  },
+  {
+   "q": "How early should a T12 review happen relative to the 45-day identification deadline?",
+   "a": "As early as possible, ideally in the first couple weeks after a candidate surfaces. A tax reassessment or expense recasting issue found in week two still leaves time to adjust the offer or move to another candidate, which isn't true if it surfaces after the deadline, when the available options narrow considerably."
+  },
+  {
+   "q": "Does a strong T12 guarantee a Dallas property is a good exchange candidate?",
+   "a": "It's a necessary check, not a complete one. We still pair it with rent roll analysis and lease-level review, since a T12 can look clean while individual lease terms or tenant credit create risk the operating statement alone wouldn't show. The two documents are meant to be read together, not filed away separately once each looks acceptable on its own."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 889
+}

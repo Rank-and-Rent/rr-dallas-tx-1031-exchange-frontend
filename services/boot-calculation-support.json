@@ -1,0 +1,54 @@
+{
+ "slug": "boot-calculation-support",
+ "taxonomy": "services",
+ "title": "Boot Calculation Support",
+ "name": "Boot Calculation Support",
+ "metaTitle": "Boot Calculation Support in Dallas, TX",
+ "metaDescription": "Working through cash boot, mortgage boot, and debt replacement math for Dallas 1031 exchanges before closing, so nothing taxable arrives as a surprise.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Boot is the part of a 1031 exchange that turns a tax-deferred transaction into a partially taxable one, and it shows up in two forms: cash left over, or debt on the replacement property that is lower than debt on the relinquished one. Dallas investors moving between submarkets with very different price points run into this constantly, and the math is worth doing before closing rather than discovering it on the tax return. A few extra hours of arithmetic before an offer goes in routinely saves a far more expensive correction after closing.</p>"
+  },
+  {
+   "heading": "Cash Boot Is the Easier One to Spot",
+   "html": "<p>Cash boot is any exchange proceeds that end up in the investor's hands rather than reinvested into the replacement property, whether that is a check at closing, funds released early from the qualified intermediary, or proceeds left over because the replacement purchase price came in lower than the relinquished sale price. If an investor sells a Preston Center-area office for a certain amount and buys a suburban NNN parcel for less, the difference is cash boot and it is taxable to the extent of gain, even though the rest of the exchange still defers. It also shows up in smaller ways that are easy to miss, closing cost credits, prorated rent collected before closing but not reinvested, or a QI fee paid from proceeds rather than from outside funds.</p>"
+  },
+  {
+   "heading": "Mortgage Boot Is Where Most Miscalculations Happen",
+   "html": "<p>Mortgage boot, also called debt relief, occurs when the debt paid off on the relinquished property exceeds the debt taken on for the replacement. An investor paying off a large loan on an industrial building near I-20 and then buying a lower-leverage suburban asset can trigger mortgage boot even if every dollar of cash proceeds gets reinvested, because the net debt reduction itself is treated as boot. The fix, when it is available, is either replacing enough debt on the new property or adding cash to offset the shortfall, and knowing which one applies requires the actual numbers on both sides of the transaction. Investors moving from a heavily leveraged Dallas asset into a lower-debt or debt-free replacement run into this more often than they expect, since the instinct to reduce leverage after a sale directly works against the debt-replacement requirement.</p>"
+  },
+  {
+   "heading": "Cash Boot Can Offset Mortgage Boot, But Not the Other Way",
+   "html": "<p>One detail that trips up investors doing this math themselves: adding extra cash into a replacement purchase can offset debt reduction from the relinquished sale, but reducing debt cannot offset cash boot in the other direction. Understanding which direction the offset runs matters most in transactions where an investor is deliberately taking on less debt to keep leverage in check, a common move in this market for investors moving out of a heavily leveraged office asset and into unlevered or lightly levered NNN property. Running the offset math before an offer is signed, rather than after the replacement is already under contract, is what keeps this decision from becoming an unpleasant surprise on the closing statement.</p>"
+  },
+  {
+   "heading": "What Gets Calculated Before an Offer Goes In",
+   "html": "<p>Before a replacement property offer is finalized, the numbers worth running are:</p><ul><li>Net sale proceeds from the relinquished property after closing costs and debt payoff</li><li>Debt balance being retired on the relinquished property</li><li>Anticipated purchase price and financing on the replacement property</li><li>Projected cash boot if the replacement price or leverage falls short</li><li>Projected mortgage boot if new debt is lower than debt retired</li></ul>"
+  },
+  {
+   "heading": "This Is Support, Not a Substitute for a Tax Advisor",
+   "html": "<p>Boot calculation support means running the transaction numbers early enough that an investor can adjust the deal, adding cash, taking on more debt, or naming a higher-value replacement, before closing locks in a result. The actual tax treatment of any boot, and how it interacts with depreciation recapture on Texas industrial or office property, is a question for the investor's own CPA or tax advisor, not something to finalize based on a rough estimate run during the identification period.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Is boot always fully taxable?",
+   "a": "Boot is taxable only to the extent of the investor's realized gain on the exchange. If the gain is smaller than the boot received, the taxable amount is capped at the gain, not the full boot figure. Confirming the exact number is a job for a tax advisor working from the actual closing statements."
+  },
+  {
+   "q": "Can I avoid mortgage boot by simply not refinancing?",
+   "a": "Not necessarily. Mortgage boot is about the net change in debt across both properties, so buying a lower-priced or less-leveraged replacement can create mortgage boot even without a formal refinance, if the debt paid off on the relinquished sale is larger than the debt taken on for the replacement."
+  },
+  {
+   "q": "Does Texas having no state income tax change how boot is taxed?",
+   "a": "No. Boot is taxed at the federal level regardless of state income tax rules. Texas having no state income tax affects the state-level side of an investor's overall return, but it does not change the federal treatment of boot in a 1031 exchange."
+  },
+  {
+   "q": "What if I want to pull some cash out of the exchange deliberately?",
+   "a": "That is allowed, it simply means accepting boot on the amount withdrawn. Some investors do this intentionally when they want partial liquidity from a Dallas sale while still deferring gain on the portion reinvested, and running the calculation ahead of time avoids a surprise at tax time."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 854
+}

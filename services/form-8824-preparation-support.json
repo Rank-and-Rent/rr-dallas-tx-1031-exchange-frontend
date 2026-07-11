@@ -1,0 +1,54 @@
+{
+ "slug": "form-8824-preparation-support",
+ "taxonomy": "services",
+ "title": "Form 8824 Preparation Support",
+ "name": "Form 8824 Preparation Support",
+ "metaTitle": "Form 8824 Preparation Support in Dallas, TX",
+ "metaDescription": "Assembling the closing statements, basis records, and boot calculations a Dallas investor's tax preparer needs to complete Form 8824 correctly.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Form 8824 is where a 1031 exchange gets reported to the IRS, and it asks for numbers that live scattered across two closing statements, a qualified intermediary's fee statement, and whatever debt records exist on both properties involved in the transaction. Preparation support means gathering those numbers into one organized packet before a Dallas investor's tax preparer sits down to complete the form, not handing over a folder of unsorted, disorganized paperwork in March when time is already short. The goal is a packet the preparer can work through in one sitting rather than one that generates a list of follow-up questions before any actual tax work can begin. Getting this packet assembled while a transaction is still fresh, rather than reconstructed months later from memory and scattered emails, is what keeps the actual tax preparation from turning into a documentation search.</p>"
+  },
+  {
+   "heading": "What the Form Actually Requires",
+   "html": "<p>Form 8824 asks for the description of both the relinquished and replacement properties, the dates of transfer and identification, the fair market values involved, any debt relief or debt assumed, cash received or paid, and the resulting realized and recognized gain. Every one of those figures traces back to a specific document, a closing statement line item, a payoff letter, a QI settlement statement, which is why the preparation work is really a documentation exercise as much as a numbers exercise, and skipping that exercise tends to surface as a rushed guess at filing time. Missing even one supporting document does not necessarily block the filing, but it forces the preparer to work from an estimate rather than a confirmed figure, which is a weaker position if the return is ever reviewed.</p>"
+  },
+  {
+   "heading": "The Two Closing Statements Rarely Match Up Cleanly",
+   "html": "<p>A relinquished sale closing statement and a replacement purchase closing statement, especially across different Dallas submarkets and different title companies, format prorations, fees, and credits differently. Reconciling the two into a single figure for net proceeds and net debt relief takes deliberate line-by-line comparison, since a fee categorized one way on the sale side and a different way on the purchase side can throw off a boot calculation if the two documents are simply read at face value. Building a single reconciled summary that maps each closing statement line to where it belongs in the exchange calculation removes that ambiguity before it reaches the preparer's desk.</p>"
+  },
+  {
+   "heading": "Basis Carryover Is Where Years of Prior Depreciation Comes Back Into Play",
+   "html": "<p>The replacement property's basis for tax purposes generally carries over adjusted basis from the relinquished property, adjusted for any additional cash invested or debt relief, rather than starting fresh at the new purchase price. For an investor who has owned Dallas commercial real estate for years and taken substantial depreciation, this carryover figure is one of the more consequential numbers on the form, and getting the historical basis and depreciation schedule right requires pulling records that sometimes predate the current property manager or accountant. Tracking down an original purchase settlement statement or an old capital improvement invoice takes time, which is another reason this work benefits from starting well before the return is due rather than in the final weeks of tax season. A missing invoice from a decade-old roof replacement or parking lot repaving can shift the basis calculation more than most investors expect, so it is worth budgeting real time to locate these records rather than estimating them.</p>"
+  },
+  {
+   "heading": "What a Complete Packet Includes Before It Reaches the Preparer",
+   "html": "<p>A packet ready for a tax preparer to work from typically has:</p><ul><li>Closing statements for both the relinquished sale and replacement purchase</li><li>Qualified intermediary settlement statement showing funds held and disbursed</li><li>Debt payoff statement from the relinquished property's lender</li><li>Prior depreciation schedule and adjusted basis for the relinquished property</li><li>Boot calculation worksheet showing cash and mortgage boot, if any</li></ul>"
+  },
+  {
+   "heading": "This Assembles the Inputs, It Does Not File the Return",
+   "html": "<p>Preparation support ends at organizing accurate, well-traced numbers and documents for the investor's own CPA or tax preparer to actually use. Deciding how gain is characterized, applying depreciation recapture rules, or determining the final tax position on Form 8824 is the preparer's professional judgment to make, not something settled ahead of time by whoever assembled the supporting file. Every Dallas exchanger should confirm the completed form with their own tax advisor before filing.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do I need to file Form 8824 even if my exchange fully deferred all gain?",
+   "a": "Yes. Form 8824 is required for the tax year of the exchange regardless of whether any gain was recognized, since it is how the IRS tracks the exchange and the resulting basis in the replacement property."
+  },
+  {
+   "q": "What if I exchanged into more than one replacement property?",
+   "a": "Multiple replacement properties generally require separate reporting for each, with the combined transaction still tied to the same relinquished sale. A tax preparer familiar with multi-property exchanges should confirm the correct approach for the specific set of closings involved."
+  },
+  {
+   "q": "Can the qualified intermediary provide the numbers needed for the form?",
+   "a": "A QI can typically provide a settlement statement showing funds received and disbursed, but they generally do not calculate gain, basis, or depreciation recapture, since that requires the investor's full ownership history and tax records."
+  },
+  {
+   "q": "How far back does the depreciation history need to go?",
+   "a": "Back to the original acquisition of the relinquished property, or however far the current basis calculation depends on prior improvements, depreciation, and any earlier exchanges the property may have been part of."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 860
+}

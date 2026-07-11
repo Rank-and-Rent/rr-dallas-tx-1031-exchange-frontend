@@ -1,0 +1,58 @@
+{
+ "slug": "qualified-intermediary-coordination",
+ "taxonomy": "services",
+ "title": "Qualified Intermediary Coordination",
+ "name": "Qualified Intermediary Coordination",
+ "metaTitle": "Qualified Intermediary Coordination in Dallas, TX",
+ "metaDescription": "Coordinating your qualified intermediary with Dallas closings, title work, and identification deadlines so exchange funds never touch your hands.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The qualified intermediary is the one party in a 1031 exchange whose job is entirely about custody and paperwork, and getting that coordination wrong is how an otherwise clean Dallas sale turns into a fully taxable event. We don't act as your QI, but we make sure their instructions, deadlines, and escrow language line up with every closing on both ends of the exchange.</p><p>Most of the failures we see aren't dramatic, they're procedural: a wire sent to the wrong account, a settlement statement drafted like a normal cash sale, an identification letter that never actually reached the right inbox. None of that requires bad luck, just a missed handoff between busy people.</p>"
+  },
+  {
+   "heading": "Why the QI Has to Be In Place Before You Close",
+   "html": "<p>An exchange agreement with a qualified intermediary needs to be signed and the relinquished property assigned to the QI before that sale closes, not after. Once a seller receives sale proceeds directly, even briefly, the exchange is broken by constructive receipt and there's no fixing it after the fact. We build this into the closing timeline from the first conversation with a client's title company.</p>"
+  },
+  {
+   "heading": "Keeping Identification Paperwork Aligned With the QI's Records",
+   "html": "<p>The 45-day identification letter has to go to the qualified intermediary, or another party specified under the exchange rules, in writing before the deadline. We track the exact identification deadline against the closing date on the relinquished property and confirm the QI has received a valid letter, since a verbal update to your intermediary or a list that only exists in an email thread doesn't satisfy the requirement.</p><p>We ask for a written confirmation back from the QI acknowledging receipt, dated before day 45, rather than assuming a sent email was actually opened and logged on their end before the deadline passed.</p>"
+  },
+  {
+   "heading": "Routing Funds Through Multiple Title Companies",
+   "html": "<p>Dallas exchange transactions frequently involve two different title companies, one for the sale and one for the purchase, and that handoff is where instructions get garbled if nobody is actively managing it. We confirm wire instructions, exchange escrow language, and the settlement statement treatment with both title companies so the qualified intermediary's funds move on schedule without a title officer defaulting to standard cash-deal paperwork.</p>"
+  },
+  {
+   "heading": "What We Confirm Before Every Closing",
+   "html": "<p>Before a relinquished or replacement closing is scheduled, we confirm the following with the qualified intermediary and both title companies, verbally rather than by email alone:</p><ul><li>Exchange agreement is executed and assignment of contract rights is in place</li><li>Settlement statement reflects the QI as seller or buyer of record where required</li><li>Wire instructions have been verbally verified with a known contact</li><li>Identification letter has been delivered and time-stamped ahead of day 45</li><li>Replacement closing is scheduled with margin before day 180</li></ul><p>Wire fraud targeting real estate closings is common enough in Dallas that verbal verification, not a reply to whatever email arrived last, is standard procedure on every exchange transaction we coordinate.</p>"
+  },
+  {
+   "heading": "Handling a Failed or Partial Exchange",
+   "html": "<p>Sometimes a candidate falls through late, or a purchase can't close before day 180 for reasons outside anyone's control. We keep the qualified intermediary informed of live alternatives throughout the window so a client has real options rather than a single last-minute deal, and we make clear that any remaining exchange funds returned after day 180 become taxable boot, which is a conversation for your tax advisor, not something we can resolve after the fact.</p><p>This is exactly why the identification letter usually names more than one candidate. A single point of failure on a tight 180-day timeline leaves no room to react if a lender, a seller, or a title issue pushes past the deadline.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you serve as the qualified intermediary for a Dallas exchange?",
+   "a": "No. We coordinate sourcing, timelines, and paperwork alongside your independently chosen qualified intermediary, since the QI has to be a separate, unrelated party for the exchange to hold up under the rules governing disqualified persons."
+  },
+  {
+   "q": "What happens if sale proceeds land in my account even for a day?",
+   "a": "That's constructive receipt, and it disqualifies the exchange regardless of intent. This is why the exchange agreement and assignment to the QI need to be signed before the relinquished property closes, not after."
+  },
+  {
+   "q": "Can the same qualified intermediary handle both a relinquished sale and a replacement purchase in different Dallas title offices?",
+   "a": "Yes, and it's the normal arrangement. The QI's instructions simply need to be confirmed with each title company individually so nobody defaults to a standard, non-exchange settlement statement that doesn't reflect the exchange structure."
+  },
+  {
+   "q": "What is boot and how does it show up in a Dallas exchange?",
+   "a": "Boot is any non-like-kind value received in the exchange, such as excess cash back or debt relief not offset by new debt or additional cash invested. It's taxable to the extent of gain, which is why the QI holds funds until they're needed for the replacement purchase, and it's worth reviewing with your CPA before a purchase price is finalized."
+  },
+  {
+   "q": "What if my replacement purchase can't close before the 180-day deadline?",
+   "a": "The qualified intermediary returns the remaining exchange funds, and that amount becomes taxable. We work to avoid this by keeping backup candidates live throughout the window, but the final tax treatment is a question for your CPA or tax advisor, and we flag the risk well before day 180 arrives."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 852
+}

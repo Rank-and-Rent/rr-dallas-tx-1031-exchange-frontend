@@ -1,0 +1,58 @@
+{
+ "slug": "rent-roll-analysis",
+ "taxonomy": "services",
+ "title": "Rent Roll Analysis",
+ "name": "Rent Roll Analysis",
+ "metaTitle": "Rent Roll Analysis for Dallas 1031 Replacement Property",
+ "metaDescription": "Rent roll review for Dallas exchange candidates: lease-by-lease reading, collections trend, and flags before a property reaches your identification list.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A rent roll is the single document that tells you whether a Dallas replacement candidate is actually performing or just marketed well. We read every rent roll lease by lease before a property is added to a client's identification letter, because a broker's one-page summary tends to smooth over exactly the details that matter once you own the building.</p><p>This work has to happen fast, since a candidate that fails a rent roll review in week three needs to be replaced on the identification letter before day 45, not after the deadline has already passed and there's no time left to react.</p>"
+  },
+  {
+   "heading": "Reading Loss-to-Lease the Right Way",
+   "html": "<p>Loss-to-lease gets pitched as upside, and sometimes it is. But on a Dallas garden-style multifamily property, a wide loss-to-lease number can also mean the owner has been unwilling or unable to push renewals, and that same resistance may exist for the new owner too. We separate loss-to-lease that reflects real, achievable rent growth from loss-to-lease that reflects a landlord who stopped trying.</p><p>We cross-check the claimed loss-to-lease against comparable rents at similar properties nearby, since a number that looks large purely because the seller under-managed the asset for years is a different opportunity than one grounded in genuine market movement the seller simply hasn't captured yet.</p>"
+  },
+  {
+   "heading": "Collections Trend Over the Trailing Twelve Months",
+   "html": "<p>Posted rent means nothing if it isn't collected. We pull the trailing twelve months of actual collections against the rent roll's stated rents, looking specifically for a widening gap in the last two or three months, since that's usually the earliest sign of tenant distress before it shows up anywhere else in the financials.</p>"
+  },
+  {
+   "heading": "Lease Expiration Concentration and Rollover Risk",
+   "html": "<p>A rent roll with a third of its leases expiring in the same six-month window carries real rollover risk, especially on a single-tenant or small multi-tenant net-lease building where losing one tenant means losing a meaningful share of income at once. We map expirations across the full hold period an investor is planning rather than only the next twelve months, since a wall of expirations three years out still needs to be underwritten today.</p><p>Re-leasing assumptions also get checked against current market conditions rather than the rent roll's own optimistic renewal terms, since a tenant renewing at a below-market rate today has little reason to pay a premium at the next renewal unless the space itself has changed.</p>"
+  },
+  {
+   "heading": "What Gets Flagged in Every Rent Roll Review",
+   "html": "<p>Every rent roll we review against a Dallas candidate gets checked for the same set of issues before it clears:</p><ul><li>Related-party or below-market leases that inflate apparent occupancy</li><li>Security deposit balances that don't match stated lease terms</li><li>Month-to-month tenants counted as stabilized occupancy</li><li>Concessions or free-rent periods not disclosed in the summary rent roll</li><li>Guarantor or credit history on any tenant carrying an outsized share of total rent</li></ul><p>None of these issues are unusual or a sign of bad faith on the seller's part, but each one changes what the property is actually worth, and each one takes real time to trace back through lease files rather than a summary spreadsheet.</p>"
+  },
+  {
+   "heading": "Turning the Review Into an Identification Decision",
+   "html": "<p>Once the rent roll checks out, we translate the findings into plain terms for the identification decision: whether the in-place income supports the purchase price on its own, or whether the deal depends on lease-up assumptions that may not hold. That distinction matters more when you're working inside a fixed 45-day window than it would on an open-ended purchase, since there's less time to renegotiate if something surfaces late.</p><p>A candidate that only pencils on optimistic lease-up assumptions isn't automatically dropped from the list, but it gets flagged clearly as the higher-risk option relative to a property already performing at the numbers being asked.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How far back do you look at collections history on a Dallas rent roll?",
+   "a": "We typically pull the trailing twelve months, with particular attention to the most recent two or three, since a widening gap between posted rent and actual collections usually shows up there first before it reaches the summary numbers."
+  },
+  {
+   "q": "Is a high loss-to-lease number always a good sign?",
+   "a": "Not automatically. It can mean real upside from below-market rents, or it can mean an owner who avoided pushing renewals for years. We separate the two before it factors into a purchase decision."
+  },
+  {
+   "q": "What's the biggest red flag in a multifamily rent roll?",
+   "a": "A widening gap between stated rent and actual trailing collections in the most recent months, combined with month-to-month tenants being counted as stabilized occupancy. Both point to income that looks stronger on paper than it is in practice, and both are worth flagging before an offer goes in."
+  },
+  {
+   "q": "Does rent roll analysis delay the 45-day identification process?",
+   "a": "It shouldn't, if it starts early. We review rent rolls on candidates as they surface rather than waiting until a property is close to being finalized, so the analysis is done well before the identification letter needs to be filed."
+  },
+  {
+   "q": "Do you review rent rolls for single-tenant net-lease properties too?",
+   "a": "Yes, though the review looks different. Instead of unit-level collections, we're checking lease guarantee strength, remaining term, and any co-tenancy language that could affect the single rent payment the whole deal depends on, since there's no diversification across multiple tenants to absorb a problem."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

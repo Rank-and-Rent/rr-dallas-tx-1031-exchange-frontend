@@ -1,0 +1,54 @@
+{
+ "slug": "exchange-documentation-assembly",
+ "taxonomy": "services",
+ "title": "Exchange Documentation Assembly",
+ "name": "Exchange Documentation Assembly",
+ "metaTitle": "Exchange Documentation Assembly in Dallas, TX",
+ "metaDescription": "Assembling the exchange agreement, assignments, identification notices, and closing statements a Dallas 1031 exchange needs to hold up under later review.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>A 1031 exchange runs on paper just as much as it runs on a calendar, and the two need to stay in sync from the first day to the last. Every step along the way, the sale, the identification, the qualified intermediary's custody of funds, the eventual purchase, needs a document behind it, and a Dallas exchange with a compressed timeline is not the moment to be reconstructing a paper trail after the fact, since every hour spent chasing a missing signature is an hour not spent on the next deadline.</p>"
+  },
+  {
+   "heading": "The Exchange Agreement Comes First, Before Anything Else Closes",
+   "html": "<p>The exchange agreement between the investor and the qualified intermediary has to be signed before the relinquished property closes, not after. This document establishes the QI's role holding proceeds and assigns the investor's rights in the relinquished sale contract to the intermediary, which is what keeps the exchanger from taking actual or constructive receipt of the funds. Missing this step, or signing it after closing, is one of the more common ways an otherwise well-planned Dallas exchange fails a basic requirement. Confirming the agreement is fully executed, rather than merely drafted or verbally agreed to, before the relinquished closing appears on any settlement calendar is worth treating as a hard gate rather than a formality to circle back to later. That confirmation should include the qualified intermediary's own signature, not only the investor's, since a one-sided signature does not establish the agreement.</p>"
+  },
+  {
+   "heading": "Assignments on Both Sides of the Transaction",
+   "html": "<p>Alongside the exchange agreement, the investor's rights under both the relinquished sale contract and the eventual replacement purchase contract get formally assigned to the qualified intermediary, with notice of the assignment delivered to the other party in each transaction. A Dallas title company handling either side of the deal will typically expect to see these assignment documents before it releases or accepts funds through the QI, so having them ready ahead of each closing avoids a delay at the table. A closing rescheduled at the last minute because an assignment was still being drafted is an avoidable setback, and one that eats directly into whatever buffer remains before the 180-day deadline.</p>"
+  },
+  {
+   "heading": "The Identification Notice Has to Be a Standalone Document",
+   "html": "<p>The written identification of replacement properties, whether it names a suburban NNN parcel, an industrial building near I-20, or several candidates under the 200 percent rule, needs to exist as its own dated, signed document delivered to the qualified intermediary before day 45. It should not live only in an email thread or a verbal conversation with a broker. A clean identification notice is one of the first things reviewed if an exchange is ever questioned, and it is far easier to assemble correctly upfront than to reconstruct later from scattered correspondence. Keeping a dated copy of the delivered notice, along with confirmation the qualified intermediary actually received it, closes off any later question about whether the identification was timely.</p>"
+  },
+  {
+   "heading": "What the Full File Should Contain by Closing",
+   "html": "<p>A complete exchange file typically includes:</p><ul><li>Signed exchange agreement with the qualified intermediary, dated before the relinquished closing</li><li>Assignment of rights for both the relinquished and replacement contracts</li><li>Written identification notice with legal descriptions or addresses and the applicable identification rule noted</li><li>Closing statements from both the relinquished sale and the replacement purchase</li><li>Records of fund transfers showing the QI held proceeds throughout, with no constructive receipt by the exchanger</li></ul>"
+  },
+  {
+   "heading": "Why This Matters Years After the Exchange Closes",
+   "html": "<p>Form 8824 gets filed with the tax return for the year of the exchange, but the underlying documentation is what actually supports that filing if the return is ever reviewed years down the road. A complete, organized file, assembled while the transaction is fresh rather than reconstructed years later, is the difference between a quick response to a records request and a scramble through old email accounts. This assembly work supports the investor's tax preparer; it is not a substitute for that preparer's own review of the completed exchange. An organized file also makes it easier to answer questions from a lender or a future buyer down the road, since the chain of ownership and the exchange history behind a Dallas property sometimes comes up again well after the transaction closes.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "When does the exchange agreement need to be signed?",
+   "a": "Before the relinquished property closes. Signing it after closing generally defeats the purpose of the exchange, since the investor may be considered to have received the sale proceeds directly rather than through a qualified intermediary."
+  },
+  {
+   "q": "Is an email identifying replacement properties enough documentation?",
+   "a": "It can satisfy the written notice requirement if delivered to the right party before the deadline, but a standalone signed identification document is more defensible than relying on an email thread, especially if the exchange is later reviewed."
+  },
+  {
+   "q": "Who typically keeps the master copy of the exchange file?",
+   "a": "The qualified intermediary retains records related to their role holding funds, but the investor should keep a complete personal copy of every document, since the QI's retention period may not match how long the investor's tax return remains subject to review."
+  },
+  {
+   "q": "Does the replacement property purchase contract need special exchange language?",
+   "a": "Most qualified intermediaries require specific cooperation language in the replacement purchase contract acknowledging the exchange and the assignment to the QI. This should be added before the contract is signed, not inserted afterward as an amendment."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 852
+}

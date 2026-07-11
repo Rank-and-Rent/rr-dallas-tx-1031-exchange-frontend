@@ -1,0 +1,54 @@
+{
+ "slug": "200-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "200 Percent Rule Strategy",
+ "name": "200 Percent Rule Strategy",
+ "metaTitle": "200 Percent Rule Strategy in Dallas, TX",
+ "metaDescription": "Structuring 1031 identification lists under the 200 percent rule for Dallas investors who want more than three replacement properties on the table.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The three-property rule works fine when an investor already knows exactly which replacement they want. The 200 percent rule exists for everyone else, the Dallas exchangers who want a longer list of backups across a market with this much submarket variety, as long as the combined value of every property named stays under twice the relinquished sale price.</p>"
+  },
+  {
+   "heading": "Why Three Properties Isn't Always Enough in This Market",
+   "html": "<p>A single relinquished sale in Dallas can open up replacement candidates across genuinely different asset types: an Oak Cliff-area office building, a suburban NNN retail pad, a South Dallas industrial building near I-20. An investor weighing all three categories against a 45-day identification window often wants more than three named properties as insurance against a deal falling through in due diligence. The 200 percent rule removes the count limit and replaces it with a value limit, which suits a portfolio search that is still narrowing by asset class rather than by address. That flexibility matters most in the early days after a relinquished closing, when an investor may still be comparing an industrial building against an office asset against several smaller retail candidates and does not yet know which category will actually pencil.</p>"
+  },
+  {
+   "heading": "How the Value Cap Actually Works",
+   "html": "<p>Every property identified in writing before day 45 gets added together at fair market value, and that combined total cannot exceed 200 percent of what the relinquished property sold for. A relinquished sale at two million dollars, for example, allows up to four million dollars in combined identified value spread across however many properties the exchanger wants to name. There is no limit on the number of properties as long as the total stays under the cap; a list can run to five, eight, or more properties without disqualifying the exchange, so long as the math holds. Keeping a running tally as candidates get added or dropped is the practical discipline here, since a property added late in the search can push the aggregate value over the cap if nobody is tracking the total in real time.</p>"
+  },
+  {
+   "heading": "Choosing Between the Three-Property Rule and the 200 Percent Rule",
+   "html": "<p>The three-property rule is simpler when an investor already has a strong first choice and just needs one or two backups in case financing or inspection issues sink the primary deal. The 200 percent rule earns its complexity when the search is genuinely open across multiple Dallas submarkets, or when an investor is intentionally splitting one relinquished sale into several smaller replacement purchases to diversify asset class or tenant exposure. Neither rule is inherently better; the choice tracks how settled the replacement strategy already is by day 45. An investor who switches from a settled short list to a broader search midway through the identification window should revisit which rule actually governs the exchange before the notice goes to the qualified intermediary, since defaulting to the wrong rule can create confusion later about which properties legitimately count.</p>"
+  },
+  {
+   "heading": "What Has to Be True for Every Property on the List",
+   "html": "<p>Regardless of which identification rule applies, every property named under the 200 percent rule has to meet the same basic requirements:</p><ul><li>Named in writing to the qualified intermediary before the 45-day deadline</li><li>Described unambiguously, with a legal description or unmistakable street address</li><li>Included in the combined fair market value calculation against the 200 percent cap</li><li>Not substituted after day 45, outside the narrow identification-period revocation rules</li><li>Not required to actually close; only the acquired properties matter after the fact</li></ul>"
+  },
+  {
+   "heading": "When a List Edges Past the Cap",
+   "html": "<p>If an investor's wish list of Dallas replacement properties would push the combined value over the 200 percent ceiling, the fix is either trimming the list or switching identification approaches entirely to the 95 percent rule, which drops the value cap in exchange for a strict requirement to close on 95 percent of everything named. That tradeoff matters most for investors chasing a broad set of suburban NNN options where individual property values vary widely and the aggregate math can get tight without careful tracking. Deciding which rule to switch to should happen well before day 45, since discovering a cap problem in the final days leaves little time to rebuild a list under a different set of rules.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Can I identify more than three properties without triggering the 200 percent rule?",
+   "a": "No. Naming a fourth property automatically moves the identification out of the three-property rule and into either the 200 percent rule or the 95 percent rule, so the value cap or closing requirement applies from that point forward."
+  },
+  {
+   "q": "Does the 200 percent cap apply to purchase price or fair market value?",
+   "a": "Fair market value at the time of identification, not necessarily the eventual purchase price. A qualified intermediary or appraiser can help confirm the value used against the cap, especially for properties still in early due diligence."
+  },
+  {
+   "q": "What happens if I only end up closing on one of five identified properties?",
+   "a": "That is allowed under the 200 percent rule. There is no requirement to close on every property named, only that the exchanger acquires enough qualifying replacement value to satisfy the exchange overall."
+  },
+  {
+   "q": "Can I revise the identified list after the 45th day?",
+   "a": "Generally no. Identifications made under the 200 percent rule are locked once the 45-day window closes, with narrow exceptions for properties destroyed or made unavailable through no fault of the exchanger. Confirm any specific situation with a qualified intermediary before assuming flexibility exists."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 862
+}

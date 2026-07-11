@@ -1,0 +1,58 @@
+{
+ "slug": "tax-advisor-and-cpa-coordination",
+ "taxonomy": "services",
+ "title": "Tax Advisor and CPA Coordination",
+ "name": "Tax Advisor and CPA Coordination",
+ "metaTitle": "Tax Advisor and CPA Coordination for Dallas 1031 Exchanges",
+ "metaDescription": "Coordinating your CPA or tax advisor through a Dallas exchange: document handoffs, deadline alignment, and staying out of tax advice entirely.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>We source and coordinate property, we don't give tax advice, and on a Dallas exchange that line matters more than it sounds. Your CPA or tax advisor is the one who confirms basis, gain, and how the exchange actually lands on your return, so our job is making sure they have everything they need, on time, without you having to chase down paperwork between three different parties.</p><p>Investors sometimes assume their tax advisor will hear about a deal only once it's fully closed, which is backward. The earlier your CPA sees the shape of a transaction, the fewer surprises show up when it's time to file.</p>"
+  },
+  {
+   "heading": "Looping the CPA In Before the Sale Closes",
+   "html": "<p>The best time to bring your tax advisor into a Dallas exchange is before the relinquished property closes, not after, since basis calculations and depreciation recapture exposure are easier to plan around ahead of a sale than to untangle afterward. We share the closing timeline and identification deadlines with your CPA as soon as they're known so there are no surprises about when documentation needs to be ready.</p><p>This is especially true for an investor who has owned the relinquished property for many years, since the depreciation schedule built up over that time affects how the exchange is reported, and your CPA is better positioned to advise on that with real lead time rather than a few days before a filing deadline.</p>"
+  },
+  {
+   "heading": "What Documentation Actually Needs to Move Between Parties",
+   "html": "<p>Closing statements from both the relinquished and replacement transactions, the exchange agreement with your qualified intermediary, and the identification letter itself all eventually land in your CPA's file to support the exchange on your return. We route copies of each as they're generated rather than leaving it to an investor to assemble everything at year-end.</p><p>Depreciation schedules from the relinquished property also need to transfer forward in a specific way under the exchange rules, which is squarely a CPA task, but it goes faster when they already have the closing documents rather than requesting them for the first time months later.</p>"
+  },
+  {
+   "heading": "Where the Line Between Coordination and Advice Sits",
+   "html": "<p>We can tell you how the mechanics of a Dallas exchange work, what a QI does, and what a typical timeline looks like, but questions about your specific basis, whether a partial exchange makes sense given your tax situation, or how boot would be treated on your particular return go to your CPA. That distinction isn't a formality, it's the difference between process coordination and tax advice we're not licensed to give.</p>"
+  },
+  {
+   "heading": "What We Confirm With Your Tax Advisor Before Closing",
+   "html": "<p>Ahead of each closing, we confirm the following directly with your CPA or tax advisor's office:</p><ul><li>Their preferred format and timing for receiving closing statements</li><li>Whether they need to review the exchange agreement before it's signed</li><li>Any depreciation schedule or cost segregation study relevant to Form 8824 preparation</li><li>Confirmation they're aware of the identification and closing deadlines on both sides of the exchange</li></ul>"
+  },
+  {
+   "heading": "Keeping Everyone Aligned Under a Fixed Deadline",
+   "html": "<p>Because the 45-day and 180-day deadlines don't move for anyone's schedule, we treat CPA coordination as an active part of the timeline rather than a box to check once the deal is done. A tax advisor who's been kept informed throughout the exchange can advise faster when a question comes up mid-transaction than one who's handed a stack of documents after everything has already closed.</p><p>A quick call between your CPA and your qualified intermediary in week two of the identification period, once real candidates exist, resolves far more questions than the same conversation attempted after both deadlines have already passed.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Do you replace the need for a CPA on a Dallas 1031 exchange?",
+   "a": "No. We coordinate sourcing, timelines, and documentation, but decisions about basis, gain recognition, and how the exchange affects your specific return belong entirely with your own CPA or tax advisor, who should stay fully involved throughout the process."
+  },
+  {
+   "q": "When should I bring my CPA into the process?",
+   "a": "Before your relinquished property closes, ideally, and before an offer is even accepted if possible. Basis and depreciation recapture exposure are easier to plan around ahead of a sale than to reconstruct afterward, and your advisor can flag issues early instead of after the fact."
+  },
+  {
+   "q": "What documents does my CPA need from a Dallas exchange?",
+   "a": "Closing statements from both transactions, the exchange agreement with your qualified intermediary, and the identification letter typically make up the core file. We route copies of each as they're generated rather than waiting until year-end, so nothing has to be reconstructed later from memory."
+  },
+  {
+   "q": "Can you tell me whether a partial exchange makes sense for my situation?",
+   "a": "That decision depends on your specific basis and tax picture, which is a question for your CPA or tax advisor rather than something we're positioned to answer. We can explain how a partial exchange works mechanically, but not what it means for your particular return or overall tax situation."
+  },
+  {
+   "q": "Why does CPA coordination matter if the deadlines are fixed regardless?",
+   "a": "Because a tax advisor who's already familiar with the transaction can respond faster if a question comes up mid-exchange. Handing someone a stack of documents after everything has closed leaves much less room to address an issue while it still matters, especially if the concern touches how the identification letter itself was structured."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

@@ -1,0 +1,58 @@
+{
+ "slug": "replacement-property-identification",
+ "taxonomy": "services",
+ "title": "Replacement Property Identification",
+ "name": "Replacement Property Identification",
+ "metaTitle": "Replacement Property Identification for Dallas 1031 Exchanges",
+ "metaDescription": "Building a valid identification letter for a Dallas exchange: description standards, delivery timing, and revising candidates before day 45.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>Identifying replacement property sounds like a formality until you realize the letter itself has rules that trip people up every quarter in Dallas: vague descriptions, late delivery, and lists assembled under pressure the week the deadline lands. We build the identification letter as its own workstream, separate from the property search, so the paperwork is ready well before day 45 arrives.</p><p>The frustrating part is that these failures are almost always avoidable. A missed deadline rarely comes from a lack of good candidates, it comes from paperwork that got treated as an afterthought while everyone focused on the deal itself.</p>"
+  },
+  {
+   "heading": "What Actually Counts as a Valid Description",
+   "html": "<p>A street address is generally sufficient for a single Dallas property, but a legal description becomes necessary when a parcel hasn't been platted with a clean address yet, which comes up more often than people expect on newer construction or subdivided industrial land near the I-20 corridor. We confirm the description standard with the qualified intermediary before the letter goes out, not after it's already been delivered.</p><p>For multi-tenant properties or a parcel with an easement carved out for a neighboring use, we pull the legal description directly from title work rather than relying on a broker flyer's simplified address, since a mismatch between the letter and the actual recorded parcel is exactly the kind of detail that surfaces at the worst possible time.</p>"
+  },
+  {
+   "heading": "Counting the Clock From the Right Date",
+   "html": "<p>The 45-day window starts on the closing date of the relinquished property, not the date a client engaged us or the date an offer was accepted on the original sale. We calculate the exact deadline the day a Dallas closing is scheduled and work backward from there, because a miscounted deadline is one of the more common and completely avoidable ways an exchange fails.</p><p>We put that date in writing to the client and the qualified intermediary the same day the closing is confirmed, so there's no ambiguity later about which calendar day the letter is due, including how weekends and holidays affect the count.</p>"
+  },
+  {
+   "heading": "Revising the List Before the Deadline",
+   "html": "<p>An identification letter can be revised as many times as needed up until day 45, and we treat the first version as a working draft rather than a final answer. If a stronger candidate surfaces in week three, it goes on an updated letter delivered before the deadline, replacing a weaker option rather than trying to add a fourth property outside the standard identification rules.</p>"
+  },
+  {
+   "heading": "Confirming Delivery, Not Just Drafting",
+   "html": "<p>The letter has to reach the right party in writing before midnight on day 45, and we treat delivery confirmation as its own checklist item:</p><ul><li>Letter is addressed to the qualified intermediary or another party permitted under the exchange rules</li><li>Each candidate has an unambiguous street address or legal description</li><li>Delivery method produces a timestamp, whether email, courier, or certified mail</li><li>A copy is retained by the investor independent of the QI's file</li></ul>"
+  },
+  {
+   "heading": "What Happens After the Letter Goes Out",
+   "html": "<p>Once the identification letter is delivered, we shift focus to underwriting whichever candidates made the final list, since the exchange rules require closing on one of the identified properties, not a substitute that appears later. Any Dallas property considered after day 45 that wasn't on the letter simply doesn't count for exchange purposes, no matter how strong the deal looks.</p><p>This is why the last few days before day 45 tend to be about discipline rather than discovery. If a genuinely better property surfaces on day 44, it can still be added, but a property found on day 47 is simply outside the exchange no matter how it compares to what's already listed.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "Does the identification letter need a full legal description for every Dallas property?",
+   "a": "Not always. A street address is typically enough for a platted parcel, but unplatted land or a newly subdivided site often needs a legal description instead. We check this against the specific parcel and title work before the letter is finalized."
+  },
+  {
+   "q": "Can I change my identification list after I've already sent it?",
+   "a": "Yes, as many times as you want, as long as the revised letter is delivered before the 45-day deadline. After day 45, the list is locked and no new candidates can be added, so any revision has to reach the QI in writing before that date passes."
+  },
+  {
+   "q": "When does the 45-day clock actually start?",
+   "a": "It starts on the closing date of your relinquished property, not the date you signed a listing agreement or accepted an offer. We confirm the exact date with the title company handling that closing and put the deadline in writing the same day."
+  },
+  {
+   "q": "What if I close on a Dallas property that wasn't on my identification letter?",
+   "a": "It won't qualify for exchange treatment. Only properties named on a timely, properly delivered identification letter can be purchased as part of the exchange, regardless of how good the deal is, which is exactly why we keep the list current rather than static."
+  },
+  {
+   "q": "Who should receive the identification letter?",
+   "a": "Your qualified intermediary is the standard recipient, though the rules also permit certain other parties involved in the exchange. We confirm the correct recipient with your QI so there's no ambiguity about delivery, and we keep a dated copy in your own file as well."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 850
+}

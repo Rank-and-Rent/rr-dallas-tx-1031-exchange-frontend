@@ -1,0 +1,54 @@
+{
+ "slug": "95-percent-rule-strategy",
+ "taxonomy": "services",
+ "title": "95 Percent Rule Strategy",
+ "name": "95 Percent Rule Strategy",
+ "metaTitle": "95 Percent Rule Strategy in Dallas, TX",
+ "metaDescription": "Using the 95 percent identification rule for Dallas 1031 exchanges when an investor wants an unlimited candidate list and can commit to closing most of it.",
+ "sections": [
+  {
+   "heading": null,
+   "html": "<p>The 95 percent rule is the least used of the three identification options, and for good reason: it drops every limit on how many Dallas properties an investor can name, but demands that the exchanger actually close on 95 percent of the combined value identified. It fits a narrow set of situations, and it punishes a list built on hope rather than real underwriting. Understanding exactly what it demands before choosing it is what separates a smart use of this rule from an expensive mistake.</p>"
+  },
+  {
+   "heading": "What the Rule Trades Away and What It Buys",
+   "html": "<p>Under the three-property rule, an exchanger can name up to three candidates with no value cap. Under the 200 percent rule, the count is unlimited but the combined value cannot exceed twice the relinquished sale price. The 95 percent rule removes both limits entirely, no cap on count and no cap on value, but requires the exchanger to acquire at least 95 percent of the total fair market value identified. That is a real commitment, not a formality, and it only makes sense when the investor already has strong conviction across a long list rather than a wide net of speculative options. Choosing this rule without that conviction already in place is where the strategy tends to go wrong, since the flexibility on count and value comes paired with real exposure if the closing rate falls short.</p>"
+  },
+  {
+   "heading": "Where This Comes Up in a Dallas Portfolio Build",
+   "html": "<p>The clearest use case is an investor deploying a large relinquished sale, say from a Preston Center-area office asset, across many smaller acquisitions at once: a handful of suburban NNN pads, a couple of self-storage facilities, maybe an industrial building near I-20. If the strategy is genuinely to close on nearly everything named rather than to keep options open, the 95 percent rule lets the investor identify the full target list without doing the value-cap math the 200 percent rule requires. The tradeoff is that walking away from more than 5 percent of the identified value can jeopardize the whole exchange, which makes this rule far more forgiving for an investor executing a plan already underwritten in detail than for one still shopping a wide field of options.</p>"
+  },
+  {
+   "heading": "Why Most Exchangers Still Default to the Other Two Rules",
+   "html": "<p>The risk with the 95 percent rule is straightforward: due diligence on real property surfaces problems, a title defect on one parcel, a rent roll that does not match on another, financing that falls through on a third. Under the three-property or 200 percent rules, losing one candidate to due diligence rarely threatens the exchange because the exchanger only needs to close on enough qualifying value overall. Under the 95 percent rule, the same setback can push the exchanger below the required threshold, which is why this option tends to suit experienced investors with a settled acquisition list rather than anyone still comparing submarkets. A single stumble late in due diligence carries far more weight here than it would under a rule with no closing-rate requirement attached.</p>"
+  },
+  {
+   "heading": "What Has to Be Documented for This Rule to Hold",
+   "html": "<p>A 95 percent rule identification still has to meet the baseline written-notice requirements:</p><ul><li>Every property named in writing before the 45-day deadline</li><li>Legal description or address specific enough to be unambiguous</li><li>Fair market value calculated for each property at the time of identification</li><li>A running tally showing the 95 percent threshold and what closing on fewer properties would do to it</li><li>Confirmation delivered to the qualified intermediary before the deadline, same as any other identification rule</li></ul>"
+  },
+  {
+   "heading": "Deciding If This Fits an Individual Exchange",
+   "html": "<p>The honest question before choosing the 95 percent rule is whether the investor is confident enough in every property on the list to treat a partial closing as a real risk rather than a remote one. For most Dallas exchanges, especially first-time exchangers or anyone still weighing asset classes, the 200 percent rule offers similar flexibility on candidate count without the same exposure. The 95 percent rule earns its place mainly for larger, more experienced portfolios where the list is closer to a shopping list than a set of options.</p>"
+  }
+ ],
+ "faqs": [
+  {
+   "q": "How is the 95 percent threshold actually calculated?",
+   "a": "It is measured against the combined fair market value of everything named in the identification notice. If the total identified value is ten million dollars, the exchanger needs to close on at least nine and a half million dollars of that value for the exchange to hold under this rule."
+  },
+  {
+   "q": "What happens if I fall just short of the 95 percent threshold?",
+   "a": "Falling short can disqualify the exchange for any property not closed within the required identification, which is the central risk of this rule. There is little room for a partial exchange to still count if the threshold is missed, so this option suits lists an investor is genuinely confident in closing."
+  },
+  {
+   "q": "Is the 95 percent rule ever combined with the 200 percent rule on the same exchange?",
+   "a": "No. An exchanger selects one identification rule for a given exchange, based on which set of tradeoffs, count limits versus value limits versus a closing threshold, fits the actual acquisition strategy."
+  },
+  {
+   "q": "Does this rule make sense for a first 1031 exchange?",
+   "a": "Rarely. Most first-time exchangers benefit from the flexibility of the three-property or 200 percent rules, since the 95 percent rule's closing requirement leaves little margin for due diligence surprises on unfamiliar property types or submarkets."
+  }
+ ],
+ "internalLinks": [],
+ "wordCount": 856
+}
