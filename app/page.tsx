@@ -403,11 +403,11 @@ export default function Home({ searchParams }: HomeProps) {
                 id="trusted-heading"
                 className={`${ibmPlexSerif.className} mb-6 text-4xl text-[#2D2D2D] sm:text-5xl`}
               >
-                Trusted Real Estate Experts
+                Exchange Planning, Clearly Organized
               </h2>
               <p className="mx-auto mb-16 max-w-3xl text-lg text-[#2D2D2D]/80">
-                {COMPANY_NAME} offers the highest level of knowledge and outstanding representation to clients.
-                Our team&apos;s perspective, acute discretion, and highly productive representation are unparalleled.
+                {COMPANY_NAME} organizes replacement-property research, deadline tracking,
+                and advisor coordination around the facts of each transaction.
               </p>
             </MotionDiv>
 
@@ -415,26 +415,26 @@ export default function Home({ searchParams }: HomeProps) {
               <div className="grid gap-8 md:grid-cols-3">
                 <div className="text-center">
                   <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    5 STARS
+                    45 DAYS
                   </p>
                   <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    On All Reviews
+                    Identification Window
                   </p>
                 </div>
                 <div className="text-center">
                   <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    TOP 1%
+                    180 DAYS
                   </p>
                   <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    Of Exchange Coordinators
+                    Exchange Completion Window
                   </p>
                 </div>
                 <div className="text-center">
                   <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    50 STATES
+                    DALLAS BASED
                   </p>
                   <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    Nationwide Coverage
+                    Nationwide Property Search
                   </p>
                 </div>
               </div>
@@ -704,7 +704,7 @@ export default function Home({ searchParams }: HomeProps) {
                           {property.description}
                         </p>
                         <Link
-                          href={`/property-types/${property.slug}`}
+                          href={`/property-types/${actualSlug}`}
                           className={`${inter.className} text-sm text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18]`}
                           aria-label={`Learn about ${property.name} exchanges`}
                         >

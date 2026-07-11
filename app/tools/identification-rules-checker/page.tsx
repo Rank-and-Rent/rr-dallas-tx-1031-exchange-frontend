@@ -75,7 +75,7 @@ export default function IdentificationRulesCheckerPage() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/services/three-property-identification-strategy"
+                href="/services/dallas-three-property-identification-lists"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Three Property Identification Strategy
@@ -83,7 +83,7 @@ export default function IdentificationRulesCheckerPage() {
             </li>
             <li>
               <Link
-                href="/services/two-hundred-percent-identification-strategy"
+                href="/services/dallas-200-percent-identification-modeling"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 200 Percent Identification Strategy
@@ -130,4 +130,3 @@ export default function IdentificationRulesCheckerPage() {
     </>
   );
 }
-

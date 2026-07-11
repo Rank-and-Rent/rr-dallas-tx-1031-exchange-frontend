@@ -76,7 +76,7 @@ export default function ExchangeCostEstimatorPage() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/services/qualified-intermediary-coordination"
+                href="/services/dallas-timeline-45-180-day-control"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Qualified Intermediary Coordination
@@ -84,7 +84,7 @@ export default function ExchangeCostEstimatorPage() {
             </li>
             <li>
               <Link
-                href="/services/exchange-planning-consultation"
+                href="/services/dallas-portfolio-sequencing-exchange"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Exchange Planning Consultation
@@ -131,4 +131,3 @@ export default function ExchangeCostEstimatorPage() {
     </>
   );
 }
-

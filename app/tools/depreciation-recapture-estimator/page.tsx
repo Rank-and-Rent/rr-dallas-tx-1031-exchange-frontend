@@ -82,7 +82,7 @@ export default function DepreciationRecaptureEstimatorPage() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/services/depreciation-recapture-planning"
+                href="/services/dallas-like-kind-audit-and-risk"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Depreciation Recapture Planning Services
@@ -90,7 +90,7 @@ export default function DepreciationRecaptureEstimatorPage() {
             </li>
             <li>
               <Link
-                href="/services/tax-strategy-consultation"
+                href="/services/dallas-like-kind-audit-and-risk"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Tax Strategy Consultation
@@ -138,4 +138,3 @@ export default function DepreciationRecaptureEstimatorPage() {
     </>
   );
 }
-

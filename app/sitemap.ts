@@ -3,6 +3,7 @@ import { SITE_URL } from "@/lib/constants";
 import { getAllServices } from "@/lib/data/services";
 import { getAllLocations } from "@/lib/data/locations";
 import { getAllArticles } from "@/lib/sanity/queries";
+import { propertyTypesData } from "@/data/property-types";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const services = getAllServices();
@@ -27,6 +28,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     { slug: "boot-calculator", priority: 0.8 },
     { slug: "exchange-cost-estimator", priority: 0.8 },
     { slug: "identification-rules-checker", priority: 0.8 },
+    { slug: "depreciation-recapture-estimator", priority: 0.8 },
+    { slug: "replacement-property-value-calculator", priority: 0.8 },
   ].map((tool) => ({
     url: `${SITE_URL}/tools/${tool.slug}`,
     lastModified: new Date(),
@@ -45,6 +48,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.6,
     };
   });
+
+  const propertyTypeUrls = propertyTypesData.map((propertyType) => ({
+    url: `${SITE_URL}/property-types/${propertyType.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }));
 
   return [
     {
@@ -90,6 +100,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       priority: 0.9,
     },
     {
+      url: `${SITE_URL}/property-types`,
+      lastModified: new Date(),
+      changeFrequency: "monthly",
+      priority: 0.8,
+    },
+    {
       url: `${SITE_URL}/privacy`,
       lastModified: new Date(),
       changeFrequency: "yearly",
@@ -104,7 +120,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...serviceUrls,
     ...locationUrls,
     ...toolUrls,
+    ...propertyTypeUrls,
     ...articleUrls,
   ];
 }
-

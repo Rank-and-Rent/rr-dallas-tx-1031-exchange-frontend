@@ -83,7 +83,7 @@ export default function ReplacementPropertyValueCalculatorPage() {
           <ul className="space-y-2">
             <li>
               <Link
-                href="/services/replacement-property-selection"
+                href="/services/dallas-1031-market-comp-dashboards"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Replacement Property Selection Services
@@ -91,7 +91,7 @@ export default function ReplacementPropertyValueCalculatorPage() {
             </li>
             <li>
               <Link
-                href="/services/exchange-planning-consultation"
+                href="/services/dallas-portfolio-sequencing-exchange"
                 className="text-heading underline underline-offset-4 transition hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
               >
                 Exchange Planning Consultation
@@ -147,4 +147,3 @@ export default function ReplacementPropertyValueCalculatorPage() {
     </>
   );
 }
-
