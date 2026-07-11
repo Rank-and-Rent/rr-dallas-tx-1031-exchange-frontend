@@ -27,7 +27,11 @@ function addPath(rawHref, source) {
   }
   if (target.origin !== baseUrl.origin) return;
   const pathname = target.pathname.replace(/\/$/, "") || "/";
-  if (pathname.startsWith("/_next/") || /\.(?:png|jpe?g|webp|avif|gif|svg|ico|mp4|webm|woff2?)$/i.test(pathname)) return;
+  if (
+    pathname.startsWith("/_next/") ||
+    pathname.startsWith("/cdn-cgi/") ||
+    /\.(?:png|jpe?g|webp|avif|gif|svg|ico|mp4|webm|woff2?)$/i.test(pathname)
+  ) return;
   if (!referrers.has(pathname)) referrers.set(pathname, new Set());
   referrers.get(pathname).add(source);
   if (!queued.has(pathname)) {
