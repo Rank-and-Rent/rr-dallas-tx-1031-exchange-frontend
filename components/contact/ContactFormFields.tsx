@@ -89,7 +89,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
   const [turnstileReady, setTurnstileReady] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
 
-  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
+  const siteKey = "";
 
   // Get projectType from URL params
   const projectTypeParam = searchParams?.get('projectType');
@@ -311,7 +311,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         </>
       )}
 
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form className="space-y-6" action="/api/contact" method="post">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
@@ -323,22 +323,16 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
               value={formData.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-              required
-            />
+              required name="name"/>
             {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
           </div>
 
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
-              Company
+              Have You Used a 1031 Exchange Before?
             </label>
-            <input
-              type="text"
-              id="company"
-              value={formData.company}
-              onChange={(e) => handleInputChange('company', e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
+            <select id="company"
+              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
           </div>
         </div>
 
@@ -353,8 +347,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
               value={formData.email}
               onChange={(e) => handleInputChange('email', e.target.value)}
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-              required
-            />
+              required name="email"/>
             {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
           </div>
 
@@ -372,97 +365,28 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
                 handleInputChange('phone', value);
               }}
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-              required
-            />
+              required name="phone"/>
             {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
           </div>
         </div>
 
-        <div>
-          <label htmlFor="projectType" className="block text-sm font-medium text-heading mb-2">
-            Service Needed *
-          </label>
-          <input
-            type="text"
-            id="projectType"
-            value={formData.projectType}
-            onChange={(e) => handleInputChange('projectType', e.target.value)}
-            placeholder="e.g., Multifamily Exchange, Industrial Property, etc."
-            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            required
-          />
-          {errors.projectType && <p className="text-red-600 text-sm mt-1">{errors.projectType}</p>}
-        </div>
+
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="property" className="block text-sm font-medium text-heading mb-2">
-              Property Being Sold
-            </label>
-            <input
-              type="text"
-              id="property"
-              value={formData.property}
-              onChange={(e) => handleInputChange('property', e.target.value)}
-              placeholder="Include property type, location, and estimated value (optional)"
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
-          </div>
-          <div>
-            <label htmlFor="estimatedCloseDate" className="block text-sm font-medium text-heading mb-2">
-              Estimated Close Date
-            </label>
-            <input
-              type="date"
-              id="estimatedCloseDate"
-              value={formData.estimatedCloseDate}
-              onChange={(e) => handleInputChange('estimatedCloseDate', e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-            />
-          </div>
+
+
         </div>
 
-        <div>
-          <label htmlFor="city" className="block text-sm font-medium text-heading mb-2">
-            City
-          </label>
-          <input
-            type="text"
-            id="city"
-            value={formData.city}
-            onChange={(e) => handleInputChange('city', e.target.value)}
-            placeholder="Primary metro or submarket (optional)"
-            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-          />
-        </div>
 
-        <div>
-          <label htmlFor="timeline" className="block text-sm font-medium text-heading mb-2">
-            Timeline
-          </label>
-          <input
-            type="text"
-            id="timeline"
-            value={formData.timeline}
-            onChange={(e) => handleInputChange('timeline', e.target.value)}
-            placeholder="e.g., 45 days, 3 months, flexible (optional)"
-            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-          />
-        </div>
+
+
 
         <div>
           <label htmlFor="details" className="block text-sm font-medium text-heading mb-2">
-            Message *
+            Additional Context
           </label>
-          <textarea
-            id="details"
-            value={formData.details}
-            onChange={(e) => handleInputChange('details', e.target.value)}
-            rows={6}
-            placeholder="Outline your goals, replacement preferences, or coordination needs"
-            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-vertical"
-            required
-          />
+          <textarea id="details"
+            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-vertical" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
           {errors.details && <p className="text-red-600 text-sm mt-1">{errors.details}</p>}
         </div>
 
@@ -472,16 +396,11 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
           </div>
         )}
 
-        {/* Turnstile Container */}
-        {siteKey && (
-          <div className="flex justify-center">
-            <div ref={captchaRef} className="min-h-[78px]" />
-          </div>
-        )}
+
+
 
         <button
           type="submit"
-          disabled={isSubmitting || !!(siteKey && !turnstileReady)}
           className="w-full bg-primary text-primary-fg px-6 py-3 rounded-full hover:bg-[#B68531] transition-colors disabled:opacity-50 disabled:cursor-not-allowed font-semibold"
         >
           {isSubmitting ? 'Sending...' : 'Send Message'}
