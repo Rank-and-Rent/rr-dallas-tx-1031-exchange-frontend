@@ -26,16 +26,20 @@ export const services: Service[] = [
     shortDescription:
       "Target stabilized and value-add multifamily communities aligned with IRS timelines and local yield expectations.",
     overview:
-      `We maintain a rolling catalog of multifamily offerings across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, including Uptown towers, suburban garden assets, and transit adjacent infill deals. Each candidate is screened for like-kind eligibility, assumable debt, and 1031 friendly sellers so investors stay on track within the 45 day identification window.`,
+      `Multifamily replacement identification is one of the most active service lines we run for investors exiting apartment holdings through a Section 1031 like kind exchange in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}. Texas has no state income tax, which means an investor's federal exchange discipline, not a state filing calendar, is what actually determines whether gain deferral holds up. Under Section 1031, gain on the sale of investment or business property is deferred, not eliminated, when the proceeds are reinvested into like kind replacement real property through a qualified intermediary who holds funds so the investor never has actual or constructive receipt. Losing that deferral usually traces back to a rushed identification list rather than a bad property. We maintain a rolling catalog of multifamily offerings across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, including Uptown high rise towers, suburban garden communities in Plano, Frisco, and Mesquite, and transit adjacent infill deals along DART corridors. Each candidate is screened for like-kind eligibility, assumable debt terms, occupancy stability, and seller willingness to work within a 1031 timeline before it is added to a client shortlist. The forty five day identification window and the one hundred eighty day exchange period both begin on the same day, the closing date of the relinquished property, and neither deadline moves for slow due diligence or a lender that needs more time. We generally organize identification around the three property rule, which allows naming up to three candidates regardless of value, or the two hundred percent rule, which allows a longer list provided the combined fair market value does not exceed twice the value of the relinquished asset. A smaller number of clients use the ninety five percent rule, which removes the value ceiling but requires acquiring at least ninety five percent of what was identified. Multifamily due diligence in this market centers on rent roll accuracy, trailing twelve month expense normalization, and debt assumability, because a rent roll padded with concessions or short term leases can distort projected income enough to change a financing decision late in the process. We also flag boot exposure early. Boot is any non like kind value an investor receives in an exchange, including cash left over after the qualified intermediary funds the purchase, debt relief that is not replaced with equivalent new debt, or personal property bundled into a real estate transaction, and boot is generally taxable even when the rest of the exchange qualifies for deferral. For investors who want backup flexibility alongside a direct multifamily purchase, we can introduce Delaware Statutory Trust and tenancy in common structures, both of which can qualify as like kind replacement property under current guidance, unlike interests in a real estate syndication fund or a crowdfunding platform, which generally do not qualify because they represent an interest in an entity rather than a direct or fractional interest in real property. DST and TIC interests are frequently structured as securities offerings, so any discussion of those alternatives is educational only, is not tax or investment advice, and we introduce clients to licensed securities professionals for that portion of the transaction rather than acting as one ourselves. Our work on a multifamily assignment typically starts with a call to understand the relinquished property's expected closing date and net proceeds, followed by a working list of candidates that gets narrowed as broker calls, property tours, and preliminary lender conversations progress. By day thirty most clients have a realistic top three, which gives room to finalize the identification method and file the written notice with the qualified intermediary well before the day forty five deadline rather than in its final hours. We also coordinate closely with lenders early in the process, because assumable debt on a stabilized ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} apartment community can materially change the economics of a proposed replacement, and a debt service coverage shortfall discovered on day forty is far harder to fix than one flagged during the first week of the search. Where a client is exiting a single large asset and rolling into two or three smaller communities to diversify management risk, we build the identification list around realistic closing sequencing so that financing, third party reports, and qualified intermediary coordination do not collide in the final weeks before the one hundred eighty day deadline. Every list we deliver includes a short narrative explaining why each candidate was included, what diligence remains open, and what would trigger a swap to a backup property before the identification window closes for good.`,
     valuePoints: [
-      "Curated short list segmented by unit mix, occupancy history, and rent growth trajectories.",
-      "Rent roll normalization and T12 variance review before letter of intent issuance.",
-      "Heat maps showing submarket absorption, concession trends, and projected NOI resilience.",
+      "Curated short list segmented by unit mix, occupancy history, and rent growth trajectories across Dallas Fort Worth submarkets.",
+      "Rent roll normalization and T12 variance review before letter of intent issuance to protect underwritten cash flow.",
+      "Heat maps showing submarket absorption, concession trends, and projected NOI resilience for candidate properties.",
+      "Boot exposure screening on every candidate so leftover cash or unmatched debt relief does not surprise you at closing.",
+      "Backup DST and TIC introductions when a direct multifamily purchase risks missing the forty five day identification window.",
     ],
     deliverables: [
       "Three Property identification brief with underwriting exhibits.",
       "200 Percent blended list for portfolio balancing.",
       "Lender ready summary with DSCR and leverage guidance.",
+      "Written identification letter formatted for direct delivery to your qualified intermediary before day forty five.",
+      "Boot and debt replacement worksheet reconciling relinquished proceeds against the proposed replacement structure.",
     ],
     timeline: [
       { label: "Day 0 to 7", detail: "Source comps and confirm relinquished property proceeds." },
@@ -62,7 +66,22 @@ export const services: Service[] = [
       {
         question: "Can you support Delaware Statutory Trust alternatives in Dallas, TX?",
         answer:
-          `We present DST options sourced for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors when direct replacements are limited, documenting risk disclosures for the QI file.`,
+          `We present DST options sourced for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors when direct replacements are limited, documenting risk disclosures for the QI file. DST and TIC interests may be securities, we do not sell securities, and we introduce clients to licensed providers for that portion of the transaction.`,
+      },
+      {
+        question: "Does Texas having no state income tax change my 1031 exchange in Dallas?",
+        answer:
+          `No. The identification and exchange deadlines are set by federal law and apply the same way in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} as anywhere else. The absence of a Texas state income tax can simplify downstream reporting on the replacement property, but it has no effect on the forty five and one hundred eighty day federal clocks.`,
+      },
+      {
+        question: "What counts as boot on a Dallas multifamily exchange?",
+        answer:
+          "Boot generally includes any cash you receive back at closing, debt relief that is not offset by new debt or additional cash into the deal, and non like kind property mixed into the transaction. Boot is typically taxable even when the rest of the exchange otherwise qualifies for deferral.",
+      },
+      {
+        question: "Can I use the 95 percent rule for a Dallas apartment exchange?",
+        answer:
+          `Yes, if the plan supports it. The ninety five percent rule removes the value cap on your identification list but requires acquiring at least ninety five percent of the value identified, which is a higher bar than the three property or two hundred percent approaches for most ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} multifamily portfolios.`,
       },
     ],
     keywords: [
@@ -79,16 +98,20 @@ export const services: Service[] = [
     shortDescription:
       "Secure last mile warehouses, cross-dock, and bulk distribution assets that match logistics growth across North Texas.",
     overview:
-      `Industrial demand in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} is driven by manufacturing, e-commerce, and inland port activity. We map vacancy thresholds, rail adjacency, and truck court specs to match relinquished proceeds with compliant replacement assets.`,
+      `Industrial demand in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} is driven by manufacturing, e-commerce fulfillment, and inland port activity radiating out from the Union Pacific and BNSF intermodal facilities that anchor North Texas logistics. Investors selling an industrial asset into this cycle face the same federal mechanics as any other Section 1031 exchange, gain is deferred rather than eliminated when net proceeds move through a qualified intermediary and are reinvested into like kind replacement real property, and the deferral only survives if the identification and closing deadlines are met exactly. Texas carries no state income tax, so the pressure an investor feels is entirely about the federal forty five day identification clock and the one hundred eighty day exchange period, both of which start on the day the relinquished property transfers and do not pause for slow environmental reports or a truck court that needs restriping before a tenant will sign. We map vacancy thresholds, rail adjacency, and truck court specifications to match relinquished proceeds with compliant replacement assets across Great Southwest, DFW Airport, Lancaster, and the growing Alliance corridor to the north. Clear height, column spacing, dock door ratios, and trailer parking counts each affect leasability and therefore affect whether a candidate building is a safe identification choice or a liability if the anchor tenant's lease rolls during the exchange period. Environmental due diligence gets particular attention on industrial assignments, since a Phase I report that surfaces recognized environmental conditions can stall a purchase agreement well past the point where a backup candidate could be substituted, so we push Phase I ordering to the earliest practical point in the search rather than waiting until a letter of intent is signed. We also track boot exposure specific to industrial deals, where personal property such as racking systems, dock equipment, or specialized machinery bundled into a sale can inadvertently create non like kind value that is taxable even when the real property portion of the exchange otherwise qualifies. For clients balancing a large industrial disposition against a tighter buyer pool for direct replacements, we introduce Delaware Statutory Trust and tenancy in common allocations focused on industrial and logistics portfolios, both of which can qualify as like kind property, unlike a syndicated fund interest or a crowdfunding platform position, which generally do not because the investor holds an interest in an entity rather than in real property itself. DST and TIC offerings are frequently securities, this discussion is educational only and not investment advice, and we route that portion of any transaction to licensed securities professionals. Most industrial identification lists we build for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients name a primary candidate along with one or two backups selected using the three property or two hundred percent identification rule, since a single point of failure on an industrial exchange, whether a title issue, a rail easement dispute, or a financing delay, can otherwise consume the entire remaining window with no fallback in place. Lender coordination happens in parallel with property sourcing rather than after a purchase agreement is signed, because industrial financing terms in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} vary meaningfully based on tenant credit, remaining lease term, and building specifications, and a lender that balks at a short weighted average lease term on day one hundred fifty leaves little room to pivot. We keep an ongoing dialogue with regional and national lenders active in North Texas industrial so financing feasibility is assessed before, not after, a candidate is added to an identification list. For portfolio investors trading multiple smaller industrial assets into fewer, larger holdings, we sequence relinquished sales and replacement closings so debt service coverage, loan to value, and identification timing all stay aligned across the entire disposition and acquisition program rather than being solved deal by deal.`,
     valuePoints: [
-      "Active monitoring of 45 day expiring availabilities across Great Southwest, DFW Airport, and Lancaster submarkets.",
-      "Load factor, clear height, and trailer parking scoring to prioritize logistics ready shells.",
-      "Environmental screening to flag Phase I and groundwater items before feasibility deposits.",
+      "Active monitoring of 45 day expiring availabilities across Great Southwest, DFW Airport, Lancaster, and Alliance submarkets.",
+      "Load factor, clear height, and trailer parking scoring to prioritize logistics ready shells for replacement identification.",
+      "Environmental screening to flag Phase I and groundwater items before feasibility deposits are at risk.",
+      "Boot exposure review on bundled personal property such as racking and dock equipment before closing.",
+      "Backup DST and TIC industrial allocations introduced when direct replacement inventory is thin near your deadline.",
     ],
     deliverables: [
       "Exchange logistics dashboard with updated cap rate benchmarks.",
       "Broker lane coordination brief and access instructions.",
       "Contingency calendar tied to 180 day closing milestones.",
+      "Written identification memo naming primary and backup candidates under the three property or 200 percent rule.",
+      "Boot worksheet reconciling any personal property or debt relief against the replacement structure.",
     ],
     timeline: [
       { label: "Pre-Sale", detail: "Gather relinquished asset utility and transport requirements." },
@@ -117,6 +140,21 @@ export const services: Service[] = [
         answer:
           `Yes. We summarize active abatements, Chapter 313 legacy terms, and municipal incentives available in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} so projections remain accurate.`,
       },
+      {
+        question: "Can bundled equipment create boot on a Dallas industrial exchange?",
+        answer:
+          "Yes. Racking, dock levelers, and specialized machinery sold along with the building are personal property, not like kind real property, so their allocated value is typically taxable boot even when the real estate portion of the exchange qualifies for deferral.",
+      },
+      {
+        question: "How many identification candidates should a Dallas industrial exchange carry?",
+        answer:
+          `Most clients name a primary building plus one or two backups under the three property or 200 percent identification rule. A single candidate list is riskier for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} industrial deals because a rail easement or title issue can otherwise consume the rest of the exchange period.`,
+      },
+      {
+        question: "Do DST industrial allocations qualify as like kind property in Dallas?",
+        answer:
+          "A properly structured DST interest generally qualifies as like kind replacement property, unlike an interest in a syndicated fund or crowdfunding platform. DST interests are frequently securities, we do not sell securities, and we introduce clients to licensed providers for that part of a transaction.",
+      },
     ],
     keywords: [
       "Dallas logistics 1031 replacement",
@@ -132,16 +170,20 @@ export const services: Service[] = [
     shortDescription:
       "Identify credit backed single tenant and shadow anchored retail assets aligned with 1031 income goals.",
     overview:
-      `Triple net retail demand across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} remains strong for medical, automotive, and essential retail signatures. We pair leased assets with lease term evaluations, rent escalator modeling, and credit scoring to deliver compliant replacements.`,
+      `Triple net retail demand across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} remains strong for medical, automotive, quick service restaurant, and essential retail tenants that anchor suburban corridors from Frisco to Cedar Hill. Investors trading out of a management intensive multifamily or retail center and into single tenant net lease product are still subject to the same federal rules as any other Section 1031 exchange, gain is deferred, not eliminated, when proceeds pass through a qualified intermediary and are reinvested into like kind real property within the forty five day identification window and the one hundred eighty day closing window, both of which start on the date the relinquished property transfers. Texas has no state income tax, so there is no separate state deadline layered on top of the federal clock, though the federal timeline itself does not bend for a slow estoppel or a tenant's corporate counsel who is unresponsive during a Dallas summer. We pair leased assets with lease term evaluations, rent escalator modeling, and credit scoring to deliver compliant replacements, since a single tenant net lease property is only as strong as the tenant behind it and the lease terms that govern rent growth, assignment rights, and co-tenancy protections. Lease abstract review is where most surprises hide on NNN deals, a co-tenancy clause that allows a tenant to pay reduced rent if an anchor vacates, an assignment clause that restricts transfer without landlord consent, or a renewal option priced at fair market value rather than a fixed escalator can each change the underwritten return well after a purchase agreement is signed. We also screen ground lease structures separately from fee simple retail, since ground lease maturities, rent reset mechanics, and reversion rights require additional diligence to confirm the interest still qualifies as like kind real property. Boot exposure on retail exchanges most often shows up as debt relief that is not replaced, meaning an investor who sells a highly leveraged relinquished property and buys an unleveraged or lightly leveraged replacement can trigger taxable boot equal to the net debt reduction, so we model financing scenarios early rather than after a letter of intent is out. For clients who want diversified retail exposure without direct property management, we introduce Delaware Statutory Trust and tenancy in common positions backed by net lease retail portfolios, both of which can satisfy the like kind requirement, unlike a real estate investment fund interest or a crowdfunding platform allocation, which generally do not qualify because the investor holds an interest in an entity rather than a direct or fractional real property interest. DST and TIC offerings are frequently structured as securities, this is educational content and not investment advice, and we introduce clients to licensed securities professionals for that portion of any transaction. Building a compliant retail identification list in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} usually means narrowing a broker inventory of dozens of listings down to two or three candidates with clean lease files, verified tenant credit, and financing that can realistically close before day one hundred eighty. We also watch for percentage rent clauses and gross sales reporting obligations on retail leases, since a tenant that under-reports sales or resists audit rights can complicate underwriting well after a letter of intent is signed, and we flag those lease terms during abstract review rather than after closing. When a relinquished property involves multiple retail pads or an outparcel configuration, we help sequence which parcels sell first so that identification timing on the replacement side lines up with actual proceeds availability, since a qualified intermediary generally cannot release funds for a replacement purchase until the corresponding relinquished sale has actually closed and proceeds have been received into the exchange account.`,
     valuePoints: [
-      "Lease abstract analysis covering assignment clauses, co-tenancy risk, and renewal options.",
-      "Store sales benchmarking using Dallas CBSA consumer spend data.",
-      "Debt assumptions and lender appetite summaries for STNL assets.",
+      "Lease abstract analysis covering assignment clauses, co-tenancy risk, and renewal options before identification.",
+      "Store sales benchmarking using Dallas CBSA consumer spend data to validate tenant durability.",
+      "Debt assumptions and lender appetite summaries for STNL assets across North Texas corridors.",
+      "Boot exposure modeling comparing relinquished leverage to proposed replacement financing before an LOI is signed.",
+      "Backup DST and TIC net lease allocations introduced when direct inventory is thin near your deadline.",
     ],
     deliverables: [
       "NNN snapshot comparing cap rate, rent escalations, and weighted average lease term.",
       "Tenant credit profile including public filings and analyst commentary.",
       "Identification submission packet for QI with supporting exhibits.",
+      "Ground lease diligence summary for parcels where fee simple ownership is not being conveyed.",
+      "Boot and debt replacement worksheet comparing relinquished proceeds to proposed financing.",
     ],
     timeline: [
       { label: "Week 1", detail: "Define credit thresholds and target rent band for the exchange." },
@@ -170,6 +212,21 @@ export const services: Service[] = [
         answer:
           `We coordinate estoppel delivery with tenant counsel in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} so your QI release stays on schedule.`,
       },
+      {
+        question: "Can debt relief create taxable boot on a Dallas NNN exchange?",
+        answer:
+          "Yes. If your relinquished property carried more debt than the replacement property, the net reduction in liabilities is generally treated as boot and is typically taxable even when the rest of the exchange qualifies for deferral. We model this before an LOI is signed.",
+      },
+      {
+        question: "Do DST net lease allocations qualify for a Dallas retail exchange?",
+        answer:
+          "A properly structured DST or TIC interest can qualify as like kind replacement property, unlike a fund interest in a retail syndication or crowdfunding platform. DST interests are often securities, we do not sell securities, and we introduce clients to licensed providers for that portion of the transaction.",
+      },
+      {
+        question: "How far in advance should identification start for a Dallas NNN exchange?",
+        answer:
+          `Because the forty five day clock never pauses, we recommend building a candidate list before your ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} relinquished sale even closes, so lease abstracts and tenant credit review are already underway when the identification window opens.`,
+      },
     ],
     keywords: [
       "Dallas NNN 1031 replacement",
@@ -185,16 +242,20 @@ export const services: Service[] = [
     shortDescription:
       "Coordinate identification of medical office buildings with compliant leases, Stark safe harbor review, and operational stability.",
     overview:
-      `Healthcare expansions across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} create steady demand for ambulatory surgery centers and specialty clinics. We align physician tenancy, parking ratios, and regulatory considerations to secure replacement assets that withstand diligence scrutiny.`,
+      `Healthcare expansion across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} creates steady demand for ambulatory surgery centers, specialty clinics, and physician owned medical office buildings, and investors exiting older healthcare real estate into newer product still have to satisfy the same federal Section 1031 requirements as any other exchange. Gain is deferred, not eliminated, when net sale proceeds move through a qualified intermediary and are reinvested into like kind real property within the forty five day identification window and the one hundred eighty day exchange period, both of which begin on the closing date of the relinquished property. Texas imposes no state income tax, so investors are not managing a separate state clock, but the federal deadlines are unforgiving regardless of how quickly a Dallas title company can turn a commitment or how long a lender takes to clear a physician group's credit file. We align physician tenancy structures, parking ratios, and regulatory considerations to secure replacement assets that withstand diligence scrutiny, since medical office underwriting differs meaningfully from general commercial office underwriting. Parking ratios matter more for medical tenants than for typical office users because patient volume creates predictable peak demand, and a building that looks adequately parked on paper can still function poorly if ingress and accessibility do not match the practice mix. We also review physician ownership structures early to flag potential related party exposure, since a exchange involving a property leased to or partly owned by a party related to the investor is subject to additional restrictions under Section 1031, including a general requirement that both parties hold the properties for at least two years after the exchange, and a related party transaction that is not properly structured can jeopardize the entire deferral. Rent roll analysis on medical office candidates is tied closely to reimbursement trends and Medicare mix, because a clinic that depends heavily on a single payer category carries different risk than a diversified specialty practice, and that risk profile affects both the underwriting and the eventual resale value of the replacement asset. Boot exposure on medical office deals often arises from tenant improvement allowances or equipment included in a sale, since built in medical equipment can be treated as personal property rather than real property depending on how it is fixed to the building, and any resulting non like kind value is generally taxable. For clients who want healthcare real estate exposure without direct operational involvement, we introduce Delaware Statutory Trust and tenancy in common allocations in medical office portfolios, both of which can qualify as like kind property, unlike an interest in a healthcare real estate fund or crowdfunding vehicle, which generally does not qualify because it represents an entity interest rather than a direct or fractional real property interest. DST and TIC interests are frequently securities, this overview is educational only and not investment or tax advice, and we introduce clients to licensed securities professionals for that portion of a transaction. Most medical office identification lists we build for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients pair a primary candidate with a backup under the three property rule so a single delayed certificate of occupancy or licensure issue does not consume the remaining exchange period. We also coordinate with healthcare focused lenders who understand practice level cash flow rather than generic office underwriting, since a conventional commercial lender unfamiliar with ambulatory surgery center reimbursement cycles can misprice risk on an otherwise sound property. Where a physician group is both the seller of the relinquished property and a prospective tenant in the replacement building, we document the arrangement carefully so the lease terms and any ownership overlap are transparent to the qualified intermediary and to counsel well before the identification deadline arrives.`,
     valuePoints: [
-      "Parking, ingress, and life safety compliance checklists pre-LOI.",
-      "Physician ownership structure review to flag potential related party limits.",
-      "Rent roll analysis tied to reimbursement trends and Medicare mix in North Texas.",
+      "Parking, ingress, and life safety compliance checklists reviewed before an LOI is signed.",
+      "Physician ownership structure review to flag potential related party limits under Section 1031.",
+      "Rent roll analysis tied to reimbursement trends and Medicare mix in North Texas practices.",
+      "Boot exposure review on tenant improvement allowances and fixed medical equipment before closing.",
+      "Backup DST and TIC medical office allocations introduced when direct inventory is limited near your deadline.",
     ],
     deliverables: [
       "Clinical facility comparison grid highlighting tenant specialty and lease maturities.",
       "Stark and anti-kickback guideline summary produced with healthcare counsel.",
       "Timeline tracker with milestone alerts for each third party report.",
+      "Related party screening memo confirming ownership structures fall outside restricted related party exchanges.",
+      "Boot worksheet separating fixed medical equipment and tenant improvement value from real property value.",
     ],
     timeline: [
       { label: "Discovery", detail: `Map hospital affiliations and referral networks across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -223,6 +284,21 @@ export const services: Service[] = [
         answer:
           `We schedule equipment verification and service contract transfers with providers operating in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to streamline transition planning.`,
       },
+      {
+        question: "Does a related party lease affect a Dallas medical office exchange?",
+        answer:
+          "It can. Exchanges involving related parties face additional restrictions, generally including a two year holding requirement after closing. We screen ownership structures early so a related party issue does not surface after your exchange is already underway.",
+      },
+      {
+        question: "Is fixed medical equipment treated as boot in a Dallas exchange?",
+        answer:
+          "It can be. Equipment that is not permanently affixed to the building is often personal property rather than real property, and its allocated value can be treated as taxable boot even when the real property portion of the exchange otherwise qualifies for deferral.",
+      },
+      {
+        question: "Can DST medical office allocations back up a direct Dallas purchase?",
+        answer:
+          `Yes. A properly structured DST or TIC interest in medical office real estate can qualify as like kind property for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors. These interests are frequently securities, and we introduce clients to licensed providers for that part of the transaction.`,
+      },
     ],
     keywords: [
       "Dallas medical office 1031",
@@ -238,16 +314,20 @@ export const services: Service[] = [
     shortDescription:
       "Source stabilized and expansion ready self storage facilities with occupancy analytics tailored to investor targets.",
     overview:
-      `Self storage in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} benefits from population inflows and small business demand. We filter by climate control ratio, visibility, and three mile demographic trends to present exchange ready inventories.`,
+      `Self storage in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} benefits from steady population inflows, frequent relocation activity, and small business demand for flexible storage and light distribution space, which keeps the asset class attractive for investors rolling proceeds out of management intensive holdings. As with every Section 1031 exchange, the underlying federal mechanics do not change by asset class, gain on the relinquished sale is deferred, not eliminated, when proceeds are routed through a qualified intermediary and reinvested into like kind real property, and both the forty five day identification window and the one hundred eighty day exchange period begin on the closing date of the relinquished property regardless of how quickly a replacement facility can be toured or how long a lender needs to underwrite a specialized asset class. Texas has no state income tax, so there is no separate state level deadline, but the federal clock is exacting and does not extend because a facility operator is slow to produce trailing financials. We filter self storage candidates by climate control ratio, roadway visibility, and three mile demographic trends to present exchange ready inventory rather than raw listings, since a facility with strong headline occupancy can still underperform if its unit mix does not match what the surrounding trade area actually rents. Expansion pad verification is a recurring diligence item on self storage acquisitions, since many facilities in growing North Texas submarkets carry unbuilt phases, and confirming entitlement status, utility capacity, and realistic construction budgets for those pads before identification protects against overpaying for upside that may take years to realize. We also review third party management agreements and revenue management software stacks closely, because a facility using dynamic pricing tools and disciplined delinquency and lien sale procedures typically converts occupancy into revenue more efficiently than one relying on flat legacy rate cards, and that operational quality affects both underwriting and eventual resale value. Boot exposure on self storage transactions most commonly arises from personal property such as gate systems, security cameras, and office equipment bundled into a sale, or from debt relief that is not matched with new financing, and either can create taxable value even when the real property portion of the exchange otherwise qualifies. For investors seeking storage exposure without operating responsibility, we introduce Delaware Statutory Trust and tenancy in common allocations backed by self storage portfolios, both of which can satisfy the like kind requirement, unlike a fund interest in a storage syndication or crowdfunding platform, which generally does not qualify because it represents an entity interest rather than a direct or fractional real property interest. DST and TIC positions are frequently securities offerings, this overview is educational only, and we introduce clients to licensed securities professionals for that portion of any transaction. A typical self storage identification list for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients pairs a stabilized facility with a lease up asset carrying more upside, structured under the three property or two hundred percent rule depending on the relinquished proceeds involved, so the exchange preserves both downside protection and growth potential inside the identification deadline. We also review climate control mix against the surrounding trade area's housing stock, since newer multifamily heavy submarkets in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} tend to support a higher percentage of climate controlled units than older single family dominant areas, and a facility with the wrong mix can leave revenue on the table even at full occupancy. Ancillary revenue streams such as truck rental programs, retail lock and box sales, and tenant insurance participation are underwritten separately from base rent, because these income lines carry different margin profiles and different sensitivity to management quality, and treating them as interchangeable with rent can distort a candidate's true stabilized value.`,
     valuePoints: [
-      "Occupancy heatmap for 1, 3, and 5 mile trade areas with rental rate ladders.",
-      "Expansion pad verification including entitlement status and construction budgets.",
+      "Occupancy heatmap for 1, 3, and 5 mile trade areas with rental rate ladders and unit mix comparisons.",
+      "Expansion pad verification including entitlement status and construction budgets before identification.",
       "Operations review covering software stack, delinquency controls, and tenant insurance uptake.",
+      "Boot exposure review on gate systems, security equipment, and other bundled personal property before closing.",
+      "Backup DST and TIC storage allocations introduced when direct facility inventory is thin near your deadline.",
     ],
     deliverables: [
       "Self storage scorecard with expense benchmarking and achievable rent projections.",
       "Capital expenditure outline for deferred maintenance across roofs, paving, and security systems.",
       "Identification package including supply pipeline commentary and competitive threats.",
+      "Expansion pad diligence memo covering entitlement status and construction cost estimates.",
+      "Boot worksheet separating personal property and debt relief from real property value.",
     ],
     timeline: [
       { label: "First 10 Days", detail: "Gather relinquished warehouse or storage details to align replacement sizing." },
@@ -276,6 +356,21 @@ export const services: Service[] = [
         answer:
           `We coordinate with local insurance brokers in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to verify replacement cost coverage and flood zone obligations prior to funding.`,
       },
+      {
+        question: "Can gate and security equipment create boot on a Dallas storage exchange?",
+        answer:
+          "Yes. Gate systems, cameras, and office equipment sold with a facility are generally personal property, not real property, and their allocated value can be treated as taxable boot even when the real estate portion of the exchange otherwise qualifies for deferral.",
+      },
+      {
+        question: "Should identification include a lease up storage facility in Dallas?",
+        answer:
+          `It can make sense. Pairing a stabilized facility with a lease up asset under the three property or 200 percent rule gives ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors both current income and growth potential, but lease up assets carry more underwriting risk and deserve extra diligence before identification.`,
+      },
+      {
+        question: "Do DST self storage allocations qualify for a Dallas exchange?",
+        answer:
+          "A properly structured DST or TIC interest in a storage portfolio can qualify as like kind property, unlike a fund interest in a storage syndication or crowdfunding platform. These are frequently securities offerings, and we introduce clients to licensed providers for that portion of the transaction.",
+      },
     ],
     keywords: [
       "Dallas self storage 1031",
@@ -291,16 +386,20 @@ export const services: Service[] = [
     shortDescription:
       "Blend office and production space requirements for light manufacturing, creative lab, and tech flex replacements.",
     overview:
-      `North ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} submarkets like Richardson and Plano feature adaptive flex properties ideal for R&D and assembly users. We layer in power availability, dock counts, and finish ratios to preserve operational continuity after the exchange.`,
+      `North ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} submarkets like Richardson and Plano feature adaptive flex properties ideal for research and development, light assembly, and technology users who need a blend of office finish and conditioned production space under one roof. Investors exiting a flex or light industrial holding into a similar or different flex asset are still governed by the same federal Section 1031 framework as any other exchange, gain is deferred, not eliminated, when net proceeds move through a qualified intermediary and are reinvested into like kind real property, and the forty five day identification window plus the one hundred eighty day exchange period both begin on the relinquished property's closing date. Texas has no state income tax, which removes a layer of state level deadline pressure, but it has no bearing on the federal timeline itself, which does not extend for a utility provider that needs extra weeks to confirm three phase power capacity. We layer in power availability, dock counts, and office to production finish ratios when screening candidates, since flex buildings vary enormously in how much conditioned space versus warehouse or lab space they offer, and a mismatch between a tenant's operational needs and a building's actual configuration can undermine lease renewal probability years after the exchange closes. Utility capacity verification is a recurring diligence item for flex assignments, particularly for tenants requiring redundant power, backup generation, or fiber connectivity for server rooms and testing labs, and we confirm these details with local providers before a candidate is added to an identification list rather than discovering a capacity shortfall during tenant improvement planning. Comparable lease rate and renewal trend reporting for flex product helps investors understand whether a candidate building's in place rents are sustainable or whether they reflect a legacy lease that will reset meaningfully lower at renewal, which materially affects underwritten value. Boot exposure on flex exchanges commonly arises from equipment, racking, or lab infrastructure included in a sale, or from unmatched debt relief between the relinquished and replacement properties, and either can generate taxable value even when the real property portion of the exchange otherwise qualifies for deferral. For investors who want flex and light industrial exposure without hands on asset management, we introduce Delaware Statutory Trust and tenancy in common allocations in industrial and flex portfolios, both of which can qualify as like kind property, unlike an interest in a flex focused real estate fund or crowdfunding platform, which generally does not qualify because the investor holds an entity interest rather than a direct or fractional real property interest. DST and TIC offerings are frequently securities, this is educational content and not investment advice, and we introduce clients to licensed securities professionals for that portion of a transaction. Most flex identification lists for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients pair a primary building with a backup candidate under the three property rule, since improvement budgets and permitting timelines on flex properties can shift quickly and a fallback option protects the exchange if the primary candidate's build-out costs prove unworkable. We also review truck court and trailer maneuvering room separately from headline square footage, since a flex building with an undersized apron or restricted turning radius can disqualify certain logistics tenants even when the interior finish and location otherwise fit an investor's target profile, and that operational detail is often missing from standard marketing packages until a site tour uncovers it.`,
     valuePoints: [
       "Finish-out analysis capturing office square footage versus conditioned production space.",
       "Utility capacity verification with local providers for power, gas, and fiber redundancy.",
-      "Comparable lease rate and renewal trend reporting for flex product.",
+      "Comparable lease rate and renewal trend reporting for flex product across North Dallas submarkets.",
+      "Boot exposure review on lab infrastructure, racking, or other bundled equipment before closing.",
+      "Backup DST and TIC flex and light industrial allocations introduced when direct inventory is limited.",
     ],
     deliverables: [
       "Flex suitability index comparing candidate buildings by build-out cost and schedule.",
       "Three property identification map with commute and labor pool overlays.",
       "Closing readiness checklist covering zoning confirmations and assignment consents.",
+      "Utility capacity verification letters for power, gas, and fiber ahead of identification.",
+      "Boot worksheet separating bundled equipment and debt relief from real property value.",
     ],
     timeline: [
       { label: "Day 1 to 5", detail: `Collect operational requirements and critical adjacency needs within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -329,6 +428,21 @@ export const services: Service[] = [
         answer:
           `Yes. We engage industrial movers and reliability engineers located in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to stage production transitions around closing deadlines.`,
       },
+      {
+        question: "Can lab or production equipment create boot on a Dallas flex exchange?",
+        answer:
+          "Yes. Equipment, racking, and lab infrastructure that is not permanently part of the building is generally personal property, and its allocated value can be treated as taxable boot even when the real property portion of the exchange otherwise qualifies for deferral.",
+      },
+      {
+        question: "Why should a Dallas flex identification list include a backup building?",
+        answer:
+          `Improvement budgets and permitting timelines can shift quickly on flex properties. A backup candidate under the three property rule protects your ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} exchange if the primary building's build-out costs or utility capacity prove unworkable late in the window.`,
+      },
+      {
+        question: "Do DST flex and light industrial allocations qualify in Dallas?",
+        answer:
+          "A properly structured DST or TIC interest in flex or light industrial real estate can qualify as like kind property, unlike a fund interest in a flex focused syndication. These are often securities offerings, and we introduce clients to licensed providers for that portion of the transaction.",
+      },
     ],
     keywords: [
       "Dallas flex space 1031",
@@ -344,16 +458,20 @@ export const services: Service[] = [
     shortDescription:
       "Target hospitality assets in demand corridors with repositioning strategies aligned to exchange proceeds.",
     overview:
-      `From downtown convention hotels to extended stay inventory in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, we build replacement lists that balance RevPAR trends, brand commitments, and renovation appetites.`,
+      `From downtown convention hotels to extended stay inventory in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, we build replacement lists that balance RevPAR trends, brand commitments, and renovation appetites for investors moving proceeds out of hospitality assets. Hotel exchanges are subject to the same federal Section 1031 requirements as any other property type, gain is deferred, not eliminated, when net proceeds pass through a qualified intermediary and are reinvested into like kind real property, and the forty five day identification window and one hundred eighty day exchange period both start on the day the relinquished hotel transfers, without regard to how long a franchise transfer approval or brand inspection takes to complete. Texas assesses no state income tax, so the pressure on a hospitality exchange is purely federal, but that federal deadline is exacting and does not wait for a property improvement plan negotiation to wrap up. Hospitality real estate carries a distinct wrinkle that other asset classes generally avoid, a significant share of a hotel's value can be attributable to furniture, fixtures, and equipment, and to the operating business itself rather than to the real property, and only the real property portion of a sale is eligible for like kind exchange treatment. We separate real property value from FF&E and business enterprise value early in every hospitality assignment so an investor understands exactly how much of the relinquished sale proceeds can actually be rolled into a replacement property without triggering boot, since FF&E and going concern value generally do not qualify as like kind to real estate and any allocation to those categories is typically taxable. Brand encumbrance analysis is central to hospitality diligence, since flag agreements dictate renovation cycles, reservation system fees, and termination rights, and a franchise agreement with an unfavorable termination clause or an looming property improvement plan can change the true cost of a replacement candidate substantially. Renovation cost benchmarking, including FF&E reserves and PIP obligations, helps investors understand total capital exposure beyond the purchase price, which matters because improvement costs are generally not eligible for exchange treatment unless structured properly as part of an improvement exchange using an exchange accommodation titleholder. Three year demand pacing using STR and Visit Dallas data helps validate whether a candidate hotel's projected RevPAR growth is realistic given convention calendar activity and new supply entering the ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} market. For investors seeking hospitality exposure without direct operating responsibility, we can introduce Delaware Statutory Trust structures holding hotel real estate, though hospitality DSTs are less common than other asset classes and carry their own operational risk considerations; these interests are frequently securities, this is educational content only, and we introduce clients to licensed securities professionals for that portion of any transaction. Hospitality identification lists typically pair a primary candidate with a backup under the three property rule, since franchise approval timelines can slip unpredictably and a fallback protects the exchange from a single point of failure. We also review management agreement termination rights and key money obligations closely, since a hotel encumbered by an unfavorable long term management contract can be difficult to reposition even after a favorable acquisition price, and that operational constraint should factor into the identification decision alongside RevPAR and brand strength.`,
     valuePoints: [
-      "Brand encumbrance analysis with flag transition planning.",
-      "Renovation cost benchmarking including FF&E and PIP obligations.",
+      "Brand encumbrance analysis with flag transition and franchise termination planning.",
+      "Renovation cost benchmarking including FF&E reserves and PIP obligations.",
       "Three year demand pacing using STR and Visit Dallas data.",
+      "Real property versus FF&E and business enterprise value separation to identify boot exposure before closing.",
+      "Backup DST hospitality allocations introduced when direct hotel inventory or franchise timing is uncertain.",
     ],
     deliverables: [
       "Hospitality investment memo with stabilized NOI projections.",
       "Renovation timeline and capital stack outline for PIP execution.",
       "Identification filing exhibits tailored to hospitality compliance.",
+      "Value allocation worksheet separating real property from FF&E and going concern value.",
+      "Franchise agreement risk summary covering termination rights and PIP triggers.",
     ],
     timeline: [
       { label: "Phase 1", detail: "Gather RevPAR history and brand agreements for relinquished asset comparison." },
@@ -382,6 +500,21 @@ export const services: Service[] = [
         answer:
           `We track convention center calendars and group booking pace for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to validate forward demand assumptions.`,
       },
+      {
+        question: "Does FF&E value qualify for exchange treatment in a Dallas hotel sale?",
+        answer:
+          "Generally no. Furniture, fixtures, equipment, and business enterprise value are typically not like kind to real property. Only the real estate portion of a hotel sale is generally eligible for 1031 deferral, and value allocated to FF&E is usually taxable.",
+      },
+      {
+        question: "Are Delaware Statutory Trusts available for Dallas hotel replacements?",
+        answer:
+          "Hospitality DSTs exist but are less common than other asset classes and carry operational risk considerations tied to hotel management. These interests are frequently securities. We do not sell securities and introduce clients to licensed providers for that portion of a transaction.",
+      },
+      {
+        question: "How does a PIP obligation affect a Dallas hospitality exchange?",
+        answer:
+          `A property improvement plan required by the franchise brand adds capital costs beyond the purchase price. We benchmark PIP scope and reserves before identification so ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors understand total exposure ahead of the forty five day deadline.`,
+      },
     ],
     keywords: [
       "Dallas hotel 1031 replacement",
@@ -397,16 +530,20 @@ export const services: Service[] = [
     shortDescription:
       "Assemble entitled and raw land tracts near growth corridors with entitlement diligence baked into exchange pacing.",
     overview:
-      `Investors often redeploy capital into land within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} for future vertical development. We identify parcels with utility access, zoning momentum, and seller readiness to accommodate exchange restrictions.`,
+      `Investors often redeploy capital into land within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} for future vertical development, using proceeds from a matured income property to secure a position ahead of a growth corridor. Land trades still fall under the same federal Section 1031 rules as any other exchange, gain on the relinquished sale is deferred, not eliminated, when net proceeds pass through a qualified intermediary and are reinvested into like kind real property, and both the forty five day identification window and the one hundred eighty day exchange period begin on the closing date of the relinquished property. Texas has no state income tax, which removes a state level filing deadline from the picture, but the federal timeline remains fixed regardless of how long a municipality takes to confirm zoning direction or how slowly a legacy landowner responds to an offer. We identify parcels with confirmed or probable utility access, favorable zoning momentum, and seller readiness to accommodate exchange restrictions, since land assemblage differs from improved property acquisition in that pricing, timing, and even the final parcel configuration can remain fluid until very late in a transaction. Raw and unimproved land is generally considered like kind to other real property under Section 1031, so a vertical income property can be exchanged into raw land and vice versa, provided both are held for investment or business use rather than personal use, which is an important distinction for investors weighing a future personal use conversion. Zoning and future land use overlays referencing municipal planning documents help identify which parcels are likely to receive favorable entitlement treatment, while topography, floodplain, and utility capacity summaries flag sites that look attractive on price alone but carry hidden development cost. Entitlement timelines vary significantly by municipality across North Texas, and a parcel requiring a zoning change or a plat amendment may not have a realistic path to usable entitlements before an investor's exchange deadline even closes, so we weigh entitlement risk heavily when a client is relying on a single land parcel as their primary identification. Boot exposure on land exchanges most often arises from debt relief that is not replaced, since land purchases are frequently less leveraged than the relinquished income property, and the resulting net debt reduction can be treated as taxable boot even when the rest of the exchange otherwise qualifies. For investors who want land or development exposure without direct assemblage risk, we can introduce Delaware Statutory Trust and tenancy in common structures tied to land banking or development focused portfolios, though these are less common than income property DSTs; such interests are frequently securities, this discussion is educational only and not investment advice, and we introduce clients to licensed securities professionals for that portion of a transaction. Most land identification packages we build for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients name a primary assemblage target alongside a smaller, less complex backup parcel under the three property rule, since land deals carry more closing uncertainty than stabilized income property and a fallback candidate materially reduces the risk of missing the exchange deadline entirely. We also track option agreement structures closely on assemblage deals, since a seller willing to grant an extended due diligence period in exchange for non-refundable option payments can give an investor room to complete entitlement work without jeopardizing the exchange, and structuring those payments correctly matters for both the seller's tax position and the buyer's basis calculation once the parcel closes.`,
     valuePoints: [
       "Zoning and future land use map overlays referencing Dallas planning documents.",
-      "Topography, floodplain, and utility capacity summaries for each site.",
-      "Entitlement calendar with probable approval durations by municipality.",
+      "Topography, floodplain, and utility capacity summaries for each site under consideration.",
+      "Entitlement calendar with probable approval durations by municipality across North Texas.",
+      "Boot exposure review comparing relinquished property leverage to unleveraged or lightly leveraged land purchases.",
+      "Backup identification candidates selected for lower closing complexity than the primary assemblage target.",
     ],
     deliverables: [
       "Assemblage map showing parcel ownership, pricing, and contract status.",
       "Feasibility checklists covering environmental, geotechnical, and access considerations.",
       "Identification forms with legal descriptions and contract milestones.",
+      "Entitlement risk memo comparing probable approval timelines against your exchange deadline.",
+      "Boot worksheet reconciling relinquished proceeds against land purchase leverage and debt structure.",
     ],
     timeline: [
       { label: "Days 1 to 10", detail: `Shortlist candidate parcels within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} growth zones.` },
@@ -435,6 +572,21 @@ export const services: Service[] = [
         answer:
           `We model rollback exposure and coordinate with ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} tax professionals to budget for valuation changes before funding.`,
       },
+      {
+        question: "Is raw land like kind to income property in a Dallas exchange?",
+        answer:
+          "Generally yes. Raw and unimproved land is typically considered like kind to other real property held for investment or business use, so an income property can be exchanged into land, provided the land is not intended for personal use.",
+      },
+      {
+        question: "Can reduced leverage on a land purchase create boot in Dallas?",
+        answer:
+          `Yes. Land purchases are often less leveraged than the relinquished property. The resulting net debt reduction is generally treated as taxable boot for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors unless offset with additional cash into the replacement purchase.`,
+      },
+      {
+        question: "Should a Dallas land identification list include a backup parcel?",
+        answer:
+          "Yes, in most cases. Land deals carry more closing uncertainty than stabilized income property, so a smaller, less complex backup parcel identified under the three property rule reduces the risk of missing the exchange deadline entirely.",
+      },
     ],
     keywords: [
       "Dallas land 1031 exchange",
@@ -450,16 +602,20 @@ export const services: Service[] = [
     shortDescription:
       "Blend residential, retail, and office components with risk controls that satisfy exchange requirements.",
     overview:
-      `Mixed-use nodes in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} deliver income and appreciation potential. We evaluate asset mix, absorption projections, and governing documents to build diversified replacement options.`,
+      `Mixed-use nodes in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} that blend residential, retail, and office components under one ownership structure deliver both income and appreciation potential, which makes them an appealing but more complicated replacement candidate for a Section 1031 exchange. The federal deferral rules apply the same way regardless of a property's complexity, gain is deferred, not eliminated, when net sale proceeds move through a qualified intermediary and are reinvested into like kind real property, and the forty five day identification window plus the one hundred eighty day exchange period both begin on the closing date of the relinquished property. Texas has no state income tax, so investors are managing a single federal deadline rather than a stacked state and federal calendar, though that federal deadline remains fixed regardless of how long it takes to review a master developer agreement or confirm a shared parking allocation. We evaluate asset mix, absorption projections, and governing documents closely to build diversified replacement options, because a mixed-use property is really several smaller investments layered together, and each component, residential, retail, and office, carries its own income pattern, lease structure, and risk profile that has to be underwritten separately before being combined into a single valuation. Shared parking agreements and cost allocation formulas deserve particular scrutiny, since disputes over parking ratios or common area maintenance allocations between residential and commercial owners can create ongoing friction that affects both operating income and resale value, and a poorly drafted reciprocal easement agreement can be difficult to renegotiate after closing. Governance documents, including homeowners association, property owners association, and master developer agreements, often carry approval rights or right of first refusal provisions that can slow a transfer, so we review these early rather than discovering a consent requirement during the final weeks before the one hundred eighty day deadline. Boot exposure on mixed-use exchanges frequently arises from debt relief that is not replaced, particularly when a relinquished single-use asset carried higher leverage than a diversified mixed-use replacement, and the resulting net debt reduction can be treated as taxable boot even when the rest of the transaction otherwise qualifies for deferral. For investors who want mixed-use exposure without direct governance complexity, we can introduce Delaware Statutory Trust and tenancy in common structures tied to mixed-use portfolios, though these are less common and more complex than single-use asset DSTs; such interests are frequently securities, this overview is educational only and not investment advice, and we introduce clients to licensed securities professionals for that portion of a transaction. Because mixed-use candidates require more layered diligence than a single-use property, identification lists for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients in this category typically carry a longer runway, with governance document review and component level underwriting starting as soon as the relinquished sale is under contract rather than waiting for the forty five day clock to begin.`,
     valuePoints: [
-      "Cash flow waterfalls by component with scenario planning for lease-up timing.",
-      "Shared parking agreement analysis and cost allocations.",
+      "Cash flow waterfalls by component with scenario planning for lease-up timing across each use type.",
+      "Shared parking agreement analysis and cost allocations between residential and commercial owners.",
       "Community improvement district assessment modeling for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} projects.",
+      "Boot exposure review comparing relinquished leverage to proposed mixed-use replacement financing.",
+      "Backup DST and TIC mixed-use allocations introduced when direct candidates carry unresolved governance issues.",
     ],
     deliverables: [
       "Asset mix profile with exposure limits to each use type.",
       "Governance document summary including HOA, POA, and master developer agreements.",
       "Identification submission package with stratified valuation breakdowns.",
+      "Reciprocal easement and shared parking review flagging approval or consent requirements.",
+      "Boot worksheet reconciling relinquished proceeds against mixed-use replacement leverage.",
     ],
     timeline: [
       { label: "Phase 1", detail: "Assess relinquished portfolio mix and target replacements that balance income streams." },
@@ -488,6 +644,21 @@ export const services: Service[] = [
         answer:
           `We review tax increment financing, PID assessments, and incentive agreements tied to ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} developments to validate obligations.`,
       },
+      {
+        question: "Can reduced leverage on a mixed-use replacement create boot in Dallas?",
+        answer:
+          "Yes. If a mixed-use replacement carries less debt than the relinquished property, the net reduction in liabilities is generally treated as boot and is typically taxable unless offset with additional cash into the purchase.",
+      },
+      {
+        question: "How early should governance document review start for a Dallas mixed-use exchange?",
+        answer:
+          `As early as possible. HOA, POA, and master developer agreements often carry consent or right of first refusal provisions. We review these as soon as a ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} candidate is identified rather than waiting until closing week.`,
+      },
+      {
+        question: "Are DST mixed-use allocations common for Dallas investors?",
+        answer:
+          "They exist but are less common than single-use asset DSTs due to added governance complexity. These interests are frequently securities. We do not sell securities and introduce clients to licensed providers for that portion of a transaction.",
+      },
     ],
     keywords: [
       "Dallas mixed-use 1031",
@@ -503,16 +674,20 @@ export const services: Service[] = [
     shortDescription:
       "Structure reverse exchanges with exchange accommodation titleholder (EAT) oversight and lender coordination.",
     overview:
-      `Competitive assets in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often require acquisition before a sale closes. We administer parking arrangements, loan guarantees, and tax compliance to deliver a reverse exchange that protects timelines.`,
+      `Competitive assets in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often require acquisition before a relinquished sale closes, which is exactly the scenario a reverse exchange is built to solve. In a standard forward exchange, the relinquished property sells first and the replacement is acquired afterward within the exchange window. A reverse exchange flips that sequence, allowing an investor to acquire the replacement property before the relinquished property sells, using an exchange accommodation titleholder, commonly called an EAT, to hold title to one of the two properties during the transition period under safe harbor guidance from IRS Revenue Procedure 2000-37. The underlying deferral principle does not change, gain on the eventual relinquished sale is deferred, not eliminated, but the mechanics are more involved, and the same one hundred eighty day outer limit generally applies to the combined parking and exchange period. Texas assesses no state income tax, which simplifies some reporting, but it has no bearing on the federal safe harbor deadlines that govern how long an EAT can hold title. We administer parking arrangements, loan guarantees, and tax compliance to deliver a reverse exchange that protects timelines rather than creating a second, more fragile deadline structure layered on top of the original exchange. Setting up the EAT structure correctly at the outset matters enormously, since the accommodation titleholder must maintain genuine indicia of ownership, including some economic risk and benefit, while functioning as a temporary holding vehicle, and a poorly documented parking arrangement can undermine the entire reverse exchange if challenged. Debt coordination is one of the most operationally complex parts of a reverse exchange, because most lenders are unfamiliar with EAT structures and require additional guaranty and collateral documentation before they will finance a property titled to an accommodation entity rather than directly to the investor, so we begin lender conversations as early as possible rather than after the parking structure is already in place. Reverse exchanges also carry higher carrying costs than forward exchanges, since the EAT typically needs to be funded for insurance, property taxes, and debt service during the parking period, and those costs should be budgeted into the overall exchange economics from the start rather than treated as an afterthought. Boot exposure in a reverse exchange context most often arises if the relinquished sale ultimately closes with less debt relief or fewer proceeds than anticipated when the replacement was acquired, so we monitor relinquished sale progress closely throughout the parking period. Reverse exchanges are not appropriate for every situation, and DST or TIC replacement interests are generally less compatible with reverse structures than direct property; where relevant, such interests are frequently securities, this overview is educational only, and we introduce clients to licensed securities professionals for that portion of a transaction. Investors considering a reverse exchange in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} should engage a qualified intermediary and legal counsel with specific reverse exchange experience before signing a purchase agreement on the replacement property, since the parking structure needs to be in place before, not after, that acquisition closes.`,
     valuePoints: [
-      "Exchange accommodation titleholder onboarding and document control.",
-      "Debt coordination with lenders to manage guaranty and collateral alignment.",
-      "Milestone tracking to ensure relinquished sale closes inside 180 day window.",
+      "Exchange accommodation titleholder onboarding and document control aligned to Revenue Procedure 2000-37 safe harbor.",
+      "Debt coordination with lenders to manage guaranty and collateral alignment for EAT-held property.",
+      "Milestone tracking to ensure relinquished sale closes inside the combined parking and 180 day window.",
+      "Carrying cost budgeting for insurance, property taxes, and debt service during the parking period.",
+      "Boot exposure monitoring throughout the parking period as relinquished sale terms are finalized.",
     ],
     deliverables: [
       "Reverse exchange playbook covering EAT agreements, assignment of rights, and parking steps.",
       "Timeline tracker with alerts for relinquished sale and replacement improvements.",
       `Risk memo addressing financing, tax, and operational considerations in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.`,
+      "Carrying cost projection covering EAT holding period expenses before the parking arrangement begins.",
+      "Lender coordination summary documenting guaranty and collateral terms required for EAT-titled financing.",
     ],
     timeline: [
       { label: "Pre-Acquisition", detail: "Set up EAT structure, draft parking agreements, and align lender approvals." },
@@ -541,6 +716,21 @@ export const services: Service[] = [
         answer:
           `We align with your accounting and tax advisors in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to document parking period transactions for Form 8824 reporting.`,
       },
+      {
+        question: "How long can an EAT hold title in a Dallas reverse exchange?",
+        answer:
+          "IRS safe harbor guidance under Revenue Procedure 2000-37 generally references a 180 day parking period. Exchanges structured outside the safe harbor are possible but carry more risk and require experienced counsel to document properly.",
+      },
+      {
+        question: "Do lenders treat EAT-titled property differently in Dallas?",
+        answer:
+          `Yes. Most lenders require additional guaranty and collateral documentation before financing property titled to an accommodation entity. We begin lender conversations early in every ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} reverse exchange for this reason.`,
+      },
+      {
+        question: "Are reverse exchanges more expensive than forward exchanges in Dallas?",
+        answer:
+          "Generally yes. Carrying costs including insurance, property taxes, and debt service accrue during the parking period, and EAT formation and legal fees add cost beyond a typical forward exchange. We budget these into the overall exchange economics upfront.",
+      },
     ],
     keywords: [
       "Dallas reverse 1031 exchange",
@@ -556,16 +746,20 @@ export const services: Service[] = [
     shortDescription:
       "Execute improvement exchanges with construction milestones monitored for IRS compliance.",
     overview:
-      `When investors customize replacements in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, improvements must be placed in service before the 180 day deadline. We coordinate design, permitting, and draw schedules so value is recognized inside the exchange period.`,
+      `When investors want to customize a replacement property rather than accept it as-is, an improvement exchange, sometimes called a construction or build-to-suit exchange, allows exchange funds to be used for construction and improvements, provided the improved value is placed in service before the exchange deadline closes. This structure relies on an exchange accommodation titleholder to hold title to the replacement property while improvements are completed, since an investor generally cannot construct improvements on property they already own and have that construction value count toward the exchange, because only property that is not yet owned by the taxpayer can be acquired as part of a like kind exchange. Everything built or installed on the property must be substantially complete and placed in service by the earlier of the one hundred eighty day deadline or the investor's tax filing deadline, and the deferral itself follows the same core rule as any Section 1031 exchange, gain is deferred, not eliminated, when exchange value is fully reinvested. Texas has no state income tax, so there is no separate state construction deadline, but the federal placed-in-service requirement is absolute and does not extend for weather delays, permitting backlogs, or a subcontractor who falls behind schedule during a busy ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} building season. We coordinate design, permitting, and draw schedules so improvement value is fully recognized inside the exchange period rather than left stranded because construction ran past the deadline, which would leave that unfinished portion of value outside the exchange and potentially taxable. General contractor selection deserves early attention on improvement exchanges, since availability constraints across North Texas can push a start date later than an investor expects, and a contractor unfamiliar with the documentation requirements of an EAT-held property can slow draw approvals unnecessarily. Permitting timelines vary meaningfully across Dallas, Plano, and surrounding suburban jurisdictions, and confirming a realistic permitting path before committing to an improvement exchange structure prevents a scenario where entitlement delays consume most of the available construction window. Budget variance tracking, contingency management, and lien oversight all matter more in an improvement exchange than in a typical construction project, because draw requests and lien releases need to be documented in a way that satisfies both the lender and the qualified intermediary or EAT overseeing the transaction. Boot exposure in an improvement exchange context most commonly arises when construction is not completed on time, since any improvement value not placed in service by the deadline generally does not count toward the exchange and the shortfall can be treated as taxable. Given the complexity involved, improvement exchanges generally require more specialized qualified intermediary and legal support than a standard forward exchange, and investors in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} considering this structure should engage that support well before a purchase contract or construction contract is signed.`,
     valuePoints: [
       "General contractor selection support with availability reviews in North Texas.",
       "Permitting roadmap across Dallas, Plano, and suburban jurisdictions.",
       "Budget variance tracking with contingency management and lien oversight.",
+      "Draw schedule documentation structured to satisfy both lender and EAT or QI requirements.",
+      "Placed-in-service deadline monitoring so unfinished construction value does not fall outside the exchange.",
     ],
     deliverables: [
       "Improvement exchange scheduling tool aligned to IRS safe harbors.",
       "Construction document checklist for QI and EAT coordination.",
       "Weekly status reports combining field updates and funding needs.",
+      "Permitting timeline assessment across relevant North Texas jurisdictions before contracting.",
+      "Boot risk memo addressing the consequences of construction not completing before the deadline.",
     ],
     timeline: [
       { label: "Pre-Closing", detail: `Finalize plans, permits, and contractor commitments across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -594,6 +788,21 @@ export const services: Service[] = [
         answer:
           `We catalog improvement costs for your ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} tax team to evaluate cost segregation choices after completion.`,
       },
+      {
+        question: "What happens if construction is not finished by the deadline in Dallas?",
+        answer:
+          "Improvement value not placed in service by the deadline generally does not count toward the exchange, and the shortfall can be treated as taxable. This makes realistic contractor and permitting timelines essential before committing to this structure.",
+      },
+      {
+        question: "Why does an improvement exchange require an EAT in Dallas?",
+        answer:
+          `An investor generally cannot construct improvements on property already owned and have that value count toward the exchange. The exchange accommodation titleholder holds title in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} while construction is completed, then conveys the property once finished.`,
+      },
+      {
+        question: "How much lead time does a Dallas improvement exchange need?",
+        answer:
+          "As much as possible. Permitting backlogs, contractor availability, and the placed-in-service deadline all compress the usable construction window, so engaging a qualified intermediary and legal counsel before signing any purchase or construction contract is strongly recommended.",
+      },
     ],
     keywords: [
       "Dallas improvement exchange support",
@@ -609,16 +818,20 @@ export const services: Service[] = [
     shortDescription:
       "Design diversified identification lists with value weighting and compliance scoring under the 200 percent rule.",
     overview:
-      `Investors balancing multiple ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} assets often rely on the 200 percent rule. We model aggregate values, contingency rankings, and lender alignment to keep lists compliant and flexible.`,
+      `Investors balancing multiple candidate properties in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often rely on the two hundred percent identification rule rather than the more limited three property rule, because it allows naming any number of replacement candidates as long as their combined fair market value does not exceed two hundred percent of the relinquished property's value. This differs from the three property rule, which caps the count at three properties regardless of value, and from the ninety five percent rule, which removes the value ceiling entirely but requires actually acquiring at least ninety five percent of everything identified, a threshold that carries real risk if even one candidate falls out of contract. All three identification methods sit inside the same forty five day identification window and one hundred eighty day exchange period that govern every Section 1031 exchange, and choosing the right method is a modeling exercise, not a formality, because the wrong choice can force an investor to close on more properties than they actually want, or leave them exposed if a single large candidate becomes the majority of an identified list. Texas has no state income tax, so identification modeling is purely a federal compliance exercise, and the two hundred percent threshold itself is measured strictly against fair market value at the time of identification, not asking price or a later negotiated price. We model aggregate values, contingency rankings, and lender alignment to keep lists compliant and flexible, running scenarios that show how a list performs if the most valuable candidate falls through, if two mid-size candidates are combined instead, or if a client wants to preserve room to add a smaller opportunistic property discovered late in the window. Lender fit analysis is folded into this modeling because financing feasibility differs across candidates even when they are similar in price, and a list that is compliant on paper but includes a property no lender will finance within the remaining timeline is not actually a workable list. Risk scoring for closing certainty, lease rollover exposure, and capital expenditure needs helps rank candidates within a compliant list so the highest quality opportunities get priority attention as due diligence deadlines approach. We also build in explicit contingency planning, since IRS rules generally do not allow a compliant list to be revised after day forty five except by revoking previously identified property before the deadline, so any candidate substitution needs to happen inside the window, which makes early, careful list construction far more valuable than late-stage adjustments. For clients weighing DST or TIC allocations as part of a two hundred percent list alongside direct property candidates, we treat those interests the same way we treat direct real estate for value modeling purposes, while noting that DST and TIC interests are frequently securities offerings, this overview is educational only, and we introduce clients to licensed securities professionals for that portion of a transaction.`,
     valuePoints: [
-      "Scenario planners showing identification coverage ratios versus relinquished value.",
-      "Lender fit analysis flagging leverage constraints across each candidate.",
+      "Scenario planners showing identification coverage ratios versus relinquished value under each identification method.",
+      "Lender fit analysis flagging leverage constraints across each candidate before it is added to a list.",
       "Risk scoring for closing certainty, lease rollover, and capital expenditure exposure.",
+      "Comparison modeling across the three property, 200 percent, and 95 percent identification rules for your situation.",
+      "Contingency planning for candidate substitution or revocation before the day forty five deadline.",
     ],
     deliverables: [
       "Identification workbook with automated compliance checks.",
       "Communication toolkit for notifying the qualified intermediary.",
       "Fallback strategy memo with instructions if a candidate fails diligence.",
+      "Method comparison summary explaining why the 200 percent rule fits your relinquished property value.",
+      "Value ceiling tracker confirming aggregate fair market value stays compliant as candidates change.",
     ],
     timeline: [
       { label: "Preparation", detail: "Gather pricing, contract status, and value confirmations for each target asset." },
@@ -645,7 +858,22 @@ export const services: Service[] = [
       {
         question: "Can you integrate DST positions in Dallas, TX?",
         answer:
-          `We include DST allocations in the compliance model for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors to maintain diversification.`,
+          `We include DST allocations in the compliance model for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors to maintain diversification. These interests are frequently securities, and we introduce clients to licensed providers for that portion of the transaction.`,
+      },
+      {
+        question: "How is the 200 percent threshold calculated for a Dallas exchange?",
+        answer:
+          "The combined fair market value of all identified candidates, measured at the time of identification, cannot exceed 200 percent of the relinquished property's value. Asking price or a later negotiated price does not change how the threshold is measured.",
+      },
+      {
+        question: "Can I revise a 200 percent identification list after day 45 in Dallas?",
+        answer:
+          `Generally no. Candidates can typically be revoked before the deadline, but new candidates cannot be added after day forty five. This makes careful upfront modeling more valuable than late adjustments for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors.`,
+      },
+      {
+        question: "When does the 95 percent rule make more sense than 200 percent in Dallas?",
+        answer:
+          "The 95 percent rule removes the value ceiling but requires acquiring at least 95 percent of identified value, a higher bar than the 200 percent rule. It generally fits investors confident they can close on nearly everything they identify.",
       },
     ],
     keywords: [
@@ -662,16 +890,20 @@ export const services: Service[] = [
     shortDescription:
       "Engineer three property lists with ranked backups, diligence status, and QI ready memorandums.",
     overview:
-      `When quality trumps quantity, our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} team crafts three property submissions with rigorous vetting, ensuring each candidate can close inside the IRS schedule.`,
+      `When quality matters more than quantity, the three property identification rule remains the most commonly used approach for Section 1031 exchanges, allowing an investor to name up to three replacement candidates without regard to their combined value. That flexibility is deceptively simple, because it also means every candidate on the list needs to be a genuinely viable closing option, not a placeholder, since IRS rules generally do not allow adding a new property after the forty five day deadline passes, even if the existing three all fail diligence. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} team crafts three property submissions with rigorous vetting, ensuring each candidate can realistically close inside the remaining schedule rather than simply looking attractive on paper during the search phase. The underlying deferral mechanics do not change based on which identification method is used, gain is deferred, not eliminated, when net proceeds pass through a qualified intermediary and are fully reinvested into like kind replacement property, and both the forty five day identification window and the one hundred eighty day exchange period begin on the day the relinquished property closes. Texas has no state income tax, so the compliance pressure is entirely federal, and the federal deadline does not extend for a slow title company or an unresponsive seller during a Dallas summer closing season. Because a three property list has no backup slots beyond the three named candidates, checklist tracking for title, survey, environmental, and lease diligence needs to move in parallel across all three rather than sequentially, so that if one candidate develops a problem, the remaining two are already far enough along in diligence to absorb the reallocated focus without losing time. Loan term sheet matching is equally important, since financing that looks available in general market conditions can still fail to clear for a specific candidate due to property-specific underwriting issues, and confirming financing feasibility for all three candidates before day forty five, rather than after, avoids discovering a financing gap with no time left to pivot. We maintain a disciplined communication cadence with sellers, brokers, and qualified intermediaries throughout the identification window so that deadlines stay visible to every party involved, not just the investor, since a seller who does not understand the exchange timeline can inadvertently create delays that jeopardize the whole transaction. Boot exposure is modeled across all three candidates individually, since debt and cash requirements can differ meaningfully between them, and an investor should understand the boot implications of each option before, not after, deciding which one to pursue. Investors weighing DST or TIC positions as one of their three identified candidates should know these interests are frequently securities offerings; this overview is educational only, and we introduce clients to licensed securities professionals for that portion of a transaction. A well-built three property list gives ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors real optionality within IRS rules, but only if all three candidates are equally real, equally diligenced, and equally financeable from day one.`,
     valuePoints: [
-      "Checklist tracking for title, survey, environmental, and lease diligence.",
-      "Loan term sheet matching to confirm financing will clear inside 180 days.",
-      "Communication cadence with sellers, brokers, and QIs to keep deadlines visible.",
+      "Checklist tracking for title, survey, environmental, and lease diligence run in parallel across all candidates.",
+      "Loan term sheet matching to confirm financing will clear inside 180 days for each named property.",
+      "Communication cadence with sellers, brokers, and QIs to keep deadlines visible for every party.",
+      "Boot exposure modeling for each of the three candidates individually before a final decision is made.",
+      "Contingency reallocation planning if one candidate develops a diligence issue before day forty five.",
     ],
     deliverables: [
       "Three property memorandum with ranked selections and supporting data.",
       "Seller engagement playbook with contact info, expectations, and contingency plans.",
       "Deadline tracker synced with calendar reminders for your internal teams.",
+      "Parallel diligence tracker confirming title, survey, and financing progress across all three candidates.",
+      "Boot comparison worksheet across the three identified properties.",
     ],
     timeline: [
       { label: "Selection", detail: `Shortlist three high certainty assets within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} by day 30.` },
@@ -700,6 +932,21 @@ export const services: Service[] = [
         answer:
           `Yes. We maintain backup candidates in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} and document substitutions if allowed by IRS rules.`,
       },
+      {
+        question: "Can a new property be added to a Dallas three property list after day 45?",
+        answer:
+          "Generally no. Once the forty five day identification deadline passes, additional properties typically cannot be added, which is why every candidate on a three property list needs to be a genuinely viable closing option from the start.",
+      },
+      {
+        question: "How is boot evaluated across three identified properties in Dallas?",
+        answer:
+          `We model boot exposure, including debt and cash requirements, for each candidate individually. Debt levels and financing structures can differ meaningfully between ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} properties even at similar price points.`,
+      },
+      {
+        question: "Is the three property rule better than the 200 percent rule for Dallas investors?",
+        answer:
+          "It depends on the situation. The three property rule caps the count but not the value, while the 200 percent rule caps aggregate value but allows more candidates. We model both against your relinquished property value before recommending an approach.",
+      },
     ],
     keywords: [
       "Dallas three property 1031 list",
@@ -715,16 +962,20 @@ export const services: Service[] = [
     shortDescription:
       "Guide Delaware Statutory Trust allocations that complement direct replacement assets and timeline demands.",
     overview:
-      `DST allocations give ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors backup flexibility. We monitor DST sponsors, asset performance, and subscription windows to keep exchanges moving when direct deals stall.`,
+      `Delaware Statutory Trust allocations give ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors backup flexibility when direct replacement deals stall or when an investor simply wants passive, professionally managed real estate exposure without landlord responsibilities. A DST is a legal entity that holds title to real property, and a properly structured beneficial interest in a DST is treated as a direct interest in real estate for Section 1031 purposes, meaning it can qualify as like kind replacement property under current IRS guidance, specifically Revenue Ruling 2004-86, unlike an interest in a real estate investment fund, a limited partnership, or a crowdfunding platform, each of which is generally treated as an interest in an entity rather than in real property and therefore does not qualify for exchange treatment. The core deferral principle is unchanged, gain on a relinquished sale is deferred, not eliminated, when proceeds are reinvested through a qualified intermediary into like kind property within the forty five day identification window and the one hundred eighty day exchange period. Texas has no state income tax, so DST allocations for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors are purely a federal compliance and investment decision rather than a state tax planning tool. We monitor DST sponsors, asset performance, and subscription windows closely to keep exchanges moving when direct deals stall, since DST inventory is finite and popular offerings can close to new investors with little notice, which makes timing coordination between an investor's exchange deadline and DST availability an active, ongoing task rather than a one-time lookup. Sponsor due diligence covers track record, reporting cadence, fee structure, and liquidity policy, since DST investors generally cannot force a sale or redemption before the sponsor's planned disposition date, and understanding that illiquidity upfront is essential before committing exchange proceeds. Tax and cash flow modeling compares projected DST distributions to what a direct asset purchase might generate, though DST returns are not guaranteed and past sponsor performance does not predict future results. It is important to state plainly that DST and TIC interests are securities in most cases, subject to securities law and offered only through licensed broker-dealers or registered investment advisors, and we do not sell securities. Our role is to help investors understand how a DST allocation fits into an overall exchange strategy and identification list, and then to introduce them to licensed securities professionals who handle the actual offering, subscription documents, and suitability review. This distinction matters because DST offerings carry investment risk including potential loss of principal, lack of control over property management decisions, and sponsor concentration risk, and any investor considering a DST allocation should review the private placement memorandum and consult independent tax and securities counsel before subscribing. For clients who want a DST position to serve as a backup identification candidate alongside a direct property search in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, we help structure the identification list so a suitable DST interest is available if the direct search does not produce a closable candidate before day forty five.`,
     valuePoints: [
-      "Sponsor due diligence covering track records, reporting cadence, and liquidity policies.",
+      "Sponsor due diligence covering track records, reporting cadence, fee structure, and liquidity policies.",
       "DST queue monitoring to confirm availability before filing identification letters.",
-      "Tax and cash flow modeling that compares DST cash yields to direct asset returns.",
+      "Tax and cash flow modeling that compares projected DST distributions to direct asset return assumptions.",
+      "Clear separation between our educational role and the licensed securities professionals who handle DST subscriptions.",
+      "Backup identification structuring so a DST candidate is available if a direct search does not close in time.",
     ],
     deliverables: [
       "DST short list with sponsor summaries and property level metrics.",
-      "Risk disclosure checklist for investor acknowledgement.",
+      "Risk disclosure checklist for investor acknowledgement, including illiquidity and sponsor concentration risk.",
       "Integration plan outlining how DST shares fit into identification strategies.",
+      "Introduction to licensed securities professionals for subscription documents and suitability review.",
+      "Comparison memo weighing DST allocation against direct property replacement for your exchange.",
     ],
     timeline: [
       { label: "Pre-Identification", detail: `Secure DST allocations or reservations aligned to your ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} exchange deadline.` },
@@ -753,6 +1004,21 @@ export const services: Service[] = [
         answer:
           `We monitor subscription capacity, funding deadlines, and replacement asset characteristics so ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors stay within timelines.`,
       },
+      {
+        question: "Are DST interests securities for Dallas investors?",
+        answer:
+          "In most cases, yes. DST and TIC interests are typically offered as securities through licensed broker-dealers or registered investment advisors. We do not sell securities and introduce clients to licensed professionals for the subscription and suitability portion of the process.",
+      },
+      {
+        question: "Can I sell my DST interest early if I need liquidity in Dallas?",
+        answer:
+          "Generally no. DST investors typically cannot force a sale or redemption before the sponsor's planned disposition date. This illiquidity should be understood clearly before committing exchange proceeds to a DST allocation.",
+      },
+      {
+        question: "Why do a crowdfunding real estate interests not qualify for a Dallas 1031 exchange?",
+        answer:
+          "Most real estate crowdfunding platforms and syndication funds structure investor interests as entity interests, such as LLC membership or limited partnership units, rather than direct or fractional real property interests, so they generally do not satisfy the like kind requirement.",
+      },
     ],
     keywords: [
       "Dallas DST 1031 advisor",
@@ -768,16 +1034,20 @@ export const services: Service[] = [
     shortDescription:
       "Command every deadline with automated reminders, escrow coordination, and compliance documentation.",
     overview:
-      `IRS deadlines are unforgiving. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} control desk monitors every milestone from relinquished closing to 180 day funding, providing escalation paths if delays surface.`,
+      `IRS deadlines governing a Section 1031 exchange are unforgiving in a way few other real estate transactions are. The forty five day identification window and the one hundred eighty day exchange period both begin the moment the relinquished property closes, run in calendar days including weekends and federal holidays, and generally cannot be extended for any reason short of a formally declared disaster affecting the transaction. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} control desk monitors every milestone from relinquished closing through the eventual one hundred eighty day funding of the replacement property, providing escalation paths the moment a delay surfaces rather than discovering the problem when it is too late to correct. Texas has no state income tax, so there is no separate state exchange deadline layered on top of the federal timeline, which simplifies the compliance picture somewhat, but it also means every ounce of deadline risk in a Dallas exchange is concentrated in these two federal dates. The forty five day identification deadline requires a written, signed identification delivered to the qualified intermediary, not a verbal conversation, and missing it generally disqualifies the exchange from deferral treatment regardless of how close the investor was to a deal. The one hundred eighty day deadline requires the replacement property to actually close, with title transferring and funds disbursing, before that window expires, and a closing that is even one day late due to a lender delay or a title curative item can unwind the entire deferral. We build an integrated timeline tracker synced to your calendar, your internal team's email, and your qualified intermediary's communications, so that every stakeholder involved, including your CPA, attorney, lender, and broker, is working from the same set of dates rather than relying on informal reminders. Escrow milestone audits confirm that funds movement, payoff statements, and net proceeds calculations are tracked accurately throughout the transaction, since a miscalculated net proceeds figure discovered late can affect how much replacement value is needed to fully defer gain and avoid boot. Risk alerts trigger automatically when inspections, appraisals, or loan approvals threaten to push a closing past the one hundred eighty day mark, giving investors and their advisors time to problem-solve rather than reacting to a crisis in the final days. We also maintain a closing binder template built specifically to support Form 8824 reporting, the IRS form used to report a like kind exchange, since assembling accurate dates, values, and identification documentation after the fact is far harder than capturing it contemporaneously as the exchange unfolds. Investors managing multiple properties, complex financing, or out-of-state replacement candidates alongside a ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} relinquished sale benefit most from this kind of centralized timeline control, since the number of moving parts that can silently drift past a deadline grows quickly once more than one property or one lender is involved.`,
     valuePoints: [
       "Integrated timeline tracker synced to your calendar, team emails, and QI communications.",
-      "Escrow milestone audits that confirm funds movement, payoff statements, and net proceeds within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
+      `Escrow milestone audits that confirm funds movement, payoff statements, and net proceeds within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.`,
       "Risk alerts when inspections or loan approvals threaten 180 day completion.",
+      "Stakeholder coordination across your CPA, attorney, lender, and broker on a single shared timeline.",
+      "Contemporaneous documentation capture to simplify eventual Form 8824 preparation.",
     ],
     deliverables: [
       "Deadline dashboard with automated reminders for every 1031 stage.",
       "Variance reports summarizing schedule slippage and recovery plans.",
       "Closing binder template to document compliance for Form 8824.",
+      "Net proceeds and boot calculation worksheet updated as escrow figures are confirmed.",
+      "Stakeholder communication log tracking every deadline notification sent across your team.",
     ],
     timeline: [
       { label: "Day 0", detail: "Record relinquished closing and schedule key deliverables." },
@@ -806,6 +1076,21 @@ export const services: Service[] = [
         answer:
           `We maintain relationships with title officers in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} and escalate curative items immediately to protect schedules.`,
       },
+      {
+        question: "Can the 180 day deadline be extended for a Dallas exchange?",
+        answer:
+          "Generally no, except in limited federally declared disaster situations. The one hundred eighty day deadline is set by statute and does not extend for lender delays, title curative items, or other closing complications.",
+      },
+      {
+        question: "What happens if a Dallas replacement closing slips past day 180?",
+        answer:
+          "If the replacement property does not close before the one hundred eighty day deadline expires, the exchange generally fails to qualify for deferral and the transaction is typically treated as a taxable sale. This is educational information, not tax advice for your situation.",
+      },
+      {
+        question: "Why track net proceeds continuously during a Dallas exchange?",
+        answer:
+          `Net proceeds figures can shift as escrow finalizes payoffs and closing costs. We track this continuously so ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors know their true reinvestment target and avoid unexpected boot at the one hundred eighty day closing.`,
+      },
     ],
     keywords: [
       "Dallas 45 day deadline help",
@@ -821,16 +1106,20 @@ export const services: Service[] = [
     shortDescription:
       "Validate income statements, rent rolls, and trailing twelve data before you lock identification lists.",
     overview:
-      `Underwriting mistakes erode returns. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} analysts scrub rent rolls, expenses, and market comparables so replacement assets deliver the cash flow you expect.`,
+      `Underwriting mistakes erode returns quietly, often not surfacing until well after a 1031 exchange has closed and the investor discovers actual cash flow falls short of what the seller's marketing package projected. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} analysts scrub rent rolls, expense statements, and market comparables before identification so replacement assets deliver the cash flow investors actually expect, not the optimistic version a broker's offering memorandum presents. This underwriting discipline matters more inside an exchange than in a typical acquisition, because the forty five day identification window compresses the time available for diligence, and a rushed underwriting process is where rent roll errors, mischaracterized expenses, and stale market comps most often slip through unnoticed. The exchange itself still follows standard federal rules, gain is deferred, not eliminated, when proceeds move through a qualified intermediary into like kind property, but the quality of the replacement property's income stream determines whether that deferral actually protected long term wealth or simply postponed a disappointing investment. Rent roll standardization is the starting point of every underwriting engagement, mapping lease expirations, renewal options, concessions, and free rent periods against a normalized twelve month projection, since a rent roll showing strong trailing income can mask a wall of lease expirations arriving shortly after closing that will require significant re-leasing capital or result in vacancy loss. Trailing twelve month expense normalization removes one-time items, such as a single large capital repair or a legal settlement, that would otherwise distort operating expense ratios, while highlighting genuinely controllable expenses like management fees, payroll, and utilities that an investor can influence going forward. Market comparable data pulled from Dallas Central Appraisal District records, county tax rolls, and brokerage transaction reporting grounds our underwriting in verifiable local data rather than a seller's selectively chosen comp set, which matters because North Texas submarkets can vary significantly in rent growth and expense trends even within a few miles of each other. We also flag boot exposure that surfaces through underwriting, since a property's actual debt assumability, financeable leverage, or required capital reserves can change how much of the relinquished proceeds are truly available for reinvestment without triggering taxable boot. For clients evaluating multiple identification candidates simultaneously, comparative underwriting across all options is essential, since the forty five day window generally does not allow revisiting a decision once the identification list is filed, so getting the underwriting right before that deadline, not after, is where real value is protected. We also cross-check property tax projections carefully, since a sale that resets assessed value under a new owner can materially change the effective expense load in year one compared to a seller's trailing operating statement, and North Texas taxing jurisdictions vary in how aggressively they reassess after a transfer. For portfolio investors comparing several candidates at once, we present findings in a consistent format across every property so returns, risk factors, and financing feasibility can be compared directly rather than reconciled from differently formatted broker packages.`,
     valuePoints: [
-      "Rent roll standardization with exposure mapping for expirations and concessions.",
+      "Rent roll standardization with exposure mapping for expirations and concessions before identification.",
       "T12 normalization removing one-time items and highlighting controllable expenses.",
-      "Market comp pulls leveraging Dallas appraisal districts and brokerage reporting.",
+      "Market comp pulls leveraging Dallas Central Appraisal District records and brokerage reporting.",
+      "Boot exposure review tied to financeable leverage and required capital reserves for each candidate.",
+      "Comparative underwriting across multiple identification candidates before the forty five day deadline.",
     ],
     deliverables: [
       "Underwriting memo with assumptions, stress tests, and sensitivity tables.",
       "Variance tracker comparing pro forma to in-place performance.",
       "Questions log for brokers, sellers, and property managers.",
+      "Lease expiration exposure map identifying re-leasing risk shortly after closing.",
+      "Boot and leverage worksheet comparing available proceeds against each underwritten candidate.",
     ],
     timeline: [
       { label: "Data Intake", detail: `Collect rent rolls, T12s, and operating budgets from ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} sellers.` },
@@ -859,6 +1148,21 @@ export const services: Service[] = [
         answer:
           `We align our models with lender covenants and DSCR requirements prevalent in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.`,
       },
+      {
+        question: "Why does underwriting matter more inside a 1031 exchange in Dallas?",
+        answer:
+          "The forty five day identification window compresses diligence time, which is exactly when rent roll errors and stale comps are most likely to slip through. Careful underwriting before you identify, not after, protects the cash flow you are exchanging into.",
+      },
+      {
+        question: "Can financeable leverage affect boot on a Dallas replacement property?",
+        answer:
+          `Yes. If a candidate cannot support the leverage you assumed, more cash may be required at closing than planned, or less debt than the relinquished property carried, either of which can affect boot exposure for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors.`,
+      },
+      {
+        question: "Do you compare underwriting across multiple candidates in Dallas?",
+        answer:
+          "Yes. Because identification decisions are difficult to revisit after day forty five, we underwrite every serious candidate side by side so the identification list reflects verified numbers rather than optimistic marketing projections.",
+      },
     ],
     keywords: [
       "Dallas rent roll audit 1031",
@@ -874,16 +1178,20 @@ export const services: Service[] = [
     shortDescription:
       "Align lenders early with debt sizing, term sheets, and closing deliverables tailored to exchange timelines.",
     overview:
-      `Debt markets move quickly in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}. We stage lender conversations, gather term sheets, and manage diligence so financing is never the reason an exchange fails.`,
+      `Debt markets move quickly in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}, and financing that looked available when a property was first identified can tighten by the time a purchase agreement is ready to sign. We stage lender conversations, gather term sheets, and manage third party diligence so financing is never the reason an otherwise sound 1031 exchange fails to close inside the one hundred eighty day deadline. The stakes are higher in an exchange context than in a typical acquisition, because a financing collapse late in the process generally cannot be solved by simply extending the closing date, the way it might be on a non-exchange purchase, since the deadline is set by federal statute rather than by negotiated contract terms. Gain deferral under Section 1031 depends on completing the purchase of like kind replacement property within that fixed window, and a lender that pulls a term sheet on day one hundred fifty leaves very little room to find alternative financing before the deadline arrives. We maintain an active lender matrix covering banks, life insurance companies, debt funds, and agency lenders active across North Texas, since different lender types have meaningfully different appetites for property type, leverage, and closing speed, and matching the right lender to the right asset early avoids wasting weeks pursuing a source unlikely to approve the deal in time. Term sheet comparison covers rate, amortization, reserve requirements, and prepayment flexibility, but for exchange transactions we weight closing speed and certainty of execution more heavily than we might for a non-exchange purchase, since the fastest, most certain lender is often the better choice even at a modest rate premium when the alternative is missing the exchange deadline entirely. Our closing checklist merges lender requirements with the qualified intermediary's process flow, since these two workstreams need to move in parallel, appraisal and engineering reports feeding both the lender's underwriting and the exchange's compliance file, and a miscommunication between the two can create last minute scrambling that is entirely avoidable with better coordination. We also model how financing decisions affect boot exposure, since debt levels on the replacement property directly determine whether an investor has fully reinvested relinquished proceeds or left value on the table that could be treated as taxable, and a financing structure that looks attractive on rate alone can inadvertently create boot if it results in significantly less leverage than the relinquished property carried. For ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors managing an exchange alongside other capital commitments, early lender engagement, ideally starting during the identification search rather than after a purchase agreement is signed, is the single most effective way to keep financing risk from becoming exchange risk. We also stress test proposed loan terms against a range of outcomes for the relinquished sale proceeds, since a shift in expected net proceeds can change how much leverage a replacement purchase actually needs, and confirming a lender's flexibility on loan amount before committing to a specific term sheet avoids a late-stage renegotiation that could threaten the closing date.`,
     valuePoints: [
       "Lender matrix covering banks, life companies, debt funds, and agency options active in North Texas.",
       "Term sheet comparison for rate, amortization, reserves, and prepayment flexibility.",
       "Closing checklist that merges lender requirements with QI process flow.",
+      "Closing speed and execution certainty weighted heavily given the fixed 180 day exchange deadline.",
+      "Boot exposure modeling comparing proposed replacement leverage to relinquished property debt levels.",
     ],
     deliverables: [
       "Financing brief summarizing recommended lenders and next steps.",
       "Document tracker for appraisals, engineering, and legal deliverables.",
       "Contingency action plan if credit committees request changes.",
+      "Parallel workstream calendar aligning lender underwriting milestones with QI compliance deadlines.",
+      "Boot and leverage worksheet comparing financing structure options against your relinquished debt level.",
     ],
     timeline: [
       { label: "Week 1", detail: "Introduce exchange transaction to preferred lenders and collect preliminary quotes." },
@@ -912,6 +1220,21 @@ export const services: Service[] = [
         answer:
           `Yes. We produce executive summaries highlighting the ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} asset story and exchange profile.`,
       },
+      {
+        question: "Why prioritize closing speed over rate for a Dallas exchange loan?",
+        answer:
+          "The 180 day exchange deadline is fixed by federal statute and generally cannot be extended. A lender that closes reliably and on time, even at a modest rate premium, is often the safer choice than a lower rate lender with execution uncertainty.",
+      },
+      {
+        question: "Can a financing shortfall create boot on a Dallas exchange?",
+        answer:
+          `Yes. If your replacement property ends up with significantly less leverage than your relinquished property, the difference in debt relief can be treated as taxable boot for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors. We model this before financing is finalized.`,
+      },
+      {
+        question: "When should lender outreach start for a Dallas 1031 exchange?",
+        answer:
+          "As early as possible, ideally during the identification search rather than after a purchase agreement is signed. Early engagement gives credit committees time to work through underwriting before the 180 day deadline compresses your options.",
+      },
     ],
     keywords: [
       "Dallas lender coordination 1031",
@@ -927,16 +1250,20 @@ export const services: Service[] = [
     shortDescription:
       "Stagger multiple sales and acquisitions with synchronized identification strategies and capital deployment.",
     overview:
-      `Large investors in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often juggle several exchanges. We align proceeds, timelines, and property types to keep every transaction compliant and cash efficient.`,
+      `Large investors and family offices in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often juggle several Section 1031 exchanges simultaneously, whether disposing of a legacy portfolio in phases or rolling proceeds from one large asset into several smaller diversified holdings. Each individual exchange follows the same federal rules as a single-property transaction, gain is deferred, not eliminated, when net proceeds move through a qualified intermediary into like kind property within the forty five day identification window and the one hundred eighty day exchange period, but running multiple exchanges concurrently multiplies the coordination burden and the consequences of a scheduling mistake. Texas has no state income tax, which simplifies reporting somewhat, but the federal deadlines apply independently to each exchange, meaning a portfolio investor closing three relinquished properties across different weeks is effectively managing three separate sets of forty five and one hundred eighty day clocks running in parallel, not a single combined deadline. We align proceeds, timelines, and property types across the entire program to keep every transaction compliant and cash efficient, mapping which relinquished sale funds which replacement purchase and confirming that a qualified intermediary structure correctly segregates each exchange's proceeds so funds from one transaction are not inadvertently commingled with another in a way that could jeopardize deferral. A sequencing roadmap lays out sale and purchase windows with built-in risk buffers, since staggering relinquished closings even by a few weeks can meaningfully reduce the number of overlapping deadlines an investor's team has to track at any given moment, and reduces the chance that a delay in one transaction cascades into another. Capital allocation modeling across multiple replacement properties helps investors understand how leverage, equity deployment, and identification coverage interact across the whole program, since over-concentrating proceeds into one replacement candidate can create outsized boot risk if that deal falls through, while spreading identification too thin across many small deals can create its own diligence bandwidth problem. We also build a communication framework linking brokers, lenders, attorneys, and qualified intermediaries across every deal in the program, because portfolio sequencing breaks down most often not from a single bad decision but from information not reaching the right party in time, a lender unaware that a companion exchange's proceeds are tied to their closing, or an attorney working from an outdated version of the master calendar. For clients who want to preserve flexibility across a multi-exchange program, we incorporate DST and TIC allocations as flexible components within the broader sequencing plan, understanding that these interests are frequently securities offerings, and we introduce clients to licensed securities professionals for that portion of any transaction. Portfolio sequencing works best for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors when it starts well before the first relinquished sale closes, since retrofitting coordination onto exchanges that are already underway is far harder than building the program correctly from the outset.`,
     valuePoints: [
-      "Sequencing roadmap mapping sale and purchase windows with risk buffers.",
-      "Capital allocation modeling across multiple replacement properties.",
-      "Communication framework linking brokers, lenders, attorneys, and QIs across deals.",
+      "Sequencing roadmap mapping sale and purchase windows with risk buffers across multiple exchanges.",
+      "Capital allocation modeling across multiple replacement properties and their independent deadlines.",
+      "Communication framework linking brokers, lenders, attorneys, and QIs across every deal in the program.",
+      "Proceeds segregation review confirming each exchange's funds remain properly separated with the QI.",
+      "Backup DST and TIC allocations incorporated as flexible components within the broader sequencing plan.",
     ],
     deliverables: [
       "Master exchange calendar with dependencies and contingency triggers.",
       "Portfolio level reporting summarizing equity deployed, leverage, and identification coverage.",
       "Weekly command center call agenda and status summary.",
+      "Proceeds segregation confirmation across each parallel exchange in the program.",
+      "Boot exposure summary comparing concentration risk against diversified allocation across the portfolio.",
     ],
     timeline: [
       { label: "Planning", detail: `Document all upcoming sales and desired acquisitions within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -965,6 +1292,21 @@ export const services: Service[] = [
         answer:
           `We deliver dashboard style reports highlighting status, risks, and capital allocation across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} deals.`,
       },
+      {
+        question: "Do parallel exchanges share a single 45 day deadline in Dallas?",
+        answer:
+          "No. Each exchange runs its own independent forty five and one hundred eighty day clocks based on its own relinquished property closing date. A portfolio investor closing multiple sales is managing multiple sets of deadlines simultaneously, not one shared timeline.",
+      },
+      {
+        question: "Can proceeds from one Dallas exchange fund another exchange's purchase?",
+        answer:
+          "Generally no. Proceeds need to remain properly segregated within the qualified intermediary structure for each individual exchange. Commingling funds across separate exchanges can jeopardize deferral, which is why proceeds tracking is a core part of portfolio sequencing.",
+      },
+      {
+        question: "How early should portfolio sequencing start for Dallas investors?",
+        answer:
+          "As early as possible, ideally before the first relinquished sale in the program closes. Building the coordination framework from the outset is far easier than retrofitting it onto exchanges that are already running against their deadlines.",
+      },
     ],
     keywords: [
       "Dallas portfolio 1031 management",
@@ -980,16 +1322,20 @@ export const services: Service[] = [
     shortDescription:
       "Structure sale-leaseback replacements with credit review, lease negotiation, and timeline discipline.",
     overview:
-      `Operating companies in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} leverage sale-leasebacks to unlock capital. We evaluate buyer appetite, lease terms, and credit to ensure the replacement holds value throughout the exchange horizon.`,
+      `Operating companies in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} leverage sale-leasebacks to unlock capital tied up in owned real estate while continuing to occupy the property under a new lease, and this structure appears frequently on both sides of a Section 1031 exchange, either as the relinquished asset an investor sells to an operator through a leaseback, or as the replacement asset an exchange buyer acquires with the operating company remaining as tenant. Regardless of which side of the transaction an investor sits on, the exchange follows standard federal rules, gain is deferred, not eliminated, when net proceeds move through a qualified intermediary into like kind real property within the forty five day identification window and the one hundred eighty day exchange period. Texas has no state income tax, so sale-leaseback structuring for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} exchanges is a federal deferral and lease negotiation exercise rather than a state tax planning tool. We evaluate buyer appetite, lease terms, and tenant credit to ensure the replacement holds value throughout the exchange horizon and beyond, since a sale-leaseback's value is really a function of two things, the real estate itself and the strength of the lease and tenant standing behind it, and either one being weak can undermine the other. Credit analysis of the operating company counterparty, including audited financial statements, leverage ratios, and industry-specific risk factors, is essential before an investor commits exchange proceeds to a sale-leaseback replacement, since the rent stream that justifies the purchase price is only as reliable as the tenant's ability to pay it through economic cycles. Lease structuring support covers rent escalations, maintenance responsibility allocation between landlord and tenant, and renewal or purchase options, and getting these terms right at the outset protects both current cash flow and eventual resale value, since a lease with weak escalators or ambiguous maintenance obligations can depress a future sale price even if the tenant never misses a payment. Appraisal and broker opinion coordination substantiates fair market value for the transaction, which matters both for financing purposes and for documenting that the sale-leaseback price reflects genuine market value rather than an inflated figure designed to extract more capital for the operating company, since an above-market sale price paired with an above-market lease rate can create issues if the arrangement is later scrutinized. Boot exposure on sale-leaseback exchanges commonly relates to debt assumption and any equipment or fixtures bundled into the transaction that may be treated as personal property rather than real property, and we separate these components clearly before closing. Sale-leasebacks involving related parties, such as an operating company selling to an entity owned by the same principals, face additional related party restrictions under Section 1031 and deserve extra scrutiny before proceeding.`,
     valuePoints: [
       "Credit analysis of counterparties including audited financials and leverage metrics.",
       "Lease structuring support covering rent escalations, maintenance obligations, and options.",
       "Appraisal and broker opinion coordination to substantiate fair market value.",
+      "Boot exposure review separating bundled equipment or fixtures from real property value.",
+      "Related party screening for sale-leaseback structures involving common ownership.",
     ],
     deliverables: [
       "Sale-leaseback memorandum with risk assessment and recommendation.",
       "Lease negotiation checklist with fallback positions.",
       "Closing binder checklist including estoppels, SNDA, and insurance certificates.",
+      "Tenant credit summary covering audited financials and leverage trends.",
+      "Boot worksheet separating bundled equipment or fixtures from real property value.",
     ],
     timeline: [
       { label: "Pre-LOI", detail: `Assess operator financials and market lease benchmarks in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -1018,6 +1364,21 @@ export const services: Service[] = [
         answer:
           `We recommend landlord protections such as security deposits, guarantees, and maintenance standards suitable for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} agreements.`,
       },
+      {
+        question: "Can equipment bundled into a Dallas sale-leaseback create boot?",
+        answer:
+          "Yes. Equipment and fixtures not permanently part of the building are generally personal property, not real property, and their allocated value can be treated as taxable boot even when the real estate portion of the exchange otherwise qualifies for deferral.",
+      },
+      {
+        question: "Do related party sale-leasebacks face extra scrutiny in Dallas?",
+        answer:
+          `Yes. If the operating company and the buying entity share common ownership, additional related party restrictions under Section 1031 apply, generally including a two year holding requirement. We screen these structures early for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients.`,
+      },
+      {
+        question: "How is fair market value confirmed for a Dallas sale-leaseback?",
+        answer:
+          "We coordinate independent appraisals and broker opinions of value to substantiate that the sale price and lease rate reflect genuine market terms, which supports both financing approval and defensibility if the arrangement is later reviewed.",
+      },
     ],
     keywords: [
       "Dallas sale-leaseback 1031",
@@ -1033,16 +1394,20 @@ export const services: Service[] = [
     shortDescription:
       "Oversee build-to-suit development pipelines that align with exchange capital deployment schedules.",
     overview:
-      `Demand for bespoke facilities in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} requires disciplined oversight. We coordinate developer agreements, GMP contracts, and draw schedules to keep build-to-suit exchanges compliant.`,
+      `Demand for bespoke facilities in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} requires disciplined oversight, and when a build-to-suit development is structured as part of a Section 1031 improvement exchange, that oversight has to be measured against a fixed federal deadline rather than a typical construction schedule that can flex if circumstances change. We coordinate developer agreements, guaranteed maximum price contracts, and draw schedules to keep build-to-suit exchanges compliant, working within the same core framework that governs every exchange, gain is deferred, not eliminated, when exchange value is fully reinvested, and improvements built using exchange funds generally need to be substantially complete and placed in service before the one hundred eighty day deadline, or the investor's tax filing deadline if earlier. Texas assesses no state income tax, so there is no separate state construction deadline, but the federal placed-in-service requirement does not extend for permitting delays, material shortages, or a subcontractor falling behind during a busy North Texas construction season. Developer vetting is where pipeline management starts, reviewing track record, bonding capacity, and financial strength before a developer is engaged, since a developer who cannot bond the project or who is financially overextended on other work introduces schedule risk that an exchange, with its fixed deadline, cannot absorb the way a conventional development project might. Guaranteed maximum price contract review with disciplined change order controls protects the budget from drifting upward in ways that consume contingency reserves needed for the inevitable surprises that surface once construction begins, and every change order needs to be evaluated not just for cost impact but for schedule impact, since a design change that adds even two weeks can matter enormously when working against a placed-in-service deadline. Construction milestone monitoring is integrated directly with the improvement exchange deadline calendar, tracking not just percentage complete but specifically whether the completed scope will actually qualify as placed in service by the required date, since a building that is functionally complete but missing a certificate of occupancy may not satisfy the placed-in-service requirement even though construction work itself is finished. We also track draw schedules and lien releases carefully, since the exchange accommodation titleholder or qualified intermediary overseeing the improvement exchange needs clean documentation to support the exchange file, and disorganized draw records can create both financing friction and exchange compliance risk. Boot exposure in a build-to-suit exchange context arises most directly when construction cannot be completed in time, since improvement value not placed in service by the deadline generally falls outside the exchange and becomes taxable, which is why we build in schedule contingency from the earliest planning stages rather than treating the deadline as a distant target. We also coordinate closely with the lender's construction inspector alongside the developer's own progress reporting, since a discrepancy between what the developer certifies and what the lender's inspector confirms can hold up a draw request at exactly the point in the schedule when momentum matters most.`,
     valuePoints: [
       "Developer vetting covering track record, bonding capacity, and financial strength.",
       "Guaranteed maximum price contract review with change order controls.",
       "Construction milestone monitoring integrated with 1031 improvement deadlines.",
+      "Placed-in-service qualification tracking, not just percentage complete, against the exchange deadline.",
+      "Draw and lien release documentation organized to support EAT and QI compliance files.",
     ],
     deliverables: [
       "Build-to-suit governance manual with responsibilities and communication cadence.",
       "Milestone tracker tied to funding events and lender inspections.",
       "Risk mitigation plan addressing delays, cost overruns, and contingency usage.",
+      "Placed-in-service readiness checklist confirming certificate of occupancy and final inspection status.",
+      "Boot risk memo addressing consequences if construction scope is not finished by the deadline.",
     ],
     timeline: [
       { label: "Engagement", detail: `Align developer agreements and GMP terms with ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} counsel.` },
@@ -1071,6 +1436,21 @@ export const services: Service[] = [
         answer:
           `We archive developer reports, photos, and certificates for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} exchanges to support QI documentation.`,
       },
+      {
+        question: "Does percentage complete equal placed in service for a Dallas build-to-suit?",
+        answer:
+          "Not necessarily. A building can be functionally finished but still lack a certificate of occupancy or final inspection sign-off needed to satisfy the placed-in-service requirement. We track qualification status separately from raw construction progress.",
+      },
+      {
+        question: "What happens if a Dallas build-to-suit exchange misses its deadline?",
+        answer:
+          "Improvement value not placed in service by the deadline generally falls outside the exchange and can be treated as taxable. This is why schedule contingency needs to be built into planning from the start rather than added after delays occur.",
+      },
+      {
+        question: "How does a change order affect a Dallas improvement exchange timeline?",
+        answer:
+          `Every change order is evaluated for schedule impact, not just cost, since even a short delay can matter against a fixed placed-in-service deadline. We manage change order approval carefully for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} build-to-suit exchanges for this reason.`,
+      },
     ],
     keywords: [
       "Dallas build-to-suit pipeline",
@@ -1086,16 +1466,20 @@ export const services: Service[] = [
     shortDescription:
       "Locate infill parcels near transit, employment hubs, and growth corridors suited for redevelopment exchanges.",
     overview:
-      `Infill opportunities across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} require fast sourcing. We mine plat records, off-market leads, and zoning cases to secure sites before competing developers.`,
+      `Infill opportunities across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} require fast sourcing, since well-located parcels near transit and employment hubs rarely stay available long once serious buyers become aware of them, and that sourcing speed has to be balanced against the forty five day identification deadline that governs every Section 1031 exchange. We mine plat records, off-market leads, and zoning cases to secure sites before competing developers, working to build a sourcing pipeline well before a client's relinquished sale even closes so that identification does not depend on finding a viable parcel from scratch inside a compressed window. The underlying exchange mechanics apply the same way to infill land as to any other replacement property, gain is deferred, not eliminated, when net proceeds move through a qualified intermediary and are reinvested into like kind real property within the forty five day identification window and the one hundred eighty day exchange period, both of which begin on the closing date of the relinquished property. Texas has no state income tax, so infill sourcing for exchange purposes is purely a federal compliance and market timing exercise rather than a state tax planning consideration. Real-time monitoring of zoning applications and concept plans across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} municipalities helps surface parcels before they hit the open market, since a property owner who has just filed a rezoning application or a concept plan is often signaling readiness to sell or develop, and reaching out at that moment can produce opportunities that never appear in a traditional broker listing. Seller outreach campaigns targeting legacy owners and family offices require a different approach than working an MLS or CoStar search, since these owners often have long emotional and financial history with a parcel and respond better to a patient, relationship-driven conversation than to an aggressive cold call, so we document outreach carefully and follow up over weeks or months rather than expecting an immediate answer. Access review covering curb cuts, utility availability, and right-of-way considerations is completed before a parcel is presented as a serious candidate, since a site that looks attractive on a map can be functionally unusable if it lacks approved access or requires an expensive utility extension that changes the effective acquisition cost substantially. Boot exposure on infill land purchases most often arises from reduced leverage relative to the relinquished property, since land acquisitions are frequently financed more conservatively than income-producing real estate, and we model that debt reduction early so an investor understands the potential taxable boot before committing to a specific parcel. Because infill sourcing carries more schedule uncertainty than buying a listed, stabilized property, we recommend clients begin this search well ahead of their relinquished sale closing whenever the timeline allows, giving the forty five day identification window room to work with parcels that are already substantially vetted.`,
     valuePoints: [
-      "Real-time monitoring of zoning applications and concept plans in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
-      "Seller outreach campaigns targeting legacy owners and family offices.",
-      "Access review covering curb cuts, utilities, and right-of-way considerations.",
+      "Real-time monitoring of zoning applications and concept plans across Dallas Fort Worth municipalities.",
+      "Seller outreach campaigns targeting legacy owners and family offices with patient, relationship-driven follow-up.",
+      "Access review covering curb cuts, utilities, and right-of-way considerations before a site is presented.",
+      "Boot exposure modeling for reduced leverage typical of land purchases relative to income property.",
+      "Pipeline building started before your relinquished sale closes so identification is not a cold search.",
     ],
     deliverables: [
       "Parcel scouting report with ownership, pricing guidance, and entitlement status.",
       "Marketing collateral for off-market approaches.",
       "Risk memo covering title objections, environmental considerations, and survey requirements.",
+      "Access and utility feasibility summary confirming curb cuts and right-of-way availability.",
+      "Boot worksheet comparing relinquished property leverage against typical land purchase financing.",
     ],
     timeline: [
       { label: "Research", detail: `Aggregate public and proprietary data sources across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -1124,6 +1508,21 @@ export const services: Service[] = [
         answer:
           `We outline demolition costs, permit requirements, and hauling considerations for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} redevelopment sites.`,
       },
+      {
+        question: "Can reduced leverage on an infill land purchase create boot in Dallas?",
+        answer:
+          "Yes. Land purchases are often financed more conservatively than income property, and the resulting net debt reduction relative to your relinquished property can be treated as taxable boot unless offset with additional cash into the purchase.",
+      },
+      {
+        question: "How early should infill parcel sourcing start for a Dallas exchange?",
+        answer:
+          `As early as possible, ideally before your relinquished sale closes. Off-market infill sourcing carries more schedule uncertainty than buying a listed property, so a pre-built pipeline gives the forty five day window room to work with ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} parcels already vetted.`,
+      },
+      {
+        question: "What access issues most often disqualify a Dallas infill parcel?",
+        answer:
+          "Missing or unapproved curb cuts, inadequate utility capacity, and unresolved right-of-way questions most often disqualify an otherwise attractive site. We review these items before presenting a parcel as a serious identification candidate.",
+      },
     ],
     keywords: [
       "Dallas infill 1031 parcels",
@@ -1139,16 +1538,20 @@ export const services: Service[] = [
     shortDescription:
       "Deliver live market comparables, cap rate trends, and absorption metrics for smarter exchange decisions.",
     overview:
-      `Transparent data keeps exchanges efficient. We build dashboards covering ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} cap rates, lease rates, and sales comps by asset class.`,
+      `Transparent data keeps a Section 1031 exchange efficient, because identifying strong replacement candidates within a forty five day window depends heavily on knowing, in real time, what cap rates, lease rates, and sales comps actually look like across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} rather than relying on a broker's memory of the last transaction they closed. We build dashboards covering cap rate trends, lease rate movement, and closed sales comps by asset class across North Texas submarkets, giving investors and their advisors a live view of the market rather than a static report that is already stale by the time an identification decision needs to be made. This matters more in an exchange context than in an ordinary acquisition search, since the deferral itself depends on the underlying federal rule that gain is deferred, not eliminated, when proceeds are reinvested into like kind property, but making a well-informed reinvestment decision within a compressed timeline requires data that is current, not data that reflects market conditions from months earlier. Texas has no state income tax, which removes one layer of complexity, but it does not change how quickly Dallas Fort Worth cap rates and lease rates can shift, particularly in the multifamily and industrial sectors where sentiment has moved meaningfully over recent cycles. Automated data feeds pulled from CoStar, Real Capital Analytics, and Dallas Central Appraisal District records keep the dashboard current without requiring manual data entry, which matters because stale comps can lead an investor to underwrite a replacement property using assumptions that no longer reflect where the market has actually moved. Custom filters for asset class, submarket, and transaction size let investors narrow the data to exactly the segment relevant to their exchange, since a multifamily investor evaluating Uptown high rise product needs a very different comp set than one evaluating garden style assets in Mesquite, and a single blended market report obscures those meaningful differences. Exportable charts formatted for investment committee packages help investors and their advisory teams communicate market context quickly to partners, lenders, or family members involved in a decision, which is often necessary when an identification decision needs buy-in from multiple stakeholders inside a tight window. We also configure alert systems that flag when comparable sales occur near an investor's target metrics, so a newly closed transaction that validates or challenges an identification candidate's pricing surfaces immediately rather than being discovered weeks later during a routine market check. For clients managing multiple identification candidates simultaneously, having a single, shared data source that every advisor references reduces the risk of a decision being made on inconsistent or outdated information during the final days before the forty five day deadline.`,
     valuePoints: [
-      "Automated data feeds from CoStar, Real Capital Analytics, and local appraisal districts.",
-      "Custom filters for asset class, submarket, and transaction size across ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
-      "Exportable charts for investment committee packages.",
+      "Automated data feeds from CoStar, Real Capital Analytics, and Dallas Central Appraisal District records.",
+      "Custom filters for asset class, submarket, and transaction size across Dallas Fort Worth.",
+      "Exportable charts for investment committee packages and multi-stakeholder decisions.",
+      "Alert system flagging comparable sales near your target metrics as they close.",
+      "Shared data source reducing inconsistent underwriting assumptions during the identification window.",
     ],
     deliverables: [
       "Interactive dashboard access with scheduled refreshes.",
-      "Monthly commentary summarizing notable transactions in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
+      `Monthly commentary summarizing notable transactions in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.`,
       "Alert system when comparable sales occur near your target metrics.",
+      "Investment committee export package formatted for multi-stakeholder review.",
+      "Submarket-specific comp filters tailored to your identification candidates.",
     ],
     timeline: [
       { label: "Setup", detail: "Configure dashboards with investor targets and asset classes." },
@@ -1177,6 +1580,21 @@ export const services: Service[] = [
         answer:
           `We format dashboard exports into PDFs and slide decks used by investment committees in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.`,
       },
+      {
+        question: "Why does live comp data matter more inside a 1031 exchange in Dallas?",
+        answer:
+          "The forty five day identification deadline compresses decision time, so relying on stale comps can lead to underwriting a candidate against market conditions that no longer apply. Live data reduces the chance of a mispriced identification decision.",
+      },
+      {
+        question: "Can dashboard alerts affect an identification decision in Dallas?",
+        answer:
+          `Yes. If a comparable sale closes near your target metrics while you are evaluating a candidate, that data point can validate or challenge your pricing assumptions before the ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} identification deadline arrives.`,
+      },
+      {
+        question: "Do dashboard filters separate Dallas submarkets by asset class?",
+        answer:
+          "Yes. A multifamily investor evaluating Uptown high rise product needs a different comp set than one evaluating garden style assets in Mesquite, so filters are built by asset class and submarket rather than a single blended market view.",
+      },
     ],
     keywords: [
       "Dallas 1031 market data",
@@ -1192,16 +1610,20 @@ export const services: Service[] = [
     shortDescription:
       "Transition into large acreage, ranch, and recreational tracts with agricultural diligence and water rights review.",
     overview:
-      `High net worth investors in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often trade into acreage. We evaluate mineral reservations, grazing leases, and water access to keep rural exchanges compliant.`,
+      `High net worth investors in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} often trade out of management intensive commercial holdings and into ranch, recreational, or large acreage tracts across North and Central Texas, seeking a different lifestyle relationship with real estate while still preserving the tax deferral benefits available under Section 1031. Gain on the relinquished commercial sale is deferred, not eliminated, when net proceeds move through a qualified intermediary and are reinvested into like kind real property, and raw and unimproved land, including ranch and agricultural acreage, is generally treated as like kind to income producing commercial real estate, provided the replacement is held for investment or business use rather than converted immediately to personal use. The forty five day identification window and one hundred eighty day exchange period apply the same way to a ranch replacement as to any other property type, and Texas assessing no state income tax does not change those federal deadlines, though it does mean ranch investors are not juggling a separate state exchange filing on top of the federal requirements. We evaluate mineral reservations, grazing leases, and water access closely to keep rural exchanges compliant and to protect long term value, since rural Texas properties frequently carry a more complicated title history than urban commercial real estate, including severed mineral estates, legacy grazing agreements, and water rights that may or may not transfer automatically with the surface estate. Title chain review focused specifically on mineral and surface rights is essential before identification, since a property where mineral rights were reserved by a prior owner carries different long term value and different negotiating leverage than one where the investor acquires both surface and mineral interests, and this distinction is often unclear from a standard title commitment without a deeper deed history review. Agricultural tax status analysis projects potential rollback tax exposure, since Texas allows reduced property valuations for land under active agricultural or wildlife management use, and a change in use after acquisition, or a change triggered by the sale itself, can generate a rollback tax liability that is separate from and unrelated to the federal exchange but still needs to be budgeted into the overall transaction economics. Water well, pond, and riparian rights verification matters enormously for ranch usability and value, since water access can be the single limiting factor on a property's grazing capacity or development potential regardless of total acreage. Boot exposure on ranch exchanges commonly arises from debt relief, since ranch and recreational land is frequently purchased with less leverage than a commercial property was carrying, and we model that reduction carefully so ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} clients understand potential taxable boot before committing to a specific tract. We also review fencing condition, road access easements, and improvement inventory, such as barns, working pens, and equipment sheds, separately from raw land value, since these items affect both usability from day one and how the property appraises for financing purposes, and a tract with strong grazing capacity but deferred fencing maintenance can require meaningful capital investment shortly after closing.`,
     valuePoints: [
-      "Title chain review focused on mineral and surface rights in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
-      "Agricultural tax status analysis to project rollback exposure.",
-      "Water well, pond, and riparian rights verification.",
+      "Title chain review focused on mineral and surface rights across North and Central Texas acreage.",
+      "Agricultural tax status analysis to project rollback exposure before closing.",
+      "Water well, pond, and riparian rights verification tied to grazing and development capacity.",
+      "Boot exposure modeling for the reduced leverage typical of ranch and recreational land purchases.",
+      "Like kind confirmation for raw acreage replacing commercial real estate under Section 1031.",
     ],
     deliverables: [
       "Ranch diligence checklist with environmental and survey requirements.",
       "Operational plan outlining grazing leases, wildlife exemptions, and improvements.",
       "Identification submission with metes and bounds legal descriptions.",
+      "Mineral and surface rights title summary distinguishing severed from unified estates.",
+      "Boot worksheet comparing relinquished property leverage against typical ranch purchase financing.",
     ],
     timeline: [
       { label: "Discovery", detail: `Catalog target acreage within a two hour radius of ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.` },
@@ -1230,6 +1652,21 @@ export const services: Service[] = [
         answer:
           `We arrange ranch inspections, fence assessments, and structural reviews within ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} counties.`,
       },
+      {
+        question: "Is raw acreage like kind to commercial property in a Dallas exchange?",
+        answer:
+          "Generally yes. Raw and unimproved land, including ranch and agricultural acreage, is typically treated as like kind to income producing commercial real estate, provided the replacement is held for investment or business use rather than personal use.",
+      },
+      {
+        question: "Can rollback taxes affect a Dallas ranch exchange?",
+        answer:
+          `Potentially. Texas allows reduced valuations for land under agricultural or wildlife management use. A change in use can trigger a rollback tax liability, which is separate from the federal exchange but should be budgeted into the ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} transaction.`,
+      },
+      {
+        question: "Why does reduced leverage matter on a Dallas ranch purchase?",
+        answer:
+          "Ranch and recreational land is often purchased with less debt than a commercial property carried. That net debt reduction can be treated as taxable boot unless offset with additional cash into the replacement purchase.",
+      },
     ],
     keywords: [
       "Dallas ranch 1031 exchange",
@@ -1245,16 +1682,20 @@ export const services: Service[] = [
     shortDescription:
       "Evaluate like-kind compliance, related party exposure, and documentation gaps before audits arise.",
     overview:
-      `Audits are costly. We assess like-kind eligibility, ownership structures, and related party agreements for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors, providing clear remediation steps.`,
+      `Audits are costly, both in the direct financial sense of a disallowed deferral and in the time and stress of responding to an IRS inquiry years after an exchange has closed, which is why we assess like-kind eligibility, ownership structures, and related party agreements for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} investors before problems surface rather than after. The core rule at the center of every Section 1031 exchange is that gain is deferred, not eliminated, and that deferral depends on the relinquished and replacement properties both being held for investment or business use, both being like kind to one another, and the exchange being properly structured through a qualified intermediary who avoids any actual or constructive receipt of funds by the taxpayer. Where an exchange runs into audit risk is usually not in the big, obvious requirements but in details that seem minor at the time, an entity structure that creates unintended related party exposure, a like-kind classification that assumed too much, or documentation that was never assembled carefully enough to withstand scrutiny years later. Texas has no state income tax, so audit exposure for Dallas investors centers entirely on federal compliance rather than a parallel state examination. Entity chart mapping is one of the most valuable exercises we run, tracing ownership across LLCs, partnerships, and trusts to flag related party transactions and attribution issues, since Section 1031 imposes additional restrictions when an exchange involves a related party, generally including a requirement that both parties hold their respective properties for at least two years after the exchange, and violating that holding period, even inadvertently through a later transfer, can retroactively disqualify the original deferral. A like-kind matrix confirms that the asset classifications involved in a completed or planned exchange meet current IRS definitions, since the scope of what qualifies as like kind real property has been narrowed by tax law changes that removed personal property exchanges from Section 1031 eligibility entirely, meaning any personal property bundled into a transaction and mistakenly treated as part of the like kind exchange creates real audit exposure. Documentation audit covering exchange agreements, identification letters, and closing statements confirms that the paper trail actually supports the deferral claimed on a tax return, since an identification letter that was verbally communicated but never formally documented, or a closing statement that does not clearly show qualified intermediary involvement, can be difficult to defend if questioned. We provide clear remediation steps when gaps are found, working alongside a client's tax counsel and qualified intermediary to correct documentation where possible and to understand risk exposure where the underlying transaction cannot be changed after the fact. This is an educational and coordination service, not a substitute for advice from a tax attorney or CPA, and every remediation plan should be reviewed by a client's own tax professional before being relied upon.`,
     valuePoints: [
       "Entity chart mapping to flag related party transactions and attribution issues.",
-      "Like-kind matrix confirming asset classifications meet IRS definitions.",
+      "Like-kind matrix confirming asset classifications meet current IRS definitions.",
       "Documentation audit covering exchange agreements, identification letters, and closing statements.",
+      "Two year holding period tracking for related party exchange structures.",
+      "Personal property exposure review to confirm bundled items were not improperly treated as like kind.",
     ],
     deliverables: [
       "Risk report outlining issues, mitigation actions, and responsible parties.",
       "Updated documentation checklist to maintain defensible records.",
       "Advisor coordination plan involving QI, tax counsel, and legal teams.",
+      "Related party holding period tracker covering the two years following your exchange.",
+      "Personal property allocation review flagging any items that may not have qualified as like kind.",
     ],
     timeline: [
       { label: "Intake", detail: "Collect organization charts, exchange agreements, and property documents." },
@@ -1283,6 +1724,21 @@ export const services: Service[] = [
         answer:
           `We compile appraisals, broker opinions, and valuation memos for ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} assets to substantiate fair market value.`,
       },
+      {
+        question: "What is the related party holding period for a Dallas 1031 exchange?",
+        answer:
+          "Exchanges involving related parties generally require both parties to hold their respective properties for at least two years after the exchange. A transfer within that window, even inadvertently, can retroactively jeopardize the original deferral.",
+      },
+      {
+        question: "Does personal property still qualify for a Dallas 1031 exchange?",
+        answer:
+          "No. Tax law changes narrowed Section 1031 to real property only, so personal property, including equipment, fixtures, and other tangible items, no longer qualifies for like kind exchange treatment regardless of how it is bundled into a sale.",
+      },
+      {
+        question: "Is this a substitute for tax advice on my Dallas exchange?",
+        answer:
+          "No. This is an educational and coordination service. Every risk assessment and remediation plan should be reviewed by your own tax attorney or CPA, since specific facts can change how a related party or like-kind issue is ultimately treated.",
+      },
     ],
     keywords: [
       "Dallas like-kind audit review",
@@ -1298,16 +1754,20 @@ export const services: Service[] = [
     shortDescription:
       "Rapid response service for investors inside the final ten days of identification or funding deadlines.",
     overview:
-      `Late stage exchanges demand precision. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} fast track unit mobilizes replacements, DST allocations, and lender approvals when timelines shrink.`,
+      `Late stage exchanges demand precision, and when an investor's forty five day identification deadline or one hundred eighty day closing deadline is only days away with no viable replacement secured, the margin for error effectively drops to zero. Our ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} fast track unit mobilizes replacement candidates, DST allocations, and lender approvals when timelines shrink, working from the same federal rules that govern every Section 1031 exchange, gain is deferred, not eliminated, only when identification and closing happen within the statutory windows, and neither deadline extends because a primary replacement candidate collapsed unexpectedly or a lender pulled a commitment late. This service exists because exchanges do sometimes reach the final days with real uncertainty, a financing source falls through, an environmental report surfaces an unexpected issue, or a seller backs out of a signed agreement, and when that happens the standard, methodical identification process most investors follow no longer fits the time available. Rapid sourcing protocols tap brokers, off-market contacts, and Delaware Statutory Trust sponsors serving ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} simultaneously rather than sequentially, since a fast track situation cannot afford to exhaust one channel before trying another. DST allocations often play an outsized role in fast track situations specifically because subscription processes for an existing, already-underwritten DST offering can move faster than negotiating and closing a direct property purchase from scratch, though it is important to understand that DST and TIC interests are frequently securities offerings, we do not sell securities, and any DST component of a fast track solution is handled through licensed securities professionals, with our role limited to helping the timeline and identification strategy fit together. Emergency lender alignment focuses on identifying financing sources capable of underwriting and closing within days rather than the weeks a conventional process assumes, which usually means agency lenders with streamlined programs, bridge lenders, or all-cash structures that remove financing contingency risk entirely when the deadline leaves no room for a slow underwriting process. Legal coordination accelerates document review, signature logistics, and qualified intermediary filings, since even a compliant identification or closing can be jeopardized by a document that is not executed and delivered on time, and fast track situations require every party, attorney, QI, lender, and title company, working from the same urgent timeline with no ambiguity about what is due when. Texas has no state income tax, so the fast track focus remains entirely on the federal deadlines, and no amount of urgency changes the fact that a forty five day identification window that has already expired cannot be extended after the fact. We also conduct a post-event review after every fast track engagement, documenting what created the late-stage crisis so future exchanges can be structured with more buffer from the start, since the best fast track outcome is one that never needed to be invoked.`,
     valuePoints: [
-      "Rapid sourcing protocols tapping brokers, off-market contacts, and DST sponsors serving ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}.",
-      "Emergency lender alignment to secure bridge or agency commitments within days.",
+      "Rapid sourcing protocols tapping brokers, off-market contacts, and DST sponsors serving Dallas simultaneously.",
+      "Emergency lender alignment to secure bridge, agency, or all-cash commitments within days.",
       "Legal coordination that accelerates document review, signatures, and QI filings.",
+      "DST subscription pathways available for situations where direct closings cannot move fast enough.",
+      "Post-event review documenting root causes so future exchanges carry more built-in buffer.",
     ],
     deliverables: [
       "Crisis action plan summarizing remaining milestones and owners.",
       "Contact playbook activating dedicated resources during extended hours.",
       "Post-event review documenting lessons learned for future exchanges.",
+      "Emergency financing shortlist prioritized by realistic closing speed within your remaining window.",
+      "DST introduction pathway to licensed securities professionals when direct closings are not feasible in time.",
     ],
     timeline: [
       { label: "Hours 0 to 12", detail: "Assess status, gather documentation, and deploy task force members." },
@@ -1334,7 +1794,22 @@ export const services: Service[] = [
       {
         question: "Can you integrate DST and direct assets in Dallas, TX?",
         answer:
-          `We blend DST subscriptions with direct replacements inside ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to secure compliance under extreme deadlines.`,
+          `We blend DST subscriptions with direct replacements inside ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR} to secure compliance under extreme deadlines. DST interests are frequently securities, and we introduce clients to licensed providers for that portion of the transaction.`,
+      },
+      {
+        question: "Can a Dallas exchange deadline be extended in a true emergency?",
+        answer:
+          "Generally no, except in limited federally declared disaster relief situations. Fast track service focuses on mobilizing resources within the existing deadline rather than seeking an extension, since the forty five and one hundred eighty day windows are set by statute.",
+      },
+      {
+        question: "Why do DST allocations help in a Dallas fast track situation?",
+        answer:
+          "An existing, already-underwritten DST offering can often move to subscription faster than negotiating and closing a new direct property purchase. This makes DSTs a useful fallback when a direct replacement falls through late in the process.",
+      },
+      {
+        question: "What financing sources close fastest for a Dallas fast track exchange?",
+        answer:
+          "Agency lenders with streamlined programs, bridge lenders, and all-cash structures typically close faster than conventional bank financing. We prioritize sources by realistic closing speed given the days remaining in your deadline.",
       },
     ],
     keywords: [
