@@ -315,7 +315,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
-              Name *
+              Name
             </label>
             <input
               type="text"
@@ -329,7 +329,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
 
           <div>
             <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
-              Have You Used a 1031 Exchange Before?
+              Have you completed a 1031 exchange before?
             </label>
             <select id="company"
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
@@ -339,7 +339,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="email" className="block text-sm font-medium text-heading mb-2">
-              Email *
+              Email
             </label>
             <input
               type="email"
@@ -353,7 +353,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
 
           <div>
             <label htmlFor="phone" className="block text-sm font-medium text-heading mb-2">
-              Phone *
+              Phone Number
             </label>
             <input
               type="tel"
@@ -383,7 +383,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
 
         <div>
           <label htmlFor="details" className="block text-sm font-medium text-heading mb-2">
-            Additional Context
+            Notes
           </label>
           <textarea id="details"
             className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-vertical" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
