@@ -328,11 +328,21 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
           </div>
 
           <div>
-            <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
-              Have you completed a 1031 exchange before?
+            <label htmlFor="phone" className="block text-sm font-medium text-heading mb-2">
+              Phone Number
             </label>
-            <select id="company"
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
+            <input
+              type="tel"
+              id="phone"
+              value={formData.phone}
+              onChange={(e) => {
+                // Only allow digits, spaces, hyphens, parentheses, and plus sign
+                const value = e.target.value.replace(/[^\d\s\-\(\)\+]/g, '');
+                handleInputChange('phone', value);
+              }}
+              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              required name="phone"/>
+            {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
           </div>
         </div>
 
@@ -352,21 +362,11 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
           </div>
 
           <div>
-            <label htmlFor="phone" className="block text-sm font-medium text-heading mb-2">
-              Phone Number
+            <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
+              Have you completed a 1031 exchange before?
             </label>
-            <input
-              type="tel"
-              id="phone"
-              value={formData.phone}
-              onChange={(e) => {
-                // Only allow digits, spaces, hyphens, parentheses, and plus sign
-                const value = e.target.value.replace(/[^\d\s\-\(\)\+]/g, '');
-                handleInputChange('phone', value);
-              }}
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-              required name="phone"/>
-            {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
+            <select id="company"
+              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
           </div>
         </div>
 
