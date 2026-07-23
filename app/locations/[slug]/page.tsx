@@ -6,6 +6,7 @@ import { getAllLocations } from "@/lib/data/locations";
 import { getAllServices } from "@/lib/data/services";
 import { findLocationBySlug } from "@/lib/utils/search";
 import { getLocationImagePath } from "@/lib/utils/images";
+import { getLocationContent } from "@/lib/data/location-content";
 import {
   COMPANY_NAME,
   PRIMARY_CITY,
@@ -95,6 +96,10 @@ export default async function LocationPage({ params }: LocationPageProps) {
     .filter(Boolean);
 
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(location.name)}&output=embed`;
+
+  const richContent = getLocationContent(location.slug);
+  const faqs =
+    richContent && richContent.faqs.length > 0 ? richContent.faqs : location.faqs;
 
   const breadcrumbJsonLd = {
     "@context": "https://schema.org",
@@ -231,6 +236,23 @@ export default async function LocationPage({ params }: LocationPageProps) {
             />
           </div>
         </section>
+        {richContent && richContent.sections.length > 0 && (
+          <section className="space-y-8 rounded-3xl border border-outline/15 bg-white p-6 shadow-[0_20px_56px_rgba(21,50,67,0.08)] sm:p-8">
+            {richContent.sections.map((section, index) => (
+              <div key={section.heading ?? `intro-${index}`} className="space-y-3">
+                {section.heading && (
+                  <h2 className="text-xl font-semibold text-heading">
+                    {section.heading}
+                  </h2>
+                )}
+                <div
+                  className="space-y-4 text-sm leading-6 text-text/85 [&_ul]:list-disc [&_ul]:space-y-2 [&_ul]:pl-5 [&_li]:leading-6"
+                  dangerouslySetInnerHTML={{ __html: section.html }}
+                />
+              </div>
+            ))}
+          </section>
+        )}
         <section className="space-y-4">
           <h2 className="text-xl font-semibold text-heading">
             Recommended services for {location.name}
@@ -273,7 +295,7 @@ export default async function LocationPage({ params }: LocationPageProps) {
             Frequently asked questions
           </h2>
           <div className="space-y-3">
-            {location.faqs.map((faq) => (
+            {faqs.map((faq) => (
               <details
                 key={faq.question}
                 className="rounded-3xl border border-outline/15 bg-white p-5 shadow-[0_20px_56px_rgba(21,50,67,0.08)]"

@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef, Suspense } from 'react';
-import { useSearchParams } from 'next/navigation';
-import { PRIMARY_STATE_ABBR } from '@/lib/constants';
 
 // Extend window type for Turnstile
 declare global {
@@ -49,15 +47,10 @@ function loadTurnstile(): Promise<void> {
 
 type FormData = {
   name: string;
-  company: string;
   email: string;
   phone: string;
-  projectType: string;
-  property: string;
-  estimatedCloseDate: string;
-  city: string;
-  timeline: string;
-  details: string;
+  hasCompleted1031: boolean;
+  notes: string;
 };
 
 type FormErrors = Partial<Record<keyof FormData, string>>;
@@ -69,19 +62,13 @@ type ContactFormFieldsProps = {
 };
 
 function ContactFormFieldsContent({ onSuccess, showHeading = false, className = '' }: ContactFormFieldsProps) {
-  const searchParams = useSearchParams();
   const captchaRef = useRef<HTMLDivElement | null>(null);
   const [formData, setFormData] = useState<FormData>({
     name: '',
-    company: '',
     email: '',
     phone: '',
-    projectType: '',
-    property: '',
-    estimatedCloseDate: '',
-    city: '',
-    timeline: '',
-    details: ''
+    hasCompleted1031: false,
+    notes: ''
   });
   const [errors, setErrors] = useState<FormErrors>({});
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -90,9 +77,6 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
   const [submitError, setSubmitError] = useState<string | null>(null);
 
   const siteKey = "";
-
-  // Get projectType from URL params
-  const projectTypeParam = searchParams?.get('projectType');
 
   // Load Turnstile script
   useEffect(() => {
@@ -145,24 +129,6 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
     };
   }, [siteKey]);
 
-  useEffect(() => {
-    // Prefill form from URL parameters
-    const projectTypeParam = searchParams?.get('projectType');
-    const locationParam = searchParams?.get('location');
-
-    if (projectTypeParam) {
-      setFormData(prev => ({ ...prev, projectType: projectTypeParam }));
-    }
-
-    if (locationParam && !projectTypeParam) {
-      setFormData(prev => ({
-        ...prev,
-        projectType: `${locationParam} Property Search`,
-        details: `Interested in 1031 exchange opportunities in ${locationParam}, ${PRIMARY_STATE_ABBR}.`
-      }));
-    }
-  }, [searchParams]);
-
   const validateForm = (): FormErrors => {
     const newErrors: FormErrors = {};
 
@@ -170,8 +136,6 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
     if (!formData.email.trim()) newErrors.email = 'Email is required';
     else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) newErrors.email = 'Valid email required';
     if (!formData.phone.trim()) newErrors.phone = 'Phone is required';
-    if (!formData.projectType) newErrors.projectType = 'Service needed is required';
-    if (!formData.details.trim()) newErrors.details = 'Message is required';
 
     return newErrors;
   };
@@ -238,15 +202,10 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         },
         body: JSON.stringify({
           name: formData.name,
-          company: formData.company,
           email: formData.email,
           phone: phoneDigits,
-          projectType: formData.projectType,
-          property: formData.property,
-          estimatedCloseDate: formData.estimatedCloseDate,
-          city: formData.city,
-          timeline: formData.timeline,
-          details: formData.details,
+          hasCompleted1031: formData.hasCompleted1031 ? "Yes" : "No",
+          notes: formData.notes,
           'cf-turnstile-response': turnstileToken,
         }),
       });
@@ -255,15 +214,10 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         // Reset form
         setFormData({
           name: '',
-          company: '',
           email: '',
           phone: '',
-          projectType: '',
-          property: '',
-          estimatedCloseDate: '',
-          city: '',
-          timeline: '',
-          details: ''
+          hasCompleted1031: false,
+          notes: ''
         });
         // Reset turnstile
         if (window.turnstile && turnstileId) {
@@ -311,7 +265,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
         </>
       )}
 
-      <form className="space-y-6" action="/api/contact" method="post">
+      <form className="space-y-6" onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
@@ -323,6 +277,7 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
               value={formData.name}
               onChange={(e) => handleInputChange('name', e.target.value)}
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              autoComplete="name"
               required name="name"/>
             {errors.name && <p className="text-red-600 text-sm mt-1">{errors.name}</p>}
           </div>
@@ -341,44 +296,39 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
                 handleInputChange('phone', value);
               }}
               className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+              autoComplete="tel"
               required name="phone"/>
             {errors.phone && <p className="text-red-600 text-sm mt-1">{errors.phone}</p>}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div>
-            <label htmlFor="email" className="block text-sm font-medium text-heading mb-2">
-              Email
-            </label>
-            <input
-              type="email"
-              id="email"
-              value={formData.email}
-              onChange={(e) => handleInputChange('email', e.target.value)}
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
-              required name="email"/>
-            {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
-          </div>
-
-          <div>
-            <label htmlFor="company" className="block text-sm font-medium text-heading mb-2">
-              Have you completed a 1031 exchange before?
-            </label>
-            <select id="company"
-              className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary" name="hasCompleted1031" required><option value="">Select yes or no</option><option value="Yes">Yes</option><option value="No">No</option></select>
-          </div>
+        <div>
+          <label htmlFor="email" className="block text-sm font-medium text-heading mb-2">
+            Email
+          </label>
+          <input
+            type="email"
+            id="email"
+            value={formData.email}
+            onChange={(e) => handleInputChange('email', e.target.value)}
+            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary"
+            autoComplete="email"
+            required name="email"/>
+          {errors.email && <p className="text-red-600 text-sm mt-1">{errors.email}</p>}
         </div>
 
-
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-
-
-        </div>
-
-
-
+        <label className="flex cursor-pointer items-center gap-3 rounded-2xl border border-outline/30 bg-white px-4 py-3 text-sm font-medium text-heading">
+          <input type="hidden" name="hasCompleted1031" value="No" />
+          <input
+            type="checkbox"
+            name="hasCompleted1031"
+            value="Yes"
+            checked={formData.hasCompleted1031}
+            onChange={(e) => setFormData(prev => ({ ...prev, hasCompleted1031: e.target.checked }))}
+            className="h-4 w-4 shrink-0 accent-primary"
+          />
+          Have you completed a 1031 exchange before?
+        </label>
 
 
         <div>
@@ -386,8 +336,9 @@ function ContactFormFieldsContent({ onSuccess, showHeading = false, className = 
             Notes
           </label>
           <textarea id="details"
-            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-vertical" name="notes" rows={4} placeholder="Share any exchange questions or context"></textarea>
-          {errors.details && <p className="text-red-600 text-sm mt-1">{errors.details}</p>}
+            value={formData.notes}
+            onChange={(e) => handleInputChange('notes', e.target.value)}
+            className="w-full px-4 py-3 bg-white border border-outline/30 rounded-2xl text-heading placeholder:text-text/60 focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary resize-vertical" name="notes" rows={5} placeholder="Share any exchange questions or context"></textarea>
         </div>
 
         {submitError && (
