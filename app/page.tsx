@@ -1,3 +1,4 @@
+import ExchangeIntentSection from "../components/ExchangeIntentSection";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -186,7 +187,7 @@ const FAQ_ITEMS = [
       "A 1031 exchange defers federal and Texas income tax on qualifying real property. County and municipal transfer taxes, filing fees, and documentary stamp taxes still apply where assessed.",
   },
   {
-    question: "Can I complete a reverse exchange?",
+    question: "Can you complete a reverse exchange?",
     answer:
       "Reverse exchanges are permitted when you acquire the replacement property before selling the relinquished property, using an exchange accommodation titleholder and compliant documentation.",
   },
@@ -1124,7 +1125,7 @@ export default function Home({ searchParams }: HomeProps) {
         </section>
 
         {/* NO FOOTER HERE - Footer is in layout.tsx via SiteFooter component */}
-      </main>
+      <ExchangeIntentSection /></main>
       {jsonLdBlocks.map((script) => (
         <script
           key={script.id}

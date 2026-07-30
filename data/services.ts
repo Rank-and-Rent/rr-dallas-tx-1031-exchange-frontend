@@ -9,6 +9,27 @@ export const servicesData: ServiceItem[] = [
     category: "Property Paths",
   },
   {
+    slug: "qualified-intermediary-coordination",
+    name: "Qualified Intermediary Coordination",
+    short: "Introduction to vetted qualified intermediaries and escrow coordination support.",
+    route: "/services/qualified-intermediary-coordination",
+    category: "Execution",
+  },
+  {
+    slug: "dst-placement-advisory",
+    name: "DST Placement Advisory",
+    short: "Introduction to Delaware Statutory Trust options for fractional replacement property ownership.",
+    route: "/services/dst-placement-advisory",
+    category: "Structures",
+  },
+  {
+    slug: "reverse-exchange-coordination",
+    name: "Reverse Exchange Coordination",
+    short: "Support for acquiring replacement property before relinquished property sale closes.",
+    route: "/services/reverse-exchange-coordination",
+    category: "Structures",
+  },
+  {
     slug: "three-property-identification-strategy",
     name: "Three Property Identification Strategy",
     short: "Structured approach to selecting up to three replacement properties per IRS rules.",
@@ -30,24 +51,10 @@ export const servicesData: ServiceItem[] = [
     category: "Property Paths",
   },
   {
-    slug: "reverse-exchange-coordination",
-    name: "Reverse Exchange Coordination",
-    short: "Support for acquiring replacement property before relinquished property sale closes.",
-    route: "/services/reverse-exchange-coordination",
-    category: "Structures",
-  },
-  {
     slug: "improvement-exchange-planning",
     name: "Improvement Exchange Planning",
     short: "Coordination of build-to-suit and improvement exchanges using qualified escrow.",
     route: "/services/improvement-exchange-planning",
-    category: "Structures",
-  },
-  {
-    slug: "dst-placement-advisory",
-    name: "DST Placement Advisory",
-    short: "Introduction to Delaware Statutory Trust options for fractional replacement property ownership.",
-    route: "/services/dst-placement-advisory",
     category: "Structures",
   },
   {
@@ -128,13 +135,6 @@ export const servicesData: ServiceItem[] = [
     category: "Execution",
   },
   {
-    slug: "qualified-intermediary-coordination",
-    name: "Qualified Intermediary Coordination",
-    short: "Introduction to vetted qualified intermediaries and escrow coordination support.",
-    route: "/services/qualified-intermediary-coordination",
-    category: "Execution",
-  },
-  {
     slug: "lender-coordination-support",
     name: "Lender Coordination Support",
     short: "Assistance coordinating with lenders for replacement property financing.",
@@ -175,6 +175,5 @@ export const servicesData: ServiceItem[] = [
     short: "Assistance drafting compliant identification letters for qualified intermediaries.",
     route: "/services/identification-letter-drafting",
     category: "Execution",
-  },
-];
+  },];
 
