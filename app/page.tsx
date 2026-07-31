@@ -1,4 +1,3 @@
-import ExchangeIntentSection from "../components/ExchangeIntentSection";
 import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
@@ -1125,7 +1124,7 @@ export default function Home({ searchParams }: HomeProps) {
         </section>
 
         {/* NO FOOTER HERE - Footer is in layout.tsx via SiteFooter component */}
-      <ExchangeIntentSection /></main>
+      </main>
       {jsonLdBlocks.map((script) => (
         <script
           key={script.id}

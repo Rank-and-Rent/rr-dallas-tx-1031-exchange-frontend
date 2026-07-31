@@ -10,6 +10,12 @@ const config = {
   theme: {
     extend: {
       colors: {
+        "brand-dark": "#1E1E1E",
+        "brand-charcoal": "#2D2D2D",
+        "brand-copper": "#E85D24",
+        "brand-copper-light": "#E85D24",
+        "brand-gold": "#E85D24",
+        "brand-gold-dark": "#E85D24",
         base: tokens.paper,
         text: tokens.ink,
         paper: tokens.paper,
