@@ -270,17 +270,17 @@ const jsonLdBlocks = [
 const isStaffedOffice = false;
 
 export const metadata: Metadata = {
-  title: "Dallas 1031 Exchange Services | Nationwide Property Sourcing",
+  title: "1031 Exchange Dallas | Direct & Passive Options",
   description:
-    "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states. Compliant exchanges, expert coordination, timeline control.",
+    "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "Dallas 1031 Exchange Services | Nationwide Property Sourcing",
+    title: "1031 Exchange Dallas | Direct & Passive Options",
     description:
-      "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states. Compliant exchanges, expert coordination.",
+      "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
     url: SITE_URL,
     siteName: COMPANY_NAME,
     images: [
@@ -296,9 +296,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Dallas 1031 Exchange Services | Nationwide Property Sourcing",
+    title: "1031 Exchange Dallas | Direct & Passive Options",
     description:
-      "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states.",
+      "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
     images: [`${SITE_URL}/1031-exchange-dallas-logo.png`],
   },
 };

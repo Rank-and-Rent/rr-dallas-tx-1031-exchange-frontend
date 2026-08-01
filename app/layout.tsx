@@ -37,11 +37,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${COMPANY_NAME} | Dallas 1031 Exchange Services`,
+    default: "1031 Exchange Dallas | Direct & Passive Options",
     template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states. Compliant exchanges, expert coordination, timeline control.",
+    "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
   keywords: [
     "1031 exchange",
     "Dallas 1031 exchange",
@@ -70,8 +70,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: COMPANY_NAME,
-    title: `${COMPANY_NAME} | Dallas 1031 Exchange Services`,
-    description: "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states. Compliant exchanges, expert coordination.",
+    title: "1031 Exchange Dallas | Direct & Passive Options",
+    description: "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
     images: [
       {
         url: `${SITE_URL}/1031-exchange-dallas-logo.png`,
@@ -83,8 +83,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: `${COMPANY_NAME} | Dallas 1031 Exchange Services`,
-    description: "Dallas 1031 exchange services. Help Dallas investors find replacement properties in all 50 states.",
+    title: "1031 Exchange Dallas | Direct & Passive Options",
+    description: "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
     images: [`${SITE_URL}/1031-exchange-dallas-logo.png`],
     creator: "@1031exchangedallas",
   },
