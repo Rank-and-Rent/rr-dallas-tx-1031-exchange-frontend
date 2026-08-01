@@ -66,7 +66,7 @@ const IRS_LINKS = [
 
 const TOP_SERVICES = [
   {
-    name: "Delayed 1031 Exchange Coordination",
+    name: "Delayed 1031 Exchange Solutions",
     description:
       "Structure a compliant delayed exchange with timelines and escrow controls tailored to Texas transactions.",
     slug: "delayed-1031-exchange",
@@ -137,7 +137,7 @@ const PROPERTY_TYPES = [
   {
     name: "Hospitality Assets",
     description:
-      "Transition between hotel, extended stay, or resort holdings with precise QI coordination.",
+      "Transition between hotel, extended stay, or resort holdings with precise QI support.",
     slug: "hospitality",
   },
 ];
@@ -471,11 +471,7 @@ export default function Home({ searchParams }: HomeProps) {
                   >
                     {COMPANY_NAME}
                   </h2>
-                  <p className="mb-8 text-[#2D2D2D]/80 leading-relaxed">
-                    Our clients trust our upfront approach and value our input when addressing all aspects of a transaction.
-                    We strive to negotiate the best terms for our clients. When met with a tough challenge we are creative,
-                    strategic, and skillful in working through issues.
-                  </p>
+                  <p className="mb-8 text-[#2D2D2D]/80 leading-relaxed">A Dallas owner may be selling apartments, industrial property, land, or a long-held commercial asset to reduce management, reposition debt, diversify, or improve income. We turn that objective and the expected proceeds into a complete 1031 exchange solution with direct, net-lease, and passive replacement paths.</p>
                   <div className="flex flex-wrap gap-4">
                     <Link
                       href="/services"
@@ -513,7 +509,7 @@ export default function Home({ searchParams }: HomeProps) {
 
         {/* Three Card Portfolio Section */}
         <section className="bg-[#F5F3EE] py-20" aria-labelledby="portfolio-heading">
-          <h2 id="portfolio-heading" className="sr-only">Explore Our Services</h2>
+          <h2 id="portfolio-heading" className="sr-only">Dallas 1031 Exchange Solutions</h2>
           <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
             <MotionDiv delay={0.1}>
               <div className="grid gap-4 md:grid-cols-3">
@@ -656,7 +652,7 @@ export default function Home({ searchParams }: HomeProps) {
                     id="property-heading"
                     className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-4xl`}
                   >
-                    Qualifying Property Types
+                    Institutional-Quality Real Estate, No Daily Operations
                   </h2>
                 </div>
                 <Link
@@ -761,17 +757,12 @@ export default function Home({ searchParams }: HomeProps) {
                 </div>
               </div>
 
-              <p className="mb-8 max-w-2xl text-lg text-white/90">
-                Specializing in investment properties, commercial real estate, and land exchanges,
-                {COMPANY_NAME} sets itself apart by providing an exceptional 1031 exchange experience.
-              </p>
+              <p className="mb-8 max-w-2xl text-lg text-white/90">A DST may provide Dallas sellers professionally managed fractional ownership without personally handling tenants, repairs, or building decisions. Some offerings can carry minimums near $100,000, while current supply, projected income, fees, leverage, sponsor and property risk, transfer restrictions, eligibility, and suitability remain investment-specific.</p>
 
               <Link
                 href="/contact"
                 className={`${inter.className} inline-flex items-center border-2 border-white px-10 py-4 text-sm tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-[#2D2D2D] uppercase`}
-              >
-                Let&apos;s Connect
-              </Link>
+              >Talk Through the Dallas Sale</Link>
             </MotionDiv>
           </div>
           <h2 id="connect-heading" className="sr-only">Connect with {COMPANY_NAME}</h2>
@@ -945,11 +936,9 @@ export default function Home({ searchParams }: HomeProps) {
                   </h2>
                 </div>
                 <Link
-                  href="/services"
+                  href="/contact?request=guide"
                   className={`${inter.className} text-sm tracking-[0.1em] text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18] uppercase`}
-                >
-                  View all {getAllServices().length} services
-                </Link>
+                >Get Free Dallas 1031 Information</Link>
               </div>
             </MotionDiv>
             <MotionDiv delay={0.2}>
@@ -1051,11 +1040,9 @@ export default function Home({ searchParams }: HomeProps) {
             </div>
             <MotionDiv delay={0.55} className="mt-8">
               <Link
-                href="/tools"
+                href="/contact?request=properties"
                 className={`${inter.className} text-sm tracking-[0.1em] text-[#E85D24] underline underline-offset-4 transition hover:text-white uppercase`}
-              >
-                View all tools
-              </Link>
+              >Request the Dallas Property List</Link>
             </MotionDiv>
           </div>
         </section>
