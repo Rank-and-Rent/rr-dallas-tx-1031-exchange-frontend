@@ -1,197 +1,191 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import {
   COMPANY_NAME,
+  COMPANY_PHONE,
+  COMPANY_PHONE_DIGITS,
   CONTACT_PATH,
-  PRIMARY_CITY,
-  PRIMARY_STATE_ABBR,
-  SERVICES_PATH,
   SITE_URL,
 } from "@/lib/constants";
 
 export const metadata: Metadata = {
-  title: "About Dallas 1031 Exchange | Nationwide Services",
+  title: "About Our Dallas 1031 Exchange Solutions",
   description:
-    "Dallas 1031 exchange support. Secure intake, property matching, Qualified Intermediary coordination. We help Dallas investors find replacement properties in all 50 states.",
-  keywords: [
-    "about 1031 exchange",
-    "Dallas 1031 exchange",
-    "1031 exchange support",
-    "qualified intermediary",
-    "replacement property",
-  ],
+    "Learn how 1031 Exchange Dallas helps property owners plan a sale, compare direct and passive replacement options, and move toward closing.",
   alternates: {
     canonical: `${SITE_URL}/about`,
   },
   openGraph: {
-    title: "About Dallas 1031 Exchange | Nationwide Services",
+    title: "About Our Dallas 1031 Exchange Solutions",
     description:
-      "Dallas 1031 exchange support. Secure intake, property matching, Qualified Intermediary coordination. We help Dallas investors find replacement properties in all 50 states.",
+      "Free guidance for Dallas property owners comparing direct real estate, net-lease property, and passive DST replacement options.",
     url: `${SITE_URL}/about`,
     siteName: COMPANY_NAME,
     images: [
       {
-        url: `${SITE_URL}/1031-exchange-dallas-logo.png`,
+        url: `${SITE_URL}/1031-exchange-dallas-tx.webp`,
         width: 1200,
         height: 630,
-        alt: "About Dallas 1031 Exchange",
+        alt: "About 1031 Exchange Dallas",
       },
     ],
     locale: "en_US",
     type: "website",
   },
-  twitter: {
-    card: "summary_large_image",
-    title: "About Dallas 1031 Exchange | Nationwide Services",
-    description: "Dallas 1031 exchange support. We help Dallas investors find replacement properties in all 50 states.",
-    images: [`${SITE_URL}/1031-exchange-dallas-logo.png`],
-  },
 };
 
-const differentiators = [
+const reasons = [
   {
-    title: "Secure intake workflow",
+    title: "The current property takes too much work",
     description:
-      "Client data enters through encrypted forms and document vaults. We never email wire instructions or sensitive data without multi-factor verification.",
+      "Tenants, repairs, capital projects, leasing, and management demands may no longer fit the owner’s life or investment plan.",
   },
   {
-    title: "Exchange-aligned property matching",
+    title: "The sale creates a replacement decision",
     description:
-      "We source and score replacement assets nationwide based on timeline certainty, like-kind eligibility, and underwriting benchmarks. We help Dallas investors find properties in all 50 states.",
+      "The owner may want another direct property, a net-lease acquisition, a professionally managed DST interest, or a combination of alternatives.",
   },
   {
-    title: "Qualified Intermediary coordination",
+    title: "The exchange is already moving",
     description:
-      "Our team stays in sync with your chosen Qualified Intermediary, attorneys, CPAs, and lenders from contract execution through funding.",
+      "A contract or closing date may make it urgent to engage an independent qualified intermediary and define realistic replacement criteria.",
   },
   {
-    title: "Compliance-first documentation",
+    title: "An inherited property no longer fits",
     description:
-      "Every identification letter, inspection report, and closing statement is catalogued for Form 8824 support and future audit readiness.",
+      "Ownership, basis, qualifying use, family priorities, and timing need to be organized with the owner’s tax and legal advisors before the sale advances.",
   },
 ];
 
-const commitments = [
-  "We are not a Qualified Intermediary, law firm, broker, or CPA. Our role is advisory and operational.",
-  "We never custody exchange proceeds. Funds remain with your Qualified Intermediary at all times.",
-  "We work with licensed professionals and lenders who understand Dallas, TX regulatory deadlines and local market nuance.",
-  "We provide transparent status reports so investors and advisors track 45 and 180 day milestones together.",
+const approach = [
+  {
+    title: "Start with the planned sale",
+    description:
+      "Clarify the property, ownership, closing window, expected equity, debt, income goals, management preferences, and the reason for selling.",
+  },
+  {
+    title: "Build the replacement brief",
+    description:
+      "Place direct property, net-lease real estate, and passive DST possibilities beside the same priorities for income, control, risk, workload, liquidity, and timing.",
+  },
+  {
+    title: "Bring in the right professionals",
+    description:
+      "Connect the owner with the independent qualified intermediary and other appropriately licensed professionals the transaction requires.",
+  },
+  {
+    title: "Keep open questions visible",
+    description:
+      "Follow title, financing, inspections, identification, documents, advisor questions, and closing requirements through the replacement acquisition.",
+  },
 ];
 
 export default function AboutPage() {
   return (
-    <div className="container space-y-16 pt-28 pb-16">
-      <section className="space-y-6">
-        <p className="text-sm uppercase tracking-[0.24em] text-primary">About</p>
-        <h1 className="text-4xl font-semibold text-heading sm:text-5xl">
-          Purpose-built support for Dallas 1031 exchanges
-        </h1>
-        <p className="max-w-3xl text-lg text-text/85">
-          {COMPANY_NAME} operates as a secure project desk for Dallas investors,
-          developers, and advisors completing tax-deferred exchanges. We help Dallas investors find replacement properties in all 50 states. We choreograph every step between
-          property sale, replacement sourcing, and closing so deadlines stay on
-          track and documentation remains audit ready.
-        </p>
+    <div className="bg-[#F5F3EE] text-[#2D2D2D]">
+      <section className="relative overflow-hidden pb-24 pt-36 text-white">
+        <Image
+          src="/locations/1031-exchange-dallas-TX.webp"
+          alt="Dallas skyline"
+          fill
+          priority
+          className="object-cover"
+          sizes="100vw"
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/65 to-black/35" />
+        <div className="relative mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+          <p className="text-sm tracking-[0.24em] text-[#E85D24] uppercase">About {COMPANY_NAME}</p>
+          <h1 className="mt-5 max-w-4xl font-[family-name:var(--font-ibm-plex-serif)] text-4xl leading-tight text-white sm:text-6xl">
+            A clearer route from the Dallas property sale to what comes next.
+          </h1>
+          <p className="mt-6 max-w-3xl text-lg leading-relaxed text-white/85">
+            {COMPANY_NAME} helps investment-property owners understand their choices, organize the moving parts, and compare direct and passive replacement paths before time-sensitive decisions take over.
+          </p>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <a href={`tel:+1${COMPANY_PHONE_DIGITS}`} className="inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]">
+              Call {COMPANY_PHONE}
+            </a>
+            <Link href={`${CONTACT_PATH}?request=properties`} className="inline-flex items-center border-2 border-white px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-white hover:text-[#2D2D2D]">
+              Get a Free Property List
+            </Link>
+          </div>
+        </div>
       </section>
-      <section className="grid gap-6 md:grid-cols-2">
-        {differentiators.map((item) => (
-          <article
-            key={item.title}
-            className="rounded-3xl border border-outline/15 bg-white p-6 shadow-[0_20px_56px_rgba(21,50,67,0.08)]"
-          >
-            <h2 className="text-xl font-semibold text-heading">{item.title}</h2>
-            <p className="mt-3 text-sm text-text/80">{item.description}</p>
-          </article>
-        ))}
-      </section>
-      <section className="space-y-4 rounded-3xl border border-outline/15 bg-white p-6 shadow-[0_20px_56px_rgba(21,50,67,0.08)]">
-        <h2 className="text-xl font-semibold text-heading">
-          How engagements run
-        </h2>
-        <ol className="space-y-3 text-sm text-text/85">
-          <li className="flex gap-3">
-            <span aria-hidden="true" className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-fg">
-              1
-            </span>
-            <div>
-              <p className="font-semibold text-heading">Secure intake</p>
-              <p>
-                Share transaction goals, proceeds estimates, and advisor roster
-                through our encrypted portal. We set up calendar alerts for every
-                milestone on day one.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-3">
-            <span aria-hidden="true" className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-fg">
-              2
-            </span>
-            <div>
-              <p className="font-semibold text-heading">Property matching</p>
-              <p>
-                We present short lists that blend on-market, off-market, and DST
-                positions, each scored for closing certainty, returns, and
-                compliance with Dallas timelines.
-              </p>
-            </div>
-          </li>
-          <li className="flex gap-3">
-            <span aria-hidden="true" className="mt-1 inline-flex h-6 w-6 items-center justify-center rounded-full bg-primary text-xs font-semibold text-primary-fg">
-              3
-            </span>
-            <div>
-              <p className="font-semibold text-heading">Execution and reporting</p>
-              <p>
-                We run weekly status calls, maintain shared task trackers, and log
-                every document for your Qualified Intermediary, lender, and tax
-                advisor.
-              </p>
-            </div>
-          </li>
-        </ol>
-      </section>
-      <section className="space-y-3">
-        <h2 className="text-xl font-semibold text-heading">
-          Our commitments
-        </h2>
-        <ul className="space-y-2 text-sm text-text/80">
-          {commitments.map((item) => (
-            <li key={item} className="flex gap-3">
-              <span aria-hidden="true" className="mt-1 h-2 w-2 rounded-full bg-primary" />
-              <span>{item}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-      <section className="rounded-3xl border border-outline/15 bg-white p-8 shadow-[0_20px_60px_rgba(21,50,67,0.12)]">
-        <div className="flex flex-col gap-3 text-center md:flex-row md:items-center md:justify-between md:text-left">
-          <div>
-            <h2 className="text-2xl font-semibold text-heading">
-              Build your exchange plan
+
+      <section className="bg-white py-24">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+          <div className="max-w-3xl">
+            <p className="text-sm tracking-[0.24em] text-[#E85D24] uppercase">Why Owners Call</p>
+            <h2 className="mt-4 font-[family-name:var(--font-ibm-plex-serif)] text-3xl sm:text-5xl">
+              A 1031 exchange usually begins with a life or property problem.
             </h2>
-            <p className="text-sm text-text/80">
-              Outline your relinquished property, target asset type, and desired
-              debt structure. We will verify deadlines, loop in your advisors, and
-              present an identification roadmap.
+            <p className="mt-5 text-lg leading-relaxed text-[#2D2D2D]/75">
+              Rules matter, but owners normally begin by asking what to do with a property that no longer serves its purpose. The exchange should be built around that answer.
             </p>
           </div>
-          <div className="flex flex-wrap items-center justify-center gap-3 md:justify-end">
-            <Link
-              href={`${CONTACT_PATH}?projectType=Strategy%20Session`}
-              className="inline-flex items-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-fg transition hover:bg-[#B68531] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              Schedule a strategy call
-            </Link>
-            <Link
-              href={SERVICES_PATH}
-              className="inline-flex items-center rounded-full border border-outline/30 px-5 py-3 text-sm font-medium text-text transition hover:border-primary hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-            >
-              Explore services
-            </Link>
+          <div className="mt-12 grid gap-7 md:grid-cols-2">
+            {reasons.map((reason) => (
+              <article key={reason.title} className="border-t-2 border-[#E85D24] pt-5">
+                <h3 className="text-xl font-semibold">{reason.title}</h3>
+                <p className="mt-3 leading-relaxed text-[#2D2D2D]/70">{reason.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24">
+        <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+          <div className="text-center">
+            <p className="text-sm tracking-[0.24em] text-[#E85D24] uppercase">How We Help</p>
+            <h2 className="mt-4 font-[family-name:var(--font-ibm-plex-serif)] text-3xl sm:text-5xl">
+              One organized exchange solution
+            </h2>
+          </div>
+          <div className="mt-12 grid gap-5 md:grid-cols-2">
+            {approach.map((item) => (
+              <article key={item.title} className="bg-white p-7 shadow-[0_16px_44px_rgba(45,45,45,0.07)] sm:p-8">
+                <h3 className="font-[family-name:var(--font-ibm-plex-serif)] text-2xl">{item.title}</h3>
+                <p className="mt-3 leading-relaxed text-[#2D2D2D]/70">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-[#1A3A32] py-20 text-white">
+        <div className="mx-auto grid max-w-6xl gap-8 px-5 sm:px-8 lg:grid-cols-[1.1fr_0.9fr] lg:px-12">
+          <div>
+            <p className="text-sm tracking-[0.24em] text-[#E85D24] uppercase">Direct, Net Lease, or DST</p>
+            <h2 className="mt-4 font-[family-name:var(--font-ibm-plex-serif)] text-3xl text-white sm:text-5xl">
+              The right replacement depends on the ownership experience you want.
+            </h2>
+            <p className="mt-5 leading-relaxed text-white/75">
+              Direct property offers control. A net-lease property shifts specified responsibilities to a tenant. A DST can remove day-to-day landlord decisions while introducing sponsor, fee, leverage, property, control, and liquidity considerations. The job is to make those differences clear before a selection is made.
+            </p>
+          </div>
+          <div className="border border-white/20 bg-white/10 p-7">
+            <h3 className="font-[family-name:var(--font-ibm-plex-serif)] text-2xl text-white">Free guidance, independent professional work</h3>
+            <p className="mt-4 text-sm leading-relaxed text-white/70">
+              Tax and legal conclusions belong to the property owner’s CPA and counsel. Qualified-intermediary, brokerage, lending, and securities work must be handled by the appropriate independent professionals. DST interests are securities and require offering-document, fee, risk, eligibility, availability, and suitability review through an appropriately licensed professional.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-white py-20">
+        <div className="mx-auto flex max-w-6xl flex-col gap-6 px-5 text-center sm:px-8 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:text-left">
+          <div>
+            <h2 className="font-[family-name:var(--font-ibm-plex-serif)] text-3xl sm:text-4xl">Talk through the planned Dallas sale.</h2>
+            <p className="mt-3 text-[#2D2D2D]/70">Get free exchange guidance or request current direct and passive property information.</p>
+          </div>
+          <div className="flex flex-wrap justify-center gap-3 lg:justify-end">
+            <a href={`tel:+1${COMPANY_PHONE_DIGITS}`} className="inline-flex items-center bg-[#1A3A32] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#E85D24]">Call {COMPANY_PHONE}</a>
+            <Link href={CONTACT_PATH} className="inline-flex items-center border-2 border-[#2D2D2D] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#2D2D2D] uppercase transition hover:bg-[#2D2D2D] hover:text-white">Start My Exchange</Link>
           </div>
         </div>
       </section>
     </div>
   );
 }
-

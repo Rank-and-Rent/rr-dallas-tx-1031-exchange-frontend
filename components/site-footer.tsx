@@ -20,22 +20,6 @@ import { propertyTypesData } from "@/data/property-types";
 const allServices = getAllServices();
 const allLocations = getAllLocations();
 
-// IRS and official resource links for credibility
-const IRS_LINKS = [
-  {
-    label: "IRS Form 8824 Instructions",
-    href: "https://www.irs.gov/forms-pubs/about-form-8824",
-  },
-  {
-    label: "IRS Like-Kind Exchange Overview",
-    href: "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
-  },
-  {
-    label: "Texas Comptroller Property Tax",
-    href: "https://comptroller.texas.gov/taxes/property-tax/",
-  },
-];
-
 // Tools for sitemap
 const TOOLS = [
   { name: "Boot Calculator", slug: "boot-calculator" },
@@ -65,9 +49,9 @@ export function SiteFooter() {
                 {COMPANY_NAME}
               </h2>
               <p className="mt-4 text-sm text-white/70 leading-relaxed">
-                {COMPANY_NAME} guides {PRIMARY_CITY} investors through complex 1031 exchanges 
-                with disciplined process control, nationwide property sourcing across all 50 states, 
-                and coordination with qualified intermediaries and trusted professional partners.
+                {COMPANY_NAME} helps property owners plan a sale, compare direct,
+                net-lease, and passive DST replacement paths, and move toward a
+                well-organized closing with the appropriate independent professionals.
               </p>
             </div>
             
@@ -107,7 +91,7 @@ export function SiteFooter() {
                 </svg>
                 <div>
                   <p className="text-white/60 text-xs uppercase tracking-wider mb-1">Hours</p>
-                  <p className="text-white/80">Monday–Friday, 8:00 AM – 6:00 PM CT</p>
+                  <p className="text-white/80">Available 24/7</p>
                 </div>
               </div>
             </div>
@@ -243,30 +227,6 @@ export function SiteFooter() {
                 </Link>
               </li>
             </ul>
-          </div>
-        </div>
-      </div>
-
-      {/* IRS Resources Bar */}
-      <div className="border-t border-white/10">
-        <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12 py-6">
-          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-            <p className="text-sm text-white/60">
-              <strong className="text-white/80">Official IRS Resources:</strong> Educational content only. Consult qualified tax and legal advisors.
-            </p>
-            <div className="flex flex-wrap gap-4 text-sm">
-              {IRS_LINKS.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-white/60 hover:text-[#E85D24] transition-colors underline underline-offset-4"
-                >
-                  {link.label}
-                </a>
-              ))}
-            </div>
           </div>
         </div>
       </div>

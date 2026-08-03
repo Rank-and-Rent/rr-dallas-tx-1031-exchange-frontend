@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { CONTACT_PATH, SERVICES_PATH, LOCATIONS_PATH, TOOLS_PATH, ABOUT_PATH, BLOG_PATH } from "@/lib/constants";
+import { CONTACT_PATH, SERVICES_PATH, LOCATIONS_PATH, TOOLS_PATH, ABOUT_PATH, BLOG_PATH, COMPANY_PHONE, COMPANY_PHONE_DIGITS } from "@/lib/constants";
 import { services } from "@/lib/data/services";
 import { locationsData } from "@/data/locations";
 
@@ -93,6 +93,7 @@ const menuConfig: Record<Exclude<MenuKey, null>, { label: string; links: { href:
 export function SiteHeader() {
   const pathname = usePathname();
   const [activeMenu, setActiveMenu] = useState<MenuKey>(null);
+  const [mobileOpen, setMobileOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [isOnHero, setIsOnHero] = useState(true);
   const hoverTimeout = useRef<NodeJS.Timeout | null>(null);
@@ -123,11 +124,19 @@ export function SiteHeader() {
     const handler = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setActiveMenu(null);
+        setMobileOpen(false);
       }
     };
     window.addEventListener("keydown", handler);
     return () => window.removeEventListener("keydown", handler);
   }, []);
+
+  useEffect(() => {
+    document.body.style.overflow = mobileOpen ? "hidden" : "";
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [mobileOpen]);
 
   useEffect(() => {
     const listener = (event: MouseEvent) => {
@@ -160,7 +169,7 @@ export function SiteHeader() {
 
   // On homepage hero: white text, transparent bg
   // After scroll or on other pages: dark text, cream bg
-  const isTransparent = isHomePage && isOnHero && !isScrolled;
+  const isTransparent = isHomePage && isOnHero && !isScrolled && !mobileOpen;
   const textColorClass = isTransparent ? "text-white" : "text-[#2D2D2D]";
   const hoverColorClass = "hover:text-[#E85D24]";
 
@@ -173,8 +182,8 @@ export function SiteHeader() {
           : "bg-[#F5F3EE]/95 backdrop-blur-md border-b border-[#2D2D2D]/10"
       }`}
     >
-      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 sm:px-8 lg:px-12 py-4">
-        <div className="flex items-center gap-8">
+      <div className="mx-auto max-w-7xl flex items-center justify-between px-4 py-4 sm:px-8 lg:px-8 xl:px-12">
+        <div className="flex items-center gap-5 xl:gap-8">
           {/* Logo - "1031 Exchange Dallas" like BUSE AGENCY. */}
           <Link
             href="/"
@@ -201,7 +210,7 @@ export function SiteHeader() {
                   aria-expanded={activeMenu === key}
                   aria-controls={`header-menu-${key}`}
                   onFocus={() => handleOpen(key as Exclude<MenuKey, null>)}
-                  className={`inline-flex items-center gap-1 px-4 py-2 text-sm font-medium tracking-[0.1em] uppercase transition-colors ${textColorClass} ${hoverColorClass}`}
+                  className={`inline-flex items-center gap-1 px-2.5 py-2 text-xs font-medium tracking-[0.08em] uppercase transition-colors xl:px-3 xl:text-sm ${textColorClass} ${hoverColorClass}`}
                 >
                   {menu.label}
                   <span aria-hidden="true" className="text-[10px] ml-1">
@@ -233,7 +242,7 @@ export function SiteHeader() {
             ))}
             <Link
               href={ABOUT_PATH}
-              className={`px-4 py-2 text-sm font-medium tracking-[0.1em] uppercase transition-colors ${
+              className={`px-2.5 py-2 text-xs font-medium tracking-[0.08em] uppercase transition-colors xl:px-3 xl:text-sm ${
                 isActive(ABOUT_PATH)
                   ? "text-[#E85D24]"
                   : `${textColorClass} ${hoverColorClass}`
@@ -243,7 +252,7 @@ export function SiteHeader() {
             </Link>
             <Link
               href={BLOG_PATH}
-              className={`px-4 py-2 text-sm font-medium tracking-[0.1em] uppercase transition-colors ${
+              className={`px-2.5 py-2 text-xs font-medium tracking-[0.08em] uppercase transition-colors xl:px-3 xl:text-sm ${
                 isActive(BLOG_PATH)
                   ? "text-[#E85D24]"
                   : `${textColorClass} ${hoverColorClass}`
@@ -253,30 +262,84 @@ export function SiteHeader() {
             </Link>
           </nav>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-3">
+          <a
+            href={`tel:+1${COMPANY_PHONE_DIGITS}`}
+            className={`hidden whitespace-nowrap text-xs font-semibold tracking-[0.05em] transition-colors lg:inline-flex xl:text-sm ${textColorClass} ${hoverColorClass}`}
+          >
+            {COMPANY_PHONE}
+          </a>
           <Link
-            href={CONTACT_PATH}
-            className={`hidden lg:inline-flex px-6 py-2 text-sm font-medium tracking-[0.1em] uppercase border-2 transition-colors ${
+            href={`${CONTACT_PATH}?request=properties`}
+            className={`hidden lg:inline-flex whitespace-nowrap px-4 py-2 text-xs font-medium tracking-[0.08em] uppercase border-2 transition-colors xl:px-5 xl:text-sm ${
               isTransparent
                 ? "border-white text-white hover:bg-white hover:text-[#1A3A32]"
                 : "border-[#2D2D2D] text-[#2D2D2D] hover:bg-[#2D2D2D] hover:text-white"
             }`}
           >
-            Connect
+            Free Property List
           </Link>
           {/* Mobile menu button */}
           <button
             type="button"
             className={`lg:hidden p-2 ${textColorClass}`}
-            aria-label="Menu"
+            aria-label={mobileOpen ? "Close menu" : "Open menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-navigation"
+            onClick={() => setMobileOpen((open) => !open)}
           >
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <line x1="3" y1="6" x2="21" y2="6" />
-              <line x1="3" y1="12" x2="21" y2="12" />
-              <line x1="3" y1="18" x2="21" y2="18" />
-            </svg>
+            {mobileOpen ? (
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.25" aria-hidden="true">
+                <line x1="5" y1="5" x2="19" y2="19" />
+                <line x1="19" y1="5" x2="5" y2="19" />
+              </svg>
+            ) : (
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" aria-hidden="true">
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            )}
           </button>
         </div>
+      </div>
+      <div
+        id="mobile-navigation"
+        className={`absolute left-0 right-0 top-full max-h-[calc(100vh-72px)] overflow-y-auto border-t border-[#2D2D2D]/10 bg-[#F5F3EE] shadow-2xl transition-all duration-300 lg:hidden ${
+          mobileOpen ? "pointer-events-auto translate-y-0 opacity-100" : "pointer-events-none -translate-y-3 opacity-0"
+        }`}
+        aria-hidden={!mobileOpen}
+      >
+        <nav className="mx-auto max-w-2xl px-5 py-6" aria-label="Mobile navigation">
+          <div className="grid gap-x-8 gap-y-7 sm:grid-cols-2">
+            <div>
+              <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-[#E85D24] uppercase">Exchange Help</p>
+              <div className="space-y-1">
+                <Link href={SERVICES_PATH} onClick={() => setMobileOpen(false)} className="block border-b border-[#2D2D2D]/10 py-3 text-base font-medium text-[#2D2D2D]">All Services</Link>
+                {serviceLinks.slice(0, 4).map((link) => (
+                  <Link key={link.href} href={link.href} onClick={() => setMobileOpen(false)} className="block py-2.5 text-sm text-[#2D2D2D]/75">{link.label}</Link>
+                ))}
+              </div>
+            </div>
+            <div>
+              <p className="mb-3 text-xs font-semibold tracking-[0.18em] text-[#E85D24] uppercase">Explore</p>
+              <div className="space-y-1">
+                <Link href={LOCATIONS_PATH} onClick={() => setMobileOpen(false)} className="block border-b border-[#2D2D2D]/10 py-3 text-base font-medium text-[#2D2D2D]">Locations</Link>
+                <Link href={TOOLS_PATH} onClick={() => setMobileOpen(false)} className="block border-b border-[#2D2D2D]/10 py-3 text-base font-medium text-[#2D2D2D]">Tools</Link>
+                <Link href={ABOUT_PATH} onClick={() => setMobileOpen(false)} className="block border-b border-[#2D2D2D]/10 py-3 text-base font-medium text-[#2D2D2D]">About</Link>
+                <Link href={BLOG_PATH} onClick={() => setMobileOpen(false)} className="block border-b border-[#2D2D2D]/10 py-3 text-base font-medium text-[#2D2D2D]">Blog</Link>
+              </div>
+            </div>
+          </div>
+          <div className="mt-7 grid gap-3 sm:grid-cols-2">
+            <a href={`tel:+1${COMPANY_PHONE_DIGITS}`} className="inline-flex min-h-12 items-center justify-center bg-[#1A3A32] px-5 py-3 text-sm font-semibold tracking-[0.07em] text-white uppercase">
+              Call {COMPANY_PHONE}
+            </a>
+            <Link href={`${CONTACT_PATH}?request=properties`} onClick={() => setMobileOpen(false)} className="inline-flex min-h-12 items-center justify-center bg-[#E85D24] px-5 py-3 text-sm font-semibold tracking-[0.07em] text-white uppercase">
+              Get a Free Property List
+            </Link>
+          </div>
+        </nav>
       </div>
     </header>
   );

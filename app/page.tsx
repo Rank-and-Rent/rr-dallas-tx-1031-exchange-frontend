@@ -1,19 +1,20 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import {
   IBM_Plex_Serif,
   Inter,
-  Source_Sans_3,
   Pinyon_Script,
+  Source_Sans_3,
 } from "next/font/google";
-import { ServiceSearchGrid } from "@/components/services/service-search-grid";
-import { getAllServices } from "@/lib/data/services";
-import { MotionDiv } from "@/components/MotionDiv";
-import { RotatingBenefits } from "@/components/RotatingBenefits";
 import ContactFormFields from "@/components/contact/ContactFormFields";
-import { COMPANY_NAME, COMPANY_PHONE, COMPANY_PHONE_DIGITS, COMPANY_EMAIL, SITE_URL, PRIMARY_CITY, PRIMARY_STATE_ABBR } from "@/lib/constants";
-import { getPropertyTypeImagePath } from "@/lib/utils/images";
+import { MotionDiv } from "@/components/MotionDiv";
+import {
+  COMPANY_NAME,
+  COMPANY_PHONE,
+  COMPANY_PHONE_DIGITS,
+  SITE_URL,
+} from "@/lib/constants";
 
 const ibmPlexSerif = IBM_Plex_Serif({
   subsets: ["latin"],
@@ -39,219 +40,211 @@ const pinyonScript = Pinyon_Script({
   variable: "--font-pinyon-script",
 });
 
-const PHONE_DISPLAY = COMPANY_PHONE;
 const PHONE_LINK = `tel:+1${COMPANY_PHONE_DIGITS}`;
+const PROPERTY_LIST_LINK = "/contact?request=properties";
 
-const TX_TAX_LINKS = [
+const VALUE_POINTS = [
   {
-    label: "Texas Comptroller Property Tax Resources",
-    href: "https://comptroller.texas.gov/taxes/property-tax/",
+    title: "Free Exchange Guidance",
+    description: "Talk through the sale and possible next moves before a deadline controls the decision.",
   },
   {
-    label: "Dallas County Tax Office Guidelines",
-    href: "https://www.dallascounty.org/departments/tax/property-tax/index.php",
+    title: "Direct and Passive Options",
+    description: "Compare direct real estate, net-lease properties, and professionally managed DST interests.",
+  },
+  {
+    title: "A Clear Replacement Brief",
+    description: "Organize equity, debt, income goals, management preferences, and realistic closing needs.",
+  },
+  {
+    title: "Help Through Closing",
+    description: "Keep the owner, qualified intermediary, advisors, lenders, and closing parties aligned.",
   },
 ];
 
-const IRS_LINKS = [
+const SALE_REASONS = [
   {
-    label: "IRS Form 8824 Instructions",
-    href: "https://www.irs.gov/forms-pubs/about-form-8824",
+    title: "Leave Landlord Work Behind",
+    description:
+      "Move beyond tenant calls, repairs, capital projects, leasing, and day-to-day property decisions.",
   },
   {
-    label: "IRS Like-Kind Exchange Overview",
-    href: "https://www.irs.gov/businesses/small-businesses-self-employed/like-kind-exchanges-real-estate-tax-tips",
+    title: "Sell an Inherited Property",
+    description:
+      "Clarify ownership, property use, timing, co-owner priorities, and replacement choices before the sale advances.",
+  },
+  {
+    title: "Improve the Income Plan",
+    description:
+      "Compare replacement paths based on income objectives, debt, concentration, workload, risk, and control.",
+  },
+  {
+    title: "Diversify One Large Asset",
+    description:
+      "Explore whether exchange equity should remain in one property or be divided among multiple replacements.",
+  },
+  {
+    title: "Act While Under Contract",
+    description:
+      "Bring the sale facts together quickly, engage an independent qualified intermediary, and define the search.",
+  },
+  {
+    title: "Buy Before the Current Sale",
+    description:
+      "Review reverse-exchange, financing, title, and timing questions when the preferred replacement appears first.",
   },
 ];
 
-const TOP_SERVICES = [
+const REPLACEMENT_PATHS = [
   {
-    name: "Delayed 1031 Exchange Solutions",
+    eyebrow: "Control and flexibility",
+    title: "Direct Real Estate",
     description:
-      "Structure a compliant delayed exchange with timelines and escrow controls tailored to Texas transactions.",
-    slug: "delayed-1031-exchange",
+      "Own and operate a property directly, choose the business plan, arrange financing, and control future leasing and disposition decisions.",
+    review:
+      "Review title, leases, condition, market, operations, financing, management requirements, and closing feasibility.",
   },
   {
-    name: "Reverse Exchange Structuring",
+    eyebrow: "Property ownership with a tenant",
+    title: "Net-Lease Property",
     description:
-      "Secure your replacement asset first while we manage exchange accommodation and QI requirements.",
-    slug: "reverse-1031-exchange",
+      "Own the real estate while a commercial lease assigns specified operating obligations to the tenant.",
+    review:
+      "Review tenant credit, guaranty, lease terms, property condition, residual value, rent structure, and the reletting market.",
   },
   {
-    name: "Build-to-Suit Exchange Support",
+    eyebrow: "Professionally managed",
+    title: "DST Interest",
     description:
-      "Coordinate construction or improvement exchanges with disciplined draw schedules and documentation.",
-    slug: "build-to-suit-1031-exchange",
-  },
-  {
-    name: "Multi-Property Portfolio Planning",
-    description:
-      "Align multiple dispositions and acquisitions with Texas market insight and investor objectives.",
-    slug: "portfolio-1031-planning",
-  },
-  {
-    name: "Qualified Intermediary Placement",
-    description:
-      "Access vetted Texas-qualified intermediaries with secure handling of exchange proceeds.",
-    slug: "qualified-intermediary-placement",
-  },
-  {
-    name: "Trusted Advisor Coordination",
-    description:
-      "Coordinate with attorneys, CPAs, and lenders to keep every stakeholder aligned through closing.",
-    slug: "advisor-coordination",
+      "Own a fractional interest in institutional-grade real estate without personally handling tenants, repairs, leasing, or renovations.",
+    review:
+      "Review offering documents, sponsor experience, fees, leverage, property risks, conflicts, illiquidity, eligibility, and suitability.",
   },
 ];
 
-const PROPERTY_TYPES = [
+const EXCHANGE_PATH = [
   {
-    name: "Multifamily Communities",
+    title: "Plan Before the Sale",
     description:
-      "Stabilize and upgrade multifamily portfolios with replacement assets across major Texas metros.",
-    slug: "multifamily",
+      "Define the reason for selling, expected equity, debt, income needs, management goals, and professionals already involved.",
   },
   {
-    name: "Industrial and Flex",
+    title: "Protect the Exchange at Closing",
     description:
-      "Defer gains while moving into logistics, warehouse, and light manufacturing properties.",
-    slug: "industrial",
+      "Engage an independent qualified intermediary before closing and confirm that exchange proceeds will not reach the seller.",
   },
   {
-    name: "Office and Medical",
+    title: "Compare Replacement Options",
     description:
-      "Exchange into professional office, medical office, and specialized clinical facilities.",
-    slug: "office-medical",
+      "Evaluate primary and backup candidates against the same written criteria for income, risk, control, workload, financing, and timing.",
   },
   {
-    name: "Retail and Mixed-Use",
+    title: "Complete Diligence and Close",
     description:
-      "Reposition capital into street retail, neighborhood centers, and mixed-use developments.",
-    slug: "retail-mixed-use",
-  },
-  {
-    name: "Land and Development Parcels",
-    description:
-      "Secure entitled land or infill redevelopment opportunities within IRS timing rules.",
-    slug: "land-development",
-  },
-  {
-    name: "Hospitality Assets",
-    description:
-      "Transition between hotel, extended stay, or resort holdings with precise QI support.",
-    slug: "hospitality",
+      "Keep inspections, title, financing, insurance, entity documents, advisor questions, and closing instructions moving together.",
   },
 ];
 
-const TX_CITIES_SLUGS = [
-  { name: "Dallas", slug: "dallas-tx" },
-  { name: "Fort Worth", slug: "fort-worth-tx" },
-  { name: "Plano", slug: "plano-tx" },
-  { name: "Frisco", slug: "frisco-tx" },
-  { name: "Arlington", slug: "arlington-tx" },
-  { name: "Irving", slug: "irving-tx" },
-  { name: "Austin", slug: "austin" },
-  { name: "Houston", slug: "houston" },
-  { name: "San Antonio", slug: "san-antonio" },
+const SOLUTIONS = [
+  {
+    title: "1031 Exchange Solutions",
+    description:
+      "Start with a planned sale or an urgent contract and build a practical route from relinquished property to replacement closing.",
+    href: "/services/dallas-timeline-45-180-day-control",
+  },
+  {
+    title: "Replacement Property Search",
+    description:
+      "Define the acquisition brief and compare direct, net-lease, and passive opportunities that fit the exchange.",
+    href: "/services/dallas-multifamily-replacement-identification",
+  },
+  {
+    title: "DST Property Options",
+    description:
+      "Request current passive property information and review professionally managed real estate with an appropriately licensed professional.",
+    href: PROPERTY_LIST_LINK,
+  },
+  {
+    title: "Qualified Intermediary Introduction",
+    description:
+      "Connect with an independent qualified intermediary before the relinquished-property sale closes.",
+    href: "/services/the-qualified-intermediary-role",
+  },
+  {
+    title: "Inherited Property Planning",
+    description:
+      "Organize ownership, basis questions, qualifying use, family priorities, and sale timing with the appropriate tax and legal advisors.",
+    href: "/services/inherited-property-capital-gains",
+  },
+  {
+    title: "Reverse Exchange Questions",
+    description:
+      "Explore the structure and financing issues involved when the replacement opportunity must be acquired before the current property sells.",
+    href: "/services/dallas-reverse-exchange-control",
+  },
 ];
 
-// Locations with images for the grid
 const FEATURED_LOCATIONS = [
   { name: "Dallas", slug: "dallas-tx", image: "/locations/1031-exchange-dallas-TX.webp" },
   { name: "Fort Worth", slug: "fort-worth-tx", image: "/locations/1031-exchange-fort-worth-TX.jpg" },
   { name: "Plano", slug: "plano-tx", image: "/locations/1031-exchange-plano-TX.jpg" },
   { name: "Frisco", slug: "frisco-tx", image: "/locations/1031-exchange-frisco-TX.jpg" },
-  { name: "Arlington", slug: "arlington-tx", image: "/locations/1031-exchange-arlington-TX.jpg" },
-  { name: "Irving", slug: "irving-tx", image: "/locations/1031-exchange-irving-TX.jpg" },
 ];
 
 const FAQ_ITEMS = [
   {
-    question: "What are the 45 and 180 day deadlines?",
+    question: "Can a DST eliminate day-to-day property management?",
     answer:
-      "You must identify replacement property within 45 calendar days of the sale and complete all closings within 180 calendar days or by the due date of your federal return, whichever comes first.",
+      "A DST is professionally managed, so the investor does not personally handle tenants, repairs, leasing, or property operations. The sponsor controls the real estate, and the investor must consider fees, risks, leverage, illiquidity, reduced control, eligibility, and suitability before investing.",
   },
   {
-    question: "What qualifies as like-kind property?",
+    question: "What can a Dallas investor acquire in a 1031 exchange?",
     answer:
-      "Real property held for investment or productive use in a trade or business qualifies as like-kind to other real property with the same use, regardless of asset class, as long as both properties are within the United States.",
+      "Qualifying investment real estate can generally be exchanged for other qualifying U.S. investment real estate. Depending on the owner’s goals, the replacement path may include direct property, net-lease real estate, or an eligible DST interest.",
   },
   {
-    question: "What is taxable boot?",
+    question: "What if the Dallas property is already under contract?",
     answer:
-      "Boot is any non-like-kind value received in the exchange, including cash, debt relief, or personal property. Boot is generally taxable in the year of the exchange.",
+      "Begin immediately. An independent qualified intermediary generally must be engaged before the relinquished-property closing, and the replacement search should be organized around the actual closing date, equity, debt, and acquisition requirements.",
   },
   {
-    question: "How do state and county taxes apply?",
+    question: "Can inherited investment property qualify for an exchange?",
     answer:
-      "A 1031 exchange defers federal and Texas income tax on qualifying real property. County and municipal transfer taxes, filing fees, and documentary stamp taxes still apply where assessed.",
+      "It may, depending on ownership, use, sale facts, and the taxpayer’s intent to hold the property for investment or business use. Basis and estate questions should be reviewed with the owner’s CPA and attorney before a strategy is chosen.",
   },
   {
-    question: "Can you complete a reverse exchange?",
+    question: "How much is generally required for a DST investment?",
     answer:
-      "Reverse exchanges are permitted when you acquire the replacement property before selling the relinquished property, using an exchange accommodation titleholder and compliant documentation.",
+      "Some DST offerings may accept investments around $100,000, but minimums vary. Availability, projected income, fees, financing, property risk, sponsor risk, investor eligibility, and suitability are specific to each offering.",
   },
   {
-    question: "How is Form 8824 filed?",
+    question: "Can exchange proceeds be divided among several properties?",
     answer:
-      "Form 8824 is filed with your federal return for the tax year in which the relinquished property was transferred. It reports timelines, property details, and the calculation of deferred gain.",
+      "An owner may be able to acquire more than one replacement property, subject to identification requirements and the transaction facts. The exchange plan should account for equity, debt, closing probability, diversification, and backup choices.",
+  },
+  {
+    question: "What are the tradeoffs between direct property and a DST?",
+    answer:
+      "Direct ownership provides more control but usually requires more management and individual-property diligence. A DST offers professional management and fractional ownership, while also limiting control and liquidity and introducing sponsor, fee, financing, and offering-specific risks.",
+  },
+  {
+    question: "When should an owner begin planning a 1031 exchange?",
+    answer:
+      "Before the relinquished property closes—and ideally before it is listed. Early planning gives the owner more time to engage an independent qualified intermediary, clarify replacement criteria, examine financing, and compare direct and passive alternatives.",
   },
 ];
-
-const organizationJsonLd = {
-  "@context": "https://schema.org",
-  "@type": "FinancialService",
-  "@id": `${SITE_URL}#organization`,
-  name: COMPANY_NAME,
-  url: SITE_URL,
-  logo: `${SITE_URL}/1031-exchange-dallas-logo.png`,
-  image: `${SITE_URL}/1031-exchange-dallas-logo.png`,
-  telephone: `+1-${COMPANY_PHONE_DIGITS.slice(0, 3)}-${COMPANY_PHONE_DIGITS.slice(3, 6)}-${COMPANY_PHONE_DIGITS.slice(6)}`,
-  email: COMPANY_EMAIL,
-  contactPoint: [
-    {
-      "@type": "ContactPoint",
-      telephone: `+1-${COMPANY_PHONE_DIGITS.slice(0, 3)}-${COMPANY_PHONE_DIGITS.slice(3, 6)}-${COMPANY_PHONE_DIGITS.slice(6)}`,
-      contactType: "customer service",
-      areaServed: {
-        "@type": "Country",
-        name: "United States",
-      },
-      availableLanguage: ["English"],
-    },
-  ],
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: "9101 Lyndon B Johnson Fwy",
-    addressLocality: PRIMARY_CITY,
-    addressRegion: PRIMARY_STATE_ABBR,
-    postalCode: "75243",
-    addressCountry: "US",
-  },
-  areaServed: {
-    "@type": "Country",
-    name: "United States",
-  },
-  serviceType: "1031 Exchange Services",
-  description: "1031 exchange services helping Dallas investors find replacement properties in all 50 states",
-  sameAs: [],
-};
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": COMPANY_NAME,
-  "url": SITE_URL,
-  "potentialAction": {
-    "@type": "SearchAction",
-    "target": `${SITE_URL}search?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
+  name: COMPANY_NAME,
+  url: SITE_URL,
 };
 
 const faqJsonLd = {
   "@context": "https://schema.org",
   "@type": "FAQPage",
-  "mainEntity": FAQ_ITEMS.map((item) => ({
+  mainEntity: FAQ_ITEMS.map((item) => ({
     "@type": "Question",
     name: item.question,
     acceptedAnswer: {
@@ -261,34 +254,26 @@ const faqJsonLd = {
   })),
 };
 
-const jsonLdBlocks = [
-  { id: "organization", data: organizationJsonLd },
-  { id: "website", data: websiteJsonLd },
-  { id: "faq", data: faqJsonLd },
-];
-
-const isStaffedOffice = false;
-
 export const metadata: Metadata = {
-  title: "1031 Exchange Dallas | Direct & Passive Options",
+  title: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
   description:
-    "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
+    "Selling Dallas investment property? Get free 1031 exchange guidance, compare direct and passive DST options, and request a free property list.",
   metadataBase: new URL(SITE_URL),
   alternates: {
     canonical: SITE_URL,
   },
   openGraph: {
-    title: "1031 Exchange Dallas | Direct & Passive Options",
+    title: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
     description:
-      "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
+      "Get free Dallas 1031 exchange guidance, compare direct real estate and passive DST options, and request a free property list.",
     url: SITE_URL,
     siteName: COMPANY_NAME,
     images: [
       {
-        url: `${SITE_URL}/1031-exchange-dallas-logo.png`,
+        url: `${SITE_URL}/1031-exchange-dallas-tx.webp`,
         width: 1200,
         height: 630,
-        alt: `${COMPANY_NAME} - Dallas 1031 Exchange Services`,
+        alt: "Turnkey 1031 exchange solutions in Dallas, Texas",
       },
     ],
     locale: "en_US",
@@ -296,42 +281,23 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "1031 Exchange Dallas | Direct & Passive Options",
+    title: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
     description:
-      "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
-    images: [`${SITE_URL}/1031-exchange-dallas-logo.png`],
+      "Free Dallas 1031 exchange guidance, replacement-property options, and passive DST information.",
+    images: [`${SITE_URL}/1031-exchange-dallas-tx.webp`],
   },
 };
 
-type HomeProps = {
-  searchParams?: {
-    status?: string;
-    message?: string;
-  };
-};
-
-export default function Home({ searchParams }: HomeProps) {
-  const status = searchParams?.status;
-  const statusMessage =
-    status === "success"
-      ? "Thank you. A 1031 exchange specialist will respond shortly."
-      : status === "error"
-        ? searchParams?.message ??
-          "We could not submit your request. Please call us or try again."
-        : null;
-
+export default function Home() {
   return (
     <div
       className={`${sourceSans.className} ${ibmPlexSerif.variable} ${inter.variable} ${pinyonScript.variable} bg-[#F5F3EE] text-[#2D2D2D]`}
     >
-      <link rel="canonical" href={SITE_URL} />
       <main className="flex min-h-screen w-full flex-col">
-        {/* Hero Section - Full width video background with centered logo badge */}
         <section
-          className="relative flex min-h-screen items-center justify-center overflow-hidden"
+          className="relative flex min-h-screen items-center overflow-hidden pt-20"
           aria-labelledby="hero-heading"
         >
-          {/* Video Background */}
           <video
             autoPlay
             muted
@@ -342,148 +308,109 @@ export default function Home({ searchParams }: HomeProps) {
           >
             <source src="/dtownnnn.mp4" type="video/mp4" />
           </video>
-          {/* Dark overlay */}
-          <div className="absolute inset-0 bg-black/40" />
-
-          {/* Centered Content - Circular Badge Style */}
-          <div className="relative z-10 flex flex-col items-center text-center px-4">
-            <MotionDiv delay={0.1} className="flex flex-col items-center">
-              {/* Circular Badge with rotating text */}
-              <div className="relative mb-8">
-                {/* Outer rotating text - complete circle */}
-                <svg className="h-72 w-72 animate-spin-slow" viewBox="0 0 200 200">
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
-                    />
-                  </defs>
-                  <text className="fill-white text-[9px] uppercase tracking-[0.35em]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <textPath href="#circlePath">
-                      SERVING DALLAS • SINCE 2020 • NATIONWIDE COVERAGE • 1031 EXPERTS •
-                    </textPath>
-                  </text>
-                </svg>
-                {/* Center logo text - Elegant script like Buse Agency */}
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className={`font-[family-name:var(--font-pinyon-script)] text-6xl text-[#E85D24]`}>
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/30" />
+          <div className="relative z-10 mx-auto w-full max-w-7xl px-5 py-14 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="max-w-3xl">
+              <div className="mb-7 flex items-center gap-5">
+                <div className="flex h-20 w-20 shrink-0 flex-col items-center justify-center rounded-full border border-white/40 bg-black/20 backdrop-blur-sm">
+                  <span className="font-[family-name:var(--font-pinyon-script)] text-4xl leading-none text-[#E85D24]">
                     1031
                   </span>
-                  <span className={`font-[family-name:var(--font-pinyon-script)] text-5xl text-[#E85D24] -mt-2`}>
+                  <span className="font-[family-name:var(--font-pinyon-script)] text-2xl leading-none text-[#E85D24]">
                     Exchange
                   </span>
                 </div>
+                <p className={`${inter.className} text-xs tracking-[0.28em] text-white/85 uppercase sm:text-sm`}>
+                  Selling Investment Property in Dallas?
+                </p>
               </div>
-
-              <p className={`${inter.className} mb-6 text-sm tracking-[0.3em] text-white/90 uppercase`}>
-                Bespoke 1031 Exchange Services
-              </p>
-
-              <Link
-                href="/services"
-                className={`${inter.className} group inline-flex items-center border-b-2 border-white pb-2 text-sm tracking-[0.2em] text-white transition-colors hover:border-[#E85D24] hover:text-[#E85D24]`}
+              <h1
+                id="hero-heading"
+                className={`${ibmPlexSerif.className} max-w-3xl text-4xl leading-[1.06] text-white sm:text-5xl lg:text-6xl`}
               >
-                SEARCH ALL SERVICES
-              </Link>
-            </MotionDiv>
-          </div>
-          <div className="sr-only">
-            <h1 id="hero-heading">Dallas 1031 Exchange Specialists - Serving Dallas Investors Nationwide</h1>
-          </div>
-        </section>
-
-        {/* Trusted Experts Section - Stats */}
-        <section className="bg-white py-24" aria-labelledby="trusted-heading">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1} className="text-center">
-              <p className={`${inter.className} mb-4 text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                Let Us Guide Your Exchange
+                Turnkey 1031 Exchange Solutions in Dallas, Texas
+              </h1>
+              <p className="mt-5 max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
+                Get free guidance from the planned sale through replacement closing. Compare direct real estate, net-lease properties, and passive DST opportunities—including professionally managed properties without day-to-day landlord responsibilities.
               </p>
-              <h2
-                id="trusted-heading"
-                className={`${ibmPlexSerif.className} mb-6 text-4xl text-[#2D2D2D] sm:text-5xl`}
-              >
-                Exchange Planning, Clearly Organized
-              </h2>
-              <p className="mx-auto mb-16 max-w-3xl text-lg text-[#2D2D2D]/80">
-                {COMPANY_NAME} organizes replacement-property research, deadline tracking,
-                and advisor coordination around the facts of each transaction.
-              </p>
-            </MotionDiv>
-
-            <MotionDiv delay={0.2}>
-              <div className="grid gap-8 md:grid-cols-3">
-                <div className="text-center">
-                  <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    45 DAYS
-                  </p>
-                  <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    Identification Window
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    180 DAYS
-                  </p>
-                  <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    Exchange Completion Window
-                  </p>
-                </div>
-                <div className="text-center">
-                  <p className={`${ibmPlexSerif.className} mb-2 text-4xl font-light tracking-wide text-[#2D2D2D]`}>
-                    DALLAS BASED
-                  </p>
-                  <p className={`${inter.className} text-sm tracking-[0.15em] text-[#2D2D2D]/60 uppercase`}>
-                    Nationwide Property Search
-                  </p>
-                </div>
+              <ul className="mt-5 grid max-w-2xl gap-x-8 gap-y-2.5 text-sm text-white/90 sm:grid-cols-2 sm:text-base">
+                <li className="flex items-center gap-3"><span className="h-px w-7 bg-[#E85D24]" />Free exchange guidance</li>
+                <li className="flex items-center gap-3"><span className="h-px w-7 bg-[#E85D24]" />Free property list</li>
+                <li className="flex items-center gap-3"><span className="h-px w-7 bg-[#E85D24]" />No-management DST options</li>
+                <li className="flex items-center gap-3"><span className="h-px w-7 bg-[#E85D24]" />Help through replacement closing</li>
+              </ul>
+              <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:flex-wrap">
+                <a
+                  href={PHONE_LINK}
+                  className={`${inter.className} inline-flex min-h-12 items-center justify-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.09em] text-white uppercase transition hover:bg-[#D14D18]`}
+                >
+                  Call {COMPANY_PHONE}
+                </a>
+                <Link
+                  href={PROPERTY_LIST_LINK}
+                  className={`${inter.className} inline-flex min-h-12 items-center justify-center border-2 border-white px-7 py-3 text-sm font-semibold tracking-[0.09em] text-white uppercase transition hover:bg-white hover:text-[#2D2D2D]`}
+                >
+                  Get a Free Property List
+                </Link>
+                <Link
+                  href="/contact"
+                  className={`${inter.className} inline-flex min-h-12 items-center justify-center px-5 py-3 text-sm font-semibold tracking-[0.09em] text-white underline decoration-white/50 underline-offset-8 uppercase transition hover:text-[#E85D24]`}
+                >
+                  Start My Exchange
+                </Link>
               </div>
             </MotionDiv>
           </div>
         </section>
 
-        {/* Get To Know Section - Overlapping image with card */}
-        <section className="bg-[#F5F3EE] py-16" aria-labelledby="about-heading">
-          <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
+        <section className="bg-white py-14" aria-label="Dallas exchange assistance">
+          <div className="mx-auto grid max-w-7xl gap-8 px-5 sm:grid-cols-2 sm:px-8 lg:grid-cols-4 lg:px-12">
+            {VALUE_POINTS.map((item) => (
+              <article key={item.title} className="border-l-2 border-[#E85D24] pl-5">
+                <h2 className={`${inter.className} text-base font-semibold text-[#2D2D2D]`}>{item.title}</h2>
+                <p className="mt-2 text-sm leading-relaxed text-[#2D2D2D]/70">{item.description}</p>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="bg-[#F5F3EE] py-20" aria-labelledby="complete-solution-heading">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
             <div className="grid items-center gap-8 lg:grid-cols-2">
-              {/* Image side */}
               <MotionDiv delay={0.1} className="relative">
                 <div className="relative aspect-[4/3] overflow-hidden">
                   <Image
                     src="/locations/1031-exchange-dallas-TX.webp"
-                    alt="Dallas skyline - 1031 Exchange Services"
+                    alt="Dallas skyline representing local 1031 exchange solutions"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                 </div>
               </MotionDiv>
-
-              {/* Content card - overlapping */}
               <MotionDiv delay={0.2} className="relative lg:-ml-24">
-                <div className="bg-white/95 p-10 shadow-lg backdrop-blur-sm lg:p-12">
-                  <p className={`${inter.className} mb-4 text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                    Get To Know
+                <div className="bg-white/95 p-8 shadow-xl backdrop-blur-sm sm:p-10 lg:p-12">
+                  <p className={`${inter.className} mb-4 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>
+                    One Sale. A Complete Solution.
                   </p>
                   <h2
-                    id="about-heading"
-                    className={`${ibmPlexSerif.className} mb-6 text-3xl text-[#2D2D2D] sm:text-4xl`}
+                    id="complete-solution-heading"
+                    className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-4xl`}
                   >
-                    {COMPANY_NAME}
+                    You do not have to figure out the exchange alone.
                   </h2>
-                  <p className="mb-8 text-[#2D2D2D]/80 leading-relaxed">A Dallas owner may be selling apartments, industrial property, land, or a long-held commercial asset to reduce management, reposition debt, diversify, or improve income. We turn that objective and the expected proceeds into a complete 1031 exchange solution with direct, net-lease, and passive replacement paths.</p>
-                  <div className="flex flex-wrap gap-4">
-                    <Link
-                      href="/services"
-                      className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-8 py-3 text-sm tracking-[0.15em] text-[#2D2D2D] transition-colors hover:bg-[#2D2D2D] hover:text-white uppercase`}
-                    >
-                      Learn More
-                    </Link>
-                    <Link
-                      href="/contact"
-                      className={`${inter.className} inline-flex items-center bg-[#E85D24] px-8 py-3 text-sm tracking-[0.15em] text-white transition-colors hover:bg-[#D14D18] uppercase`}
-                    >
-                      Inquire Now
+                  <p className="mt-6 leading-relaxed text-[#2D2D2D]/80">
+                    A Dallas owner may be selling apartments, industrial property, land, retail, or a long-held commercial asset. The first question is not which rule applies—it is what the owner wants life and the portfolio to look like after the sale.
+                  </p>
+                  <p className="mt-4 leading-relaxed text-[#2D2D2D]/80">
+                    We help turn that objective, expected equity, debt, income needs, and management preferences into one practical exchange plan. When the facts call for outside expertise, the appropriate independent qualified intermediary, CPA, attorney, lender, broker, or licensed securities professional remains responsible for that regulated work.
+                  </p>
+                  <div className="mt-8 flex flex-wrap gap-3">
+                    <a href={PHONE_LINK} className={`${inter.className} inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]`}>
+                      Talk to an Expert
+                    </a>
+                    <Link href={PROPERTY_LIST_LINK} className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#2D2D2D] uppercase transition hover:bg-[#2D2D2D] hover:text-white`}>
+                      See Property Options
                     </Link>
                   </div>
                 </div>
@@ -492,631 +419,247 @@ export default function Home({ searchParams }: HomeProps) {
           </div>
         </section>
 
-        {/* Benefits Section - Rotating benefits instead of testimonials */}
-        <section className="relative bg-[#F5F3EE] py-24" aria-labelledby="benefits-heading">
-          {/* Decorative accent shape */}
-          <div className="absolute left-1/2 top-0 -translate-x-1/2 -translate-y-1/2">
-            <div className="h-64 w-32 rounded-full bg-[#E8C8A0]/30" />
-          </div>
-
-          <div className="mx-auto max-w-4xl px-4 text-center sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <h2 id="benefits-heading" className="sr-only">Benefits of 1031 Exchanges</h2>
-              <RotatingBenefits />
+        <section className="bg-white py-24" aria-labelledby="selling-reason-heading">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="max-w-3xl">
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>
+                Start With the Real Reason
+              </p>
+              <h2 id="selling-reason-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>
+                Why are you selling the Dallas property?
+              </h2>
+              <p className="mt-5 text-lg leading-relaxed text-[#2D2D2D]/75">
+                The strongest replacement search begins with the problem the current property no longer solves—not a generic list of rules or available listings.
+              </p>
+            </MotionDiv>
+            <div className="mt-12 grid gap-x-10 gap-y-9 md:grid-cols-2 lg:grid-cols-3">
+              {SALE_REASONS.map((reason, index) => (
+                <MotionDiv key={reason.title} delay={0.15 + index * 0.04} className="border-t-2 border-[#E85D24] pt-5">
+                  <h3 className={`${inter.className} text-lg font-semibold text-[#2D2D2D]`}>{reason.title}</h3>
+                  <p className="mt-3 leading-relaxed text-[#2D2D2D]/70">{reason.description}</p>
+                </MotionDiv>
+              ))}
+            </div>
+            <MotionDiv delay={0.45} className="mt-12 flex flex-wrap gap-3">
+              <a href={PHONE_LINK} className={`${inter.className} inline-flex items-center bg-[#1A3A32] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#E85D24]`}>
+                Call {COMPANY_PHONE}
+              </a>
+              <Link href="/contact" className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#2D2D2D] uppercase transition hover:bg-[#2D2D2D] hover:text-white`}>
+                Discuss the Planned Sale
+              </Link>
             </MotionDiv>
           </div>
         </section>
 
-        {/* Three Card Portfolio Section */}
-        <section className="bg-[#F5F3EE] py-20" aria-labelledby="portfolio-heading">
-          <h2 id="portfolio-heading" className="sr-only">Dallas 1031 Exchange Solutions</h2>
-          <div className="mx-auto max-w-7xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <div className="grid gap-4 md:grid-cols-3">
-                {/* Our Services Card - with Dallas skyline image */}
-                <Link
-                  href="/services"
-                  className="group relative aspect-[4/5] overflow-hidden"
-                >
-                  <Image
-                    src="/locations/1031-exchange-downtown-dallas-TX.avif"
-                    alt="Our Services - Dallas 1031 Exchange"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-6 border border-white/40 transition-all group-hover:inset-5" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                    <span className={`${inter.className} text-xl tracking-[0.4em] text-white uppercase font-light`}>
-                      Our Services
-                    </span>
-                    <span className={`${inter.className} text-xs tracking-[0.2em] text-white/70 uppercase opacity-0 group-hover:opacity-100 transition-opacity`}>
-                      Explore →
-                    </span>
-                  </div>
-                </Link>
-
-                {/* Service Areas Card - with Fort Worth image */}
-                <Link
-                  href="/locations"
-                  className="group relative aspect-[4/5] overflow-hidden"
-                >
-                  <Image
-                    src="/locations/1031-exchange-fort-worth-TX.jpg"
-                    alt="Service Areas - Texas Locations"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-6 border border-white/40 transition-all group-hover:inset-5" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                    <span className={`${inter.className} text-xl tracking-[0.4em] text-white uppercase font-light`}>
-                      Service Areas
-                    </span>
-                    <span className={`${inter.className} text-xs tracking-[0.2em] text-white/70 uppercase opacity-0 group-hover:opacity-100 transition-opacity`}>
-                      Explore →
-                    </span>
-                  </div>
-                </Link>
-
-                {/* Property Types Card - with multifamily image */}
-                <Link
-                  href="/property-types"
-                  className="group relative aspect-[4/5] overflow-hidden"
-                >
-                  <Image
-                    src="/property-types/1031-exchange-multifamily-Dallas-TX.jpg"
-                    alt="Property Types - Investment Properties"
-                    fill
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
-                  <div className="absolute inset-6 border border-white/40 transition-all group-hover:inset-5" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                    <span className={`${inter.className} text-xl tracking-[0.4em] text-white uppercase font-light`}>
-                      Property Types
-                    </span>
-                    <span className={`${inter.className} text-xs tracking-[0.2em] text-white/70 uppercase opacity-0 group-hover:opacity-100 transition-opacity`}>
-                      Explore →
-                    </span>
-                  </div>
-                </Link>
-              </div>
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* Locations We Serve Section - Full Width Grid */}
-        <section aria-labelledby="locations-heading" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12 text-center">
-            <MotionDiv delay={0.1}>
-              <h2
-                id="locations-heading"
-                className={`${ibmPlexSerif.className} mb-12 text-3xl text-[#2D2D2D] sm:text-4xl`}
-              >
-                Locations We Serve
+        <section className="bg-[#F5F3EE] py-24" aria-labelledby="replacement-path-heading">
+          <div className="mx-auto max-w-7xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="text-center">
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Choose the Ownership Experience</p>
+              <h2 id="replacement-path-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>
+                Compare each path against the same Dallas sale objective.
               </h2>
             </MotionDiv>
+            <div className="mt-12 grid gap-5 lg:grid-cols-3">
+              {REPLACEMENT_PATHS.map((path, index) => (
+                <MotionDiv key={path.title} delay={0.15 + index * 0.08} className="flex h-full flex-col bg-white p-8 shadow-[0_18px_50px_rgba(45,45,45,0.08)]">
+                  <p className={`${inter.className} text-xs tracking-[0.2em] text-[#E85D24] uppercase`}>{path.eyebrow}</p>
+                  <h3 className={`${ibmPlexSerif.className} mt-4 text-3xl text-[#2D2D2D]`}>{path.title}</h3>
+                  <p className="mt-5 leading-relaxed text-[#2D2D2D]/75">{path.description}</p>
+                  <div className="mt-6 border-t border-[#2D2D2D]/10 pt-5">
+                    <p className={`${inter.className} text-xs font-semibold tracking-[0.14em] text-[#2D2D2D]/55 uppercase`}>What to review</p>
+                    <p className="mt-2 text-sm leading-relaxed text-[#2D2D2D]/70">{path.review}</p>
+                  </div>
+                </MotionDiv>
+              ))}
+            </div>
+            <MotionDiv delay={0.45} className="mt-10 flex flex-wrap justify-center gap-3">
+              <Link href={PROPERTY_LIST_LINK} className={`${inter.className} inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]`}>
+                Get a Free Property List
+              </Link>
+              <a href={PHONE_LINK} className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#2D2D2D] uppercase transition hover:bg-[#2D2D2D] hover:text-white`}>
+                Talk Through the Options
+              </a>
+            </MotionDiv>
           </div>
-          <MotionDiv delay={0.2}>
+        </section>
+
+        <section className="relative py-28" aria-labelledby="dst-heading">
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src="/locations/1031-exchange-downtown-dallas-TX.avif"
+              alt=""
+              fill
+              className="scale-105 object-cover blur-[2px]"
+              sizes="100vw"
+              aria-hidden="true"
+            />
+            <div className="absolute inset-0 bg-[#1A3A32]/85" />
+          </div>
+          <div className="relative z-10 mx-auto grid max-w-6xl gap-12 px-5 text-white sm:px-8 lg:grid-cols-[1.15fr_0.85fr] lg:px-12">
+            <MotionDiv delay={0.1}>
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Passive Replacement Properties</p>
+              <h2 id="dst-heading" className={`${ibmPlexSerif.className} text-4xl leading-tight text-white sm:text-5xl`}>
+                Move beyond tenants, toilets, and trash.
+              </h2>
+              <p className="mt-6 max-w-2xl text-lg leading-relaxed text-white/85">
+                A DST may provide access to professionally managed, institutional-grade real estate without personally handling tenants, maintenance, leasing, renovations, or emergency calls. Some current offerings may accept investments beginning around $100,000.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm leading-relaxed text-white/65">
+                Availability, projected income, sponsor and property risk, fees, leverage, transfer restrictions, illiquidity, investor eligibility, and suitability vary by offering and require review through an appropriately licensed professional.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Link href={PROPERTY_LIST_LINK} className={`${inter.className} inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]`}>
+                  See Current DST Properties
+                </Link>
+                <a href={PHONE_LINK} className={`${inter.className} inline-flex items-center border-2 border-white px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-white hover:text-[#1A3A32]`}>
+                  Free Consultation: {COMPANY_PHONE}
+                </a>
+              </div>
+            </MotionDiv>
+            <MotionDiv delay={0.25} className="border border-white/20 bg-white/10 p-8 backdrop-blur-sm">
+              <h3 className={`${ibmPlexSerif.className} text-2xl text-white`}>A different kind of ownership experience</h3>
+              <ul className="mt-6 space-y-5 text-white/85">
+                <li className="border-b border-white/15 pb-5"><strong className="block text-white">No daily management</strong><span className="mt-1 block text-sm">The sponsor and property management team handle operations.</span></li>
+                <li className="border-b border-white/15 pb-5"><strong className="block text-white">Institutional-grade assets</strong><span className="mt-1 block text-sm">Fractional ownership may provide access to properties that would be difficult to acquire individually.</span></li>
+                <li><strong className="block text-white">Income-focused possibilities</strong><span className="mt-1 block text-sm">Compare projected distributions alongside fees, risk, leverage, concentration, and liquidity constraints.</span></li>
+              </ul>
+            </MotionDiv>
+          </div>
+        </section>
+
+        <section className="bg-white py-24" aria-labelledby="process-heading">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="text-center">
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>From Planned Sale to Replacement Closing</p>
+              <h2 id="process-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>
+                How a 1031 exchange moves forward
+              </h2>
+            </MotionDiv>
+            <div className="mt-12 grid gap-6 md:grid-cols-2">
+              {EXCHANGE_PATH.map((step, index) => (
+                <MotionDiv key={step.title} delay={0.15 + index * 0.06} className="border border-[#2D2D2D]/10 bg-[#F5F3EE] p-7 sm:p-8">
+                  <h3 className={`${ibmPlexSerif.className} text-2xl text-[#2D2D2D]`}>{step.title}</h3>
+                  <p className="mt-3 leading-relaxed text-[#2D2D2D]/70">{step.description}</p>
+                </MotionDiv>
+              ))}
+            </div>
+            <MotionDiv delay={0.45} className="mt-10 bg-[#1A3A32] p-8 text-center text-white sm:p-10">
+              <h3 className={`${ibmPlexSerif.className} text-3xl text-white`}>Is this your first 1031 exchange?</h3>
+              <p className="mx-auto mt-3 max-w-2xl text-white/80">Get free guidance through the sale, intermediary handoff, replacement search, identification period, diligence, and closing.</p>
+              <a href={PHONE_LINK} className={`${inter.className} mt-6 inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]`}>
+                Call a 1031 Expert: {COMPANY_PHONE}
+              </a>
+            </MotionDiv>
+          </div>
+        </section>
+
+        <section className="bg-[#F5F3EE] py-24" aria-labelledby="solutions-heading">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div className="max-w-3xl">
+                <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Free Guidance. Practical Next Steps.</p>
+                <h2 id="solutions-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>Dallas 1031 exchange solutions</h2>
+              </div>
+              <a href={PHONE_LINK} className={`${inter.className} text-sm font-semibold tracking-[0.08em] text-[#E85D24] underline underline-offset-4 uppercase`}>Call {COMPANY_PHONE}</a>
+            </MotionDiv>
+            <div className="mt-12 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {SOLUTIONS.map((solution, index) => (
+                <MotionDiv key={solution.title} delay={0.15 + index * 0.04}>
+                  <Link href={solution.href} className="group flex h-full flex-col bg-white p-7 shadow-[0_14px_40px_rgba(45,45,45,0.06)] transition hover:-translate-y-1 hover:shadow-[0_20px_50px_rgba(45,45,45,0.1)]">
+                    <h3 className={`${ibmPlexSerif.className} text-2xl text-[#2D2D2D] transition group-hover:text-[#E85D24]`}>{solution.title}</h3>
+                    <p className="mt-3 flex-1 leading-relaxed text-[#2D2D2D]/70">{solution.description}</p>
+                    <span className={`${inter.className} mt-6 text-sm font-semibold tracking-[0.08em] text-[#E85D24] uppercase`}>Learn more →</span>
+                  </Link>
+                </MotionDiv>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-white py-24" aria-labelledby="locations-heading">
+          <div className="mx-auto max-w-6xl px-5 text-center sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1}>
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Local Sale. Broader Replacement Search.</p>
+              <h2 id="locations-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>Dallas-Fort Worth exchange assistance</h2>
+            </MotionDiv>
+          </div>
+          <MotionDiv delay={0.2} className="mt-12">
             <div className="grid md:grid-cols-2">
               {FEATURED_LOCATIONS.map((location) => (
-                <Link
-                  key={location.slug}
-                  href={`/locations/${location.slug}`}
-                  className="group relative aspect-[4/3] overflow-hidden"
-                >
-                  <Image
-                    src={location.image}
-                    alt={location.name}
-                    fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                  />
-                  <div className="absolute inset-0 bg-black/30 transition-colors group-hover:bg-black/40" />
-                  <div className="absolute inset-0 flex flex-col items-center justify-center gap-4">
-                    <h3 className={`${ibmPlexSerif.className} text-3xl tracking-[0.15em] text-white uppercase`}>
-                      {location.name}
-                    </h3>
-                    <span className={`${inter.className} border border-white px-6 py-3 text-sm tracking-[0.2em] text-white uppercase transition-colors group-hover:bg-white group-hover:text-[#2D2D2D]`}>
-                      Learn More
-                    </span>
+                <Link key={location.slug} href={`/locations/${location.slug}`} className="group relative aspect-[4/3] overflow-hidden">
+                  <Image src={location.image} alt={`${location.name} 1031 exchange solutions`} fill className="object-cover transition-transform duration-500 group-hover:scale-105" sizes="(max-width: 768px) 100vw, 50vw" />
+                  <div className="absolute inset-0 bg-black/35 transition group-hover:bg-black/45" />
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <h3 className={`${ibmPlexSerif.className} text-3xl tracking-[0.08em] text-white uppercase`}>{location.name}</h3>
                   </div>
                 </Link>
               ))}
             </div>
           </MotionDiv>
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12 text-center mt-12">
-            <Link
-              href="/locations"
-              className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-8 py-3 text-sm tracking-[0.15em] text-[#2D2D2D] transition-colors hover:bg-[#2D2D2D] hover:text-white uppercase`}
-            >
-              View All Locations
-            </Link>
+          <div className="mt-10 flex flex-wrap justify-center gap-3 px-5">
+            <Link href="/locations" className={`${inter.className} inline-flex items-center border-2 border-[#2D2D2D] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-[#2D2D2D] uppercase transition hover:bg-[#2D2D2D] hover:text-white`}>View All Locations</Link>
+            <Link href={PROPERTY_LIST_LINK} className={`${inter.className} inline-flex items-center bg-[#E85D24] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#D14D18]`}>Get a Free Property List</Link>
           </div>
         </section>
 
-        {/* Property Types Section */}
-        <section aria-labelledby="property-heading" className="bg-[#F5F3EE] py-24">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <p className={`${inter.className} mb-2 text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                    Investment Options
-                  </p>
-                  <h2
-                    id="property-heading"
-                    className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-4xl`}
-                  >
-                    Institutional-Quality Real Estate, No Daily Operations
-                  </h2>
-                </div>
-                <Link
-                  href="/property-types"
-                  className={`${inter.className} text-sm tracking-[0.1em] text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18] uppercase`}
-                >
-                  Explore property types
-                </Link>
+        <section className="bg-[#1A3A32] py-20 text-white" aria-labelledby="tools-heading">
+          <div className="mx-auto max-w-6xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Useful When the Basics Are Clear</p>
+                <h2 id="tools-heading" className={`${ibmPlexSerif.className} text-3xl text-white sm:text-4xl`}>Exchange tools and calculators</h2>
+                <p className="mt-4 text-white/75">Estimate potential boot, exchange costs, or replacement value after the sale facts and ownership goals have been organized.</p>
               </div>
-            </MotionDiv>
-            <MotionDiv delay={0.2}>
-              <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-                {PROPERTY_TYPES.map((property) => {
-                  const slugMap: Record<string, string> = {
-                    'office-medical': 'office',
-                    'retail-mixed-use': 'retail',
-                    'land-development': 'land',
-                  };
-                  const actualSlug = slugMap[property.slug] || property.slug;
-                  const imagePath = getPropertyTypeImagePath(actualSlug);
-
-                  return (
-                    <article
-                      key={property.slug}
-                      className="group overflow-hidden bg-white"
-                    >
-                      {imagePath && (
-                        <div className="relative h-48 w-full overflow-hidden">
-                          <Image
-                            src={imagePath}
-                            alt={`${property.name} properties in ${PRIMARY_CITY}, ${PRIMARY_STATE_ABBR}`}
-                            fill
-                            className="object-cover transition-transform duration-500 group-hover:scale-105"
-                            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                          />
-                        </div>
-                      )}
-                      <div className="p-6">
-                        <h3
-                          className={`${inter.className} mb-2 text-lg font-semibold text-[#2D2D2D]`}
-                        >
-                          {property.name}
-                        </h3>
-                        <p className="mb-4 text-sm text-[#2D2D2D]/70">
-                          {property.description}
-                        </p>
-                        <Link
-                          href={`/property-types/${actualSlug}`}
-                          className={`${inter.className} text-sm text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18]`}
-                          aria-label={`Learn about ${property.name} exchanges`}
-                        >
-                          Learn more
-                        </Link>
-                      </div>
-                    </article>
-                  );
-                })}
+              <div className="grid gap-3 sm:grid-cols-3">
+                <Link href="/tools/boot-calculator" className="border border-white/20 p-5 text-white transition hover:border-[#E85D24] hover:bg-white/5">Boot Calculator</Link>
+                <Link href="/tools/exchange-cost-estimator" className="border border-white/20 p-5 text-white transition hover:border-[#E85D24] hover:bg-white/5">Cost Estimator</Link>
+                <Link href="/tools/replacement-property-value-calculator" className="border border-white/20 p-5 text-white transition hover:border-[#E85D24] hover:bg-white/5">Replacement Value</Link>
               </div>
             </MotionDiv>
           </div>
         </section>
 
-        {/* Let's Connect CTA Section - Blurred Background Style */}
-        <section className="relative py-32" aria-labelledby="connect-heading">
-          {/* Background with blur effect */}
-          <div className="absolute inset-0 overflow-hidden">
-            <Image
-              src="/locations/1031-exchange-dallas-TX.webp"
-              alt=""
-              fill
-              className="object-cover blur-sm scale-105"
-              sizes="100vw"
-              aria-hidden="true"
-            />
-            <div className="absolute inset-0 bg-[#6B7B3D]/60" />
-          </div>
-
-          <div className="relative z-10 mx-auto max-w-4xl px-4 text-center sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1} className="flex flex-col items-center">
-              {/* Circular Badge */}
-              <div className="relative mb-8">
-                <svg className="h-48 w-48 animate-spin-slow" viewBox="0 0 200 200">
-                  <defs>
-                    <path
-                      id="connectCirclePath"
-                      d="M 100, 100 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
-                    />
-                  </defs>
-                  <text className="fill-white text-[10px] uppercase tracking-[0.3em]" style={{ fontFamily: 'Inter, sans-serif' }}>
-                    <textPath href="#connectCirclePath">
-                      SERVING DALLAS • SINCE 2020 • NATIONWIDE COVERAGE • 1031 EXPERTS •
-                    </textPath>
-                  </text>
-                </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className={`font-[family-name:var(--font-pinyon-script)] text-5xl text-[#E85D24]`}>
-                    1031
-                  </span>
-                  <span className={`font-[family-name:var(--font-pinyon-script)] text-4xl text-[#E85D24] -mt-1`}>
-                    Exchange
-                  </span>
-                </div>
-              </div>
-
-              <p className="mb-8 max-w-2xl text-lg text-white/90">A DST may provide Dallas sellers professionally managed fractional ownership without personally handling tenants, repairs, or building decisions. Some offerings can carry minimums near $100,000, while current supply, projected income, fees, leverage, sponsor and property risk, transfer restrictions, eligibility, and suitability remain investment-specific.</p>
-
-              <Link
-                href="/contact"
-                className={`${inter.className} inline-flex items-center border-2 border-white px-10 py-4 text-sm tracking-[0.2em] text-white transition-colors hover:bg-white hover:text-[#2D2D2D] uppercase`}
-              >Talk Through the Dallas Sale</Link>
+        <section className="bg-white py-24" aria-labelledby="faq-heading">
+          <div className="mx-auto max-w-4xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="text-center">
+              <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Questions Dallas Owners Ask</p>
+              <h2 id="faq-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>1031 exchange and DST questions</h2>
             </MotionDiv>
-          </div>
-          <h2 id="connect-heading" className="sr-only">Connect with {COMPANY_NAME}</h2>
-        </section>
-
-        {/* Why Choose Us Section */}
-        <section aria-labelledby="why-heading" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <p className={`${inter.className} mb-4 text-center text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                Unparalleled
-              </p>
-              <h2
-                id="why-heading"
-                className={`${ibmPlexSerif.className} mb-16 text-center text-3xl text-[#2D2D2D] sm:text-4xl`}
-              >
-                Why Texas Investors Choose {COMPANY_NAME}
-              </h2>
-            </MotionDiv>
-            <MotionDiv delay={0.2}>
-              <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-                {[
-                  {
-                    title: "Nationwide Property Sourcing",
-                    description: "We help Dallas investors find replacement properties in all 50 states.",
-                  },
-                  {
-                    title: "IRS-Compliant Process",
-                    description:
-                      "All documentation and deadlines managed.",
-                  },
-                  {
-                    title: "Qualified Intermediary Network",
-                    description:
-                      "Secure funds with vetted partners.",
-                  },
-                  {
-                    title: "Attorney and CPA Coordination",
-                    description:
-                      "Local professionals available on request.",
-                  },
-                  {
-                    title: "Timeline Discipline",
-                    description:
-                      "Structured milestones from sale to close.",
-                  },
-                ].map((feature) => (
-                  <div
-                    key={feature.title}
-                    className="group border-t-2 border-[#E85D24] pt-6"
-                  >
-                    <h3
-                      className={`${inter.className} mb-3 text-lg font-semibold tracking-wide text-[#2D2D2D]`}
-                    >
-                      {feature.title}
-                    </h3>
-                    <p className="text-[#2D2D2D]/70">
-                      {feature.description}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </MotionDiv>
-            <MotionDiv delay={0.3} className="mt-12">
-              <p className="text-sm text-[#2D2D2D]/70">
-                A 1031 exchange defers federal and Texas income tax on qualifying real
-                property. It does not remove county or state transfer taxes.{" "}
-                {TX_TAX_LINKS.map((link, index) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="font-medium text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18]"
-                  >
-                    {link.label}
-                    {index < TX_TAX_LINKS.length - 1 ? ", " : "."}
-                  </Link>
-                ))}
-              </p>
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* Process Section */}
-        <section aria-labelledby="process-heading" className="bg-[#F5F3EE] py-24">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <h2
-                id="process-heading"
-                className={`${ibmPlexSerif.className} mb-16 text-center text-3xl text-[#2D2D2D] sm:text-4xl`}
-              >
-                How the 1031 Exchange Process Works
-              </h2>
-            </MotionDiv>
-            <div className="grid gap-8 lg:grid-cols-3">
-              {[
-                {
-                  title: "Sell the Relinquished Property",
-                  description:
-                    "Proceeds go to a qualified intermediary.",
-                },
-                {
-                  title: "Identify Replacements Within 45 Days",
-                  description:
-                    "Submit formal identification list.",
-                },
-                {
-                  title: "Close Within 180 Days",
-                  description:
-                    "Acquire your new property under IRS timelines.",
-                },
-              ].map((step, index) => (
-                <MotionDiv
-                  key={step.title}
-                  delay={0.2 + index * 0.1}
-                  className="relative bg-white p-8"
-                >
-                  <span
-                    className={`${ibmPlexSerif.className} absolute -top-4 left-8 text-6xl font-light text-[#E85D24]/20`}
-                  >
-                    {String(index + 1).padStart(2, '0')}
-                  </span>
-                  <div className="relative pt-8">
-                    <h3
-                      className={`${inter.className} mb-3 text-lg font-semibold text-[#2D2D2D]`}
-                    >
-                      {step.title}
-                    </h3>
-                    <p className="text-[#2D2D2D]/70">
-                      {step.description}
-                    </p>
-                  </div>
-                </MotionDiv>
+            <MotionDiv delay={0.2} className="mt-10 space-y-2">
+              {FAQ_ITEMS.map((item) => (
+                <details key={item.question} className="group border-b border-[#2D2D2D]/15 py-2">
+                  <summary className={`${inter.className} flex cursor-pointer list-none items-center justify-between gap-5 py-5 text-lg font-medium text-[#2D2D2D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E85D24]`}>
+                    {item.question}
+                    <span aria-hidden="true" className="text-2xl font-light text-[#E85D24] transition group-open:rotate-45">+</span>
+                  </summary>
+                  <p className="max-w-3xl pb-6 leading-relaxed text-[#2D2D2D]/70">{item.answer}</p>
+                </details>
               ))}
-            </div>
-            <MotionDiv delay={0.5} className="mt-12">
-              <div className="bg-[#1A3A32] p-8 text-white">
-                <p className={`${inter.className} mb-4 font-medium`}>
-                  Learn more with IRS Form 8824 and Like-Kind Property guidelines.
-                </p>
-                <ul className="flex flex-wrap gap-6">
-                  {IRS_LINKS.map((link) => (
-                    <li key={link.href}>
-                      <Link
-                        href={link.href}
-                        className="text-sm text-white/80 underline underline-offset-4 transition hover:text-[#E85D24]"
-                      >
-                        {link.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            </MotionDiv>
+          </div>
+        </section>
+
+        <section id="request-assistance" className="bg-[#F5F3EE] py-24" aria-labelledby="form-heading">
+          <div className="mx-auto max-w-5xl px-5 sm:px-8 lg:px-12">
+            <MotionDiv delay={0.1} className="grid gap-8 lg:grid-cols-[0.75fr_1.25fr] lg:items-start">
+              <div className="lg:pt-8">
+                <p className={`${inter.className} mb-3 text-sm tracking-[0.26em] text-[#E85D24] uppercase`}>Start Here</p>
+                <h2 id="form-heading" className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-5xl`}>Get free 1031 exchange guidance</h2>
+                <p className="mt-5 leading-relaxed text-[#2D2D2D]/75">Share the planned sale or the question that needs attention. The form is intentionally short.</p>
+                <a href={PHONE_LINK} className={`${inter.className} mt-7 inline-flex items-center bg-[#1A3A32] px-7 py-3 text-sm font-semibold tracking-[0.08em] text-white uppercase transition hover:bg-[#E85D24]`}>Call {COMPANY_PHONE}</a>
               </div>
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* Services Section */}
-        <section aria-labelledby="services-heading" className="bg-white py-24">
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <div className="mb-12 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-                <div>
-                  <p className={`${inter.className} mb-2 text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                    What We Offer
-                  </p>
-                  <h2
-                    id="services-heading"
-                    className={`${ibmPlexSerif.className} text-3xl text-[#2D2D2D] sm:text-4xl`}
-                  >
-                    Exchange Services for Texas Investors
-                  </h2>
-                </div>
-                <Link
-                  href="/contact?request=guide"
-                  className={`${inter.className} text-sm tracking-[0.1em] text-[#E85D24] underline underline-offset-4 transition hover:text-[#D14D18] uppercase`}
-                >Get Free Dallas 1031 Information</Link>
-              </div>
-            </MotionDiv>
-            <MotionDiv delay={0.2}>
-              <ServiceSearchGrid services={getAllServices().slice(0, 6)} compact />
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* Tools Section */}
-        <section
-          aria-labelledby="tools-heading"
-          className="bg-[#1A3A32] py-24 text-white"
-        >
-          <div className="mx-auto max-w-6xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <p className={`${inter.className} mb-2 text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                Resources
-              </p>
-              <h2
-                id="tools-heading"
-                className={`${ibmPlexSerif.className} mb-6 text-3xl text-white sm:text-4xl`}
-              >
-                Exchange Tools and Calculators
-              </h2>
-            </MotionDiv>
-            <MotionDiv delay={0.2}>
-              <p className="mb-12 max-w-3xl text-white/80">
-                Use our interactive calculators to estimate costs, calculate boot, validate
-                identification rules, estimate depreciation recapture, and calculate replacement property values.
-              </p>
-            </MotionDiv>
-            <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-              <MotionDiv delay={0.3}>
-                <Link
-                  href="/tools/boot-calculator"
-                  className="group block bg-white/10 p-8 transition-colors hover:bg-white/20"
-                >
-                  <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#E85D24] text-white">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <rect x="3" y="3" width="18" height="18" rx="2" />
-                      <path d="M9 9h6v6H9z" />
-                    </svg>
-                  </span>
-                  <h3 className={`${ibmPlexSerif.className} mb-2 text-xl text-white`}>
-                    Boot Calculator
-                  </h3>
-                  <p className="mb-4 text-sm text-white/70">
-                    Calculate boot including cash received and mortgage relief.
-                  </p>
-                  <span className={`${inter.className} text-sm text-[#E85D24]`}>
-                    Open calculator →
-                  </span>
-                </Link>
-              </MotionDiv>
-              <MotionDiv delay={0.35}>
-                <Link
-                  href="/tools/exchange-cost-estimator"
-                  className="group block bg-white/10 p-8 transition-colors hover:bg-white/20"
-                >
-                  <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#E85D24] text-white">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <line x1="12" y1="1" x2="12" y2="23" />
-                      <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
-                    </svg>
-                  </span>
-                  <h3 className={`${ibmPlexSerif.className} mb-2 text-xl text-white`}>
-                    Exchange Cost Estimator
-                  </h3>
-                  <p className="mb-4 text-sm text-white/70">
-                    Estimate QI fees, escrow costs, title insurance, and recording fees.
-                  </p>
-                  <span className={`${inter.className} text-sm text-[#E85D24]`}>
-                    Open estimator →
-                  </span>
-                </Link>
-              </MotionDiv>
-              <MotionDiv delay={0.4}>
-                <Link
-                  href="/tools/identification-rules-checker"
-                  className="group block bg-white/10 p-8 transition-colors hover:bg-white/20"
-                >
-                  <span className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#E85D24] text-white">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                      <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
-                      <polyline points="22 4 12 14.01 9 11.01" />
-                    </svg>
-                  </span>
-                  <h3 className={`${ibmPlexSerif.className} mb-2 text-xl text-white`}>
-                    Identification Rules Checker
-                  </h3>
-                  <p className="mb-4 text-sm text-white/70">
-                    Validate your identification against the three property, 200 percent, or 95 percent rules.
-                  </p>
-                  <span className={`${inter.className} text-sm text-[#E85D24]`}>
-                    Open checker →
-                  </span>
-                </Link>
-              </MotionDiv>
-            </div>
-            <MotionDiv delay={0.55} className="mt-8">
-              <Link
-                href="/contact?request=properties"
-                className={`${inter.className} text-sm tracking-[0.1em] text-[#E85D24] underline underline-offset-4 transition hover:text-white uppercase`}
-              >Request the Dallas Property List</Link>
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* FAQ Section */}
-        <section aria-labelledby="faq-heading" className="bg-white py-24">
-          <div className="mx-auto max-w-4xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <p className={`${inter.className} mb-2 text-center text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                Common Questions
-              </p>
-              <h2
-                id="faq-heading"
-                className={`${ibmPlexSerif.className} mb-12 text-center text-3xl text-[#2D2D2D] sm:text-4xl`}
-              >
-                Frequently Asked Questions
-              </h2>
-            </MotionDiv>
-            <MotionDiv delay={0.2}>
-              <div className="space-y-4">
-                {FAQ_ITEMS.map((item, index) => (
-                  <details
-                    key={item.question}
-                    className="group border-b border-[#2D2D2D]/10 pb-4"
-                  >
-                    <summary
-                      className={`${inter.className} cursor-pointer py-4 text-lg font-medium text-[#2D2D2D] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#E85D24]`}
-                    >
-                      {index + 1 < 10 ? `0${index + 1}` : index + 1}.{" "}
-                      {item.question}
-                    </summary>
-                    <p className="pb-4 text-[#2D2D2D]/70">
-                      {item.answer}
-                    </p>
-                  </details>
-                ))}
-              </div>
-            </MotionDiv>
-          </div>
-        </section>
-
-        {/* Contact Form Section */}
-        <section
-          id="request-assistance"
-          aria-labelledby="form-heading"
-          className="bg-[#F5F3EE] py-24"
-        >
-          <div className="mx-auto max-w-4xl px-4 sm:px-8 lg:px-12">
-            <MotionDiv delay={0.1}>
-              <p className={`${inter.className} mb-2 text-center text-sm tracking-[0.3em] text-[#E85D24] uppercase`}>
-                Get Started
-              </p>
-              <h2
-                id="form-heading"
-                className={`${ibmPlexSerif.className} mb-12 text-center text-3xl text-[#2D2D2D] sm:text-4xl`}
-              >
-                Request 1031 Exchange Assistance
-              </h2>
-            </MotionDiv>
-            <MotionDiv delay={0.25}>
-              <div className="bg-white p-8 shadow-lg sm:p-12">
+              <div className="bg-white p-7 shadow-xl sm:p-10">
                 <ContactFormFields showHeading={false} />
               </div>
             </MotionDiv>
           </div>
         </section>
-
-        {/* NO FOOTER HERE - Footer is in layout.tsx via SiteFooter component */}
       </main>
-      {jsonLdBlocks.map((script) => (
+      {[websiteJsonLd, faqJsonLd].map((data, index) => (
         <script
-          key={script.id}
+          key={index}
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(script.data) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
         />
       ))}
     </div>

@@ -37,11 +37,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "1031 Exchange Dallas | Direct & Passive Options",
+    default: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
     template: `%s | ${COMPANY_NAME}`,
   },
   description:
-    "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
+    "Selling Dallas investment property? Get free 1031 exchange guidance, compare direct and passive DST options, and request a free property list.",
   keywords: [
     "1031 exchange",
     "Dallas 1031 exchange",
@@ -70,11 +70,11 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: SITE_URL,
     siteName: COMPANY_NAME,
-    title: "1031 Exchange Dallas | Direct & Passive Options",
-    description: "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
+    title: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
+    description: "Get free Dallas 1031 exchange guidance, compare direct real estate and passive DST options, and request a free property list.",
     images: [
       {
-        url: `${SITE_URL}/1031-exchange-dallas-logo.png`,
+        url: `${SITE_URL}/1031-exchange-dallas-tx.webp`,
         width: 1200,
         height: 630,
         alt: `${COMPANY_NAME} - Dallas 1031 Exchange Services`,
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "1031 Exchange Dallas | Direct & Passive Options",
-    description: "Selling a Dallas rental or commercial property? Compare direct replacements and passive DST options, organize deadlines, and request a free property list.",
-    images: [`${SITE_URL}/1031-exchange-dallas-logo.png`],
+    title: "1031 Exchange Dallas | Turnkey Exchange & DST Help",
+    description: "Free Dallas 1031 exchange guidance, replacement-property options, and passive DST information.",
+    images: [`${SITE_URL}/1031-exchange-dallas-tx.webp`],
     creator: "@1031exchangedallas",
   },
   robots: {
@@ -126,8 +126,8 @@ const localBusinessJsonLd = {
   "@id": `${SITE_URL}#organization`,
   name: COMPANY_NAME,
   url: SITE_URL,
-  logo: `${SITE_URL}/1031-exchange-dallas-logo.png`,
-  image: `${SITE_URL}/1031-exchange-dallas-logo.png`,
+  logo: `${SITE_URL}/1031-exchange-dallas-tx-logo.png`,
+  image: `${SITE_URL}/1031-exchange-dallas-tx.webp`,
   telephone: `+1-${COMPANY_PHONE_DIGITS.slice(0, 3)}-${COMPANY_PHONE_DIGITS.slice(3, 6)}-${COMPANY_PHONE_DIGITS.slice(6)}`,
   email: COMPANY_EMAIL,
   address: {
