@@ -192,6 +192,7 @@ export default function RootLayout({
         <Analytics />
         <CallRailScripts />
         <HubSpotScripts />
+              <script src="/turnstile-contact.js" defer></script>
       </body>
     </html>
   );
